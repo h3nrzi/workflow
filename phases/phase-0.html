@@ -55,7 +55,28 @@
               <h1>دریافت درخواست و <span>صورت‌بندی فرصت</span></h1>
               <p class="doc-lead">از درخواست خام تا فهم مشترک با کمک مشاور هوش مصنوعی؛ مستندات را فقط پس از پایان گفت‌وگو استخراج می‌کنیم.</p>
               <div class="doc-tags"><span>Business Analysis</span><span>Evidence-Gated</span><span>Human Decision</span></div>
+              <a class="doc-primary-link" href="#prompt-tool">رفتن به پرامپت‌های اجرایی <span aria-hidden="true">←</span></a>
             </header>
+            <details class="mobile-toc" id="mobile-toc">
+              <summary>
+                <span class="mobile-toc-title">فهرست صفحه</span>
+                <span class="mobile-toc-current" id="mobile-toc-current">هدف این مرحله</span>
+                <span class="mobile-toc-chevron" aria-hidden="true">⌄</span>
+              </summary>
+              <nav class="mobile-toc-links" aria-label="بخش‌های این صفحه">
+                <a href="#goal">هدف فاز</a>
+                <a href="#roles">نقش‌ها</a>
+                <a href="#inputs">ورودی‌ها</a>
+                <a href="#activities">فعالیت‌ها</a>
+                <a href="#patterns">پترن‌ها و آنتی‌پترن‌ها</a>
+                <a href="#deliverables">خروجی‌ها</a>
+                <a href="#exit-gate">شرط عبور</a>
+                <a href="#ai">نقش دستیار</a>
+                <a href="#prompt-tool">پرامپت تحلیلگر</a>
+                <a href="#handoff-prompt">پرامپت تحویل</a>
+                <a href="#mock-client">شبیه‌ساز کارفرما</a>
+              </nav>
+            </details>
             <section class="document-section" id="goal">
               <h2>هدف این مرحله</h2>
               <p>درخواست مشتری را با کمک دستیار تحلیل کسب‌وکار روشن کنیم، سؤال‌های ضروری را بپرسیم و به یک برداشت مشترک برسیم. پرامپت اول صرفاً مشاوره و گفت‌وگوست؛ پرامپت دوم مستندات را از همان مکالمه استخراج می‌کند.</p>
@@ -312,12 +333,35 @@
             </section>
                         <nav class="doc-pagination" aria-label="جابه‌جایی بین فصل‌ها"><a href="../"><span>صفحهٔ قبل</span><strong>← نمای کلی ورک‌فلو</strong></a><div><span>مرحلهٔ بعد</span><strong>فاز یک · در حال طراحی</strong></div></nav>
           </article>
-          <aside class="toc" aria-label="فهرست این صفحه"><div class="toc-sticky"><div class="toc-title">در این صفحه</div><a href="#goal">هدف فاز</a><a href="#roles">نقش‌ها</a><a href="#inputs">ورودی‌ها</a><a href="#activities">فعالیت‌ها</a><a href="#patterns">پترن‌ها و آنتی‌پترن‌ها</a><a href="#deliverables">خروجی‌ها</a><a href="#exit-gate">شرط عبور</a><a href="#ai">نقش دستیار</a><a href="#prompt-tool">پرامپت تحلیلگر</a><a href="#handoff-prompt">پرامپت تحویل</a><a href="#mock-client">شبیه‌ساز کارفرما</a><span class="toc-tip">اصل راهنما: تصمیم روشن، مالک مشخص، شواهد واقعی.</span></div></aside>
+          <aside class="toc" aria-label="فهرست بخش‌های این صفحه">
+            <nav class="toc-sticky" aria-label="بخش‌های صفحه">
+              <div class="toc-header">
+                <span class="toc-overline">راهنمای مطالعه</span>
+                <span class="toc-title">در این صفحه</span>
+                <div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div>
+              </div>
+              <div class="toc-links">
+                <a href="#goal">هدف فاز</a>
+                <a href="#roles">نقش‌ها</a>
+                <a href="#inputs">ورودی‌ها</a>
+                <a href="#activities">فعالیت‌ها</a>
+                <a href="#patterns">پترن‌ها و آنتی‌پترن‌ها</a>
+                <a href="#deliverables">خروجی‌ها</a>
+                <a href="#exit-gate">شرط عبور</a>
+                <a href="#ai">نقش دستیار</a>
+                <a href="#prompt-tool">پرامپت تحلیلگر</a>
+                <a href="#handoff-prompt">پرامپت تحویل</a>
+                <a href="#mock-client">شبیه‌ساز کارفرما</a>
+              </div>
+              <a class="toc-shortcut" href="#prompt-tool">برو به ابزارهای اجرایی <span aria-hidden="true">←</span></a>
+            </nav>
+          </aside>
         </div>
         <footer class="footer"><span>دریافت درخواست · شناخت مسئله · تصمیم مشتری</span><span><a href="../">بازگشت به راهنما</a></span></footer>
       </div>
     </main>
   </div>
   <script src="../assets/phase-0-prompt.js" defer></script>
+  <script src="../assets/phase-0-navigation.js" defer></script>
 </body>
 </html>
