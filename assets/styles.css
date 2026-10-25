@@ -276,3 +276,13 @@ tr:last-child td { border-bottom: none; }
 .simulator-copy:hover { background: #34574f; }
 .document-section .simulator-warning { font-size: 11px; color: #766448; background: #fff9ee; border: 1px solid #ecdfc3; border-radius: 9px; padding: 11px 13px; margin: 10px 0 0; }
 @media (max-width: 650px) { .simulator-panel { padding: 16px; } }
+
+/* Handoff prompt for the end of the analyst conversation */
+.handoff-panel { border: 1px solid #d2e3e4; background: #eef5f5; border-radius: 13px; padding: 23px; margin-top: 24px; scroll-margin-top: 32px; }
+.handoff-panel h3 { font-size: 18px; color: #1b5054; margin: 7px 0 9px; }
+.document-section .handoff-panel > p { font-size: 12px; }
+.handoff-panel .prompt-preview-top { margin-top: 16px; }
+.handoff-copy { background: #236772; }
+.handoff-copy:hover { background: #1a535c; }
+.document-section .handoff-note { font-size: 11px; color: #4d6a6d; margin: 10px 0 0; line-height: 2; }
+@media (max-width: 650px) { .handoff-panel { padding: 16px; } }

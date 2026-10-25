@@ -10,6 +10,13 @@
       message: "پرامپت تحلیلگر کپی شد. آن را در سشن تحلیلگر اجرا کن."
     },
     {
+      preview: document.getElementById("handoff-prompt-preview"),
+      button: document.getElementById("handoff-copy"),
+      status: document.getElementById("handoff-copy-status"),
+      message: "پرامپت تحویل کپی شد. آن را در پایان همان سشن تحلیلگر بفرست.",
+      useClientInput: false
+    },
+    {
       preview: document.getElementById("mock-client-prompt-preview"),
       button: document.getElementById("mock-client-copy"),
       status: document.getElementById("mock-client-copy-status"),
@@ -26,7 +33,7 @@
   function updatePreviews() {
     const input = requestInput.value.trim();
     for (const item of items) {
-      item.preview.value = item.template.replace("{{CLIENT_REQUEST}}", input);
+      item.preview.value = item.useClientInput === false ? item.template : item.template.replace("{{CLIENT_REQUEST}}", input);
       item.status.textContent = "";
     }
   }
