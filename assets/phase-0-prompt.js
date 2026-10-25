@@ -9,11 +9,10 @@
   if (!requestInput || !preview || !copyButton || !status) return;
 
   const template = preview.defaultValue;
-  const missingRequest = "درخواست مشتری هنوز ارائه نشده است. پیش از تولید پرامپت اجرایی، ابتدا درخواست خام را از توسعه‌دهنده بخواه.";
 
   function updatePreview() {
     const clientRequest = requestInput.value.trim();
-    preview.value = template.replace("{{CLIENT_REQUEST}}", clientRequest || missingRequest);
+    preview.value = template.replace("{{CLIENT_REQUEST}}", clientRequest);
     status.textContent = "";
   }
 
@@ -37,7 +36,7 @@
         preview.setSelectionRange(0, 0);
         copyButton.focus();
       }
-      status.textContent = "پرامپت مرحلهٔ اول کپی شد. حالا آن را به LLM دلخواهت بده.";
+      status.textContent = "پرامپت اجرایی فاز صفر کپی شد. همین متن را مستقیماً در LLM دلخواه اجرا کن.";
     } catch (_error) {
       selectPreview();
       status.textContent = "کپی خودکار ممکن نبود؛ متن بالا انتخاب شده و می‌توانی آن را دستی کپی کنی.";
