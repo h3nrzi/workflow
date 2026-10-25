@@ -2,48 +2,63 @@
 
 (() => {
   const requestInput = document.getElementById("phase-zero-client-request");
-  const preview = document.getElementById("phase-zero-prompt-preview");
-  const copyButton = document.getElementById("phase-zero-copy");
-  const status = document.getElementById("phase-zero-copy-status");
+  const items = [
+    {
+      preview: document.getElementById("phase-zero-prompt-preview"),
+      button: document.getElementById("phase-zero-copy"),
+      status: document.getElementById("phase-zero-copy-status"),
+      message: "پرامپت تحلیلگر کپی شد. آن را در سشن تحلیلگر اجرا کن."
+    },
+    {
+      preview: document.getElementById("mock-client-prompt-preview"),
+      button: document.getElementById("mock-client-copy"),
+      status: document.getElementById("mock-client-copy-status"),
+      message: "پرامپت کارفرمای فرضی کپی شد. آن را در سشن دوم اجرا کن."
+    }
+  ];
 
-  if (!requestInput || !preview || !copyButton || !status) return;
+  if (!requestInput || items.some(({preview, button, status}) => !preview || !button || !status)) return;
 
-  const template = preview.defaultValue;
-
-  function updatePreview() {
-    const clientRequest = requestInput.value.trim();
-    preview.value = template.replace("{{CLIENT_REQUEST}}", clientRequest);
-    status.textContent = "";
+  for (const item of items) {
+    item.template = item.preview.defaultValue;
   }
 
-  function selectPreview() {
-    const panel = preview.closest("details");
-    if (panel) panel.open = true;
+  function updatePreviews() {
+    const input = requestInput.value.trim();
+    for (const item of items) {
+      item.preview.value = item.template.replace("{{CLIENT_REQUEST}}", input);
+      item.status.textContent = "";
+    }
+  }
+
+  function selectPreview(preview) {
+    const details = preview.closest("details");
+    if (details) details.open = true;
     preview.focus();
     preview.select();
   }
 
-  async function copyPrompt() {
-    const text = preview.value;
+  async function copyPrompt(item) {
+    const text = item.preview.value;
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
       } else {
-        selectPreview();
-        if (!document.execCommand("copy")) {
-          throw new Error("Clipboard unavailable");
-        }
-        preview.setSelectionRange(0, 0);
-        copyButton.focus();
+        selectPreview(item.preview);
+        if (!document.execCommand("copy")) throw new Error("Clipboard unavailable");
+        item.preview.setSelectionRange(0, 0);
+        item.button.focus();
       }
-      status.textContent = "پرامپت اجرایی فاز صفر کپی شد. همین متن را مستقیماً در LLM دلخواه اجرا کن.";
+      item.status.textContent = item.message;
     } catch (_error) {
-      selectPreview();
-      status.textContent = "کپی خودکار ممکن نبود؛ متن بالا انتخاب شده و می‌توانی آن را دستی کپی کنی.";
+      selectPreview(item.preview);
+      item.status.textContent = "کپی خودکار ممکن نبود؛ متن بالا انتخاب شده و می‌توانی آن را دستی کپی کنی.";
     }
   }
 
-  requestInput.addEventListener("input", updatePreview);
-  copyButton.addEventListener("click", copyPrompt);
-  updatePreview();
+  requestInput.addEventListener("input", updatePreviews);
+  for (const item of items) {
+    item.button.addEventListener("click", () => copyPrompt(item));
+  }
+  updatePreviews();
 })();

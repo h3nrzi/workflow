@@ -266,3 +266,13 @@ tr:last-child td { border-bottom: none; }
   .copy-prompt-button { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { .copy-prompt-button { transition: none; } }
+
+/* Optional second LLM: hypothetical client for rehearsal only */
+.simulator-panel { border: 1px solid #d9e6df; background: #f3f7f4; border-radius: 13px; padding: 23px; margin-top: 24px; scroll-margin-top: 32px; }
+.simulator-panel h3 { margin: 7px 0 9px; font-size: 18px; color: #23504c; }
+.document-section .simulator-panel > p { font-size: 12px; }
+.simulator-panel .prompt-preview-top { margin-top: 16px; }
+.simulator-copy { background: #486962; }
+.simulator-copy:hover { background: #34574f; }
+.document-section .simulator-warning { font-size: 11px; color: #766448; background: #fff9ee; border: 1px solid #ecdfc3; border-radius: 9px; padding: 11px 13px; margin: 10px 0 0; }
+@media (max-width: 650px) { .simulator-panel { padding: 16px; } }
