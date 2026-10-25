@@ -221,3 +221,48 @@ tr:last-child td { border-bottom: none; }
   html { scroll-behavior: auto; }
   .button, a.phase-card { transition: none; }
 }
+
+/* Phase zero: copyable two-step, model-agnostic prompt */
+.prompt-section-heading { margin-bottom: 22px; }
+.prompt-kicker { display: inline-flex; align-items: center; gap: 7px; color: #38786a; font-size: 11px; font-weight: 800; }
+.prompt-kicker span { font-size: 15px; }
+.prompt-section-heading h2 { margin-top: 9px; }
+.prompt-flow { display: grid; grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr) 22px minmax(0, 1fr); align-items: center; gap: 7px; margin-bottom: 17px; }
+.prompt-flow > div { display: grid; justify-items: center; text-align: center; align-content: center; gap: 3px; min-height: 95px; padding: 10px 6px; background: #edf3ef; border: 1px solid #e0eae2; border-radius: 11px; }
+.prompt-flow-number { color: #35796f; font-size: 12px; font-weight: 800; }
+.prompt-flow strong { font-size: 11px; }
+.prompt-flow small { color: #697c79; font-size: 10px; line-height: 1.7; }
+.prompt-flow-arrow { color: #669489; text-align: center; }
+.prompt-tool { background: #fff; padding: 23px; border: 1px solid #d9e6df; border-radius: 13px; box-shadow: 0 10px 25px rgba(17, 56, 47, .035); }
+.prompt-label { font-size: 13px; color: #234c4b; font-weight: 800; display: block; }
+.prompt-label span { color: #91a09d; font-size: 11px; font-weight: 500; margin-inline-start: 7px; }
+.document-section .prompt-hint { font-size: 11px; margin: 4px 0 12px; }
+.client-request-input { width: 100%; resize: vertical; min-height: 112px; display: block; padding: 12px 14px; border: 1px solid #cfded5; border-radius: 9px; font: inherit; font-size: 12px; line-height: 2.1; background: #fbfcfa; color: #1a3b3b; }
+.client-request-input::placeholder { color: #9eaeaa; }
+.client-request-input:focus { outline: 2px solid #8fc0b2; border-color: #5c9c88; outline-offset: 1px; }
+.prompt-preview-top { margin: 19px 0 12px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center; }
+.prompt-preview-subtitle { display: block; font-size: 10px; color: #778985; line-height: 2; }
+.copy-prompt-button { background: #1a4a48; color: #fff; border: none; border-radius: 8px; font: inherit; font-size: 11px; font-weight: 700; padding: 10px 15px; cursor: pointer; white-space: nowrap; transition: background .18s ease; }
+.copy-prompt-button:hover { background: #2f7163; }
+.copy-prompt-button span { margin-inline-start: 8px; }
+.prompt-details { background: #f6f8f5; border: 1px solid #e5ece7; border-radius: 9px; overflow: hidden; }
+.prompt-details summary { padding: 10px 14px; cursor: pointer; font-size: 11px; font-weight: 700; color: #53736c; }
+.prompt-details summary:hover { color: #23564d; }
+.prompt-details textarea { display: block; padding: 15px; border: 0; border-top: 1px solid #e5ece7; background: #fbfcfa; color: #365252; width: 100%; resize: vertical; font: inherit; font-size: 11px; line-height: 2.15; min-height: 250px; direction: rtl; }
+.prompt-details textarea:focus { outline: 2px solid #8fc0b2; outline-offset: -2px; }
+.document-section .prompt-status { font-size: 11px; font-weight: 700; color: #287456; min-height: 1.4em; margin: 9px 0 3px; }
+.document-section .prompt-privacy { font-size: 10px; color: #879b97; margin: 7px 0 0; line-height: 2; }
+.prompt-after { border-right: 3px solid #d7b88e; margin-top: 22px; padding: 2px 19px 2px 0; }
+.prompt-after h3 { margin: 0 0 8px; }
+.prompt-after ol { font-size: 12px; line-height: 2.2; padding: 0 21px 0 0; color: #53696b; }
+.prompt-after li { margin-bottom: 5px; }
+.document-section .prompt-after p { font-size: 11px; color: #77918b; margin-bottom: 0; }
+@media (max-width: 650px) {
+  .prompt-flow { grid-template-columns: minmax(0,1fr); gap: 5px; }
+  .prompt-flow > div { min-height: 0; padding: 10px; }
+  .prompt-flow-arrow { transform: rotate(-90deg); }
+  .prompt-tool { padding: 16px; }
+  .prompt-preview-top { display: grid; }
+  .copy-prompt-button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .copy-prompt-button { transition: none; } }
