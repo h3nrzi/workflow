@@ -7,13 +7,13 @@
       preview: document.getElementById("phase-zero-prompt-preview"),
       button: document.getElementById("phase-zero-copy"),
       status: document.getElementById("phase-zero-copy-status"),
-      message: "پرامپت تحلیلگر کپی شد. آن را در سشن تحلیلگر اجرا کن."
+      message: "پرامپت مشاور کپی شد. با آن گفت‌وگوی کشف نیاز را شروع کن؛ مستندسازی با پرامپت ۲ است."
     },
     {
       preview: document.getElementById("handoff-prompt-preview"),
       button: document.getElementById("handoff-copy"),
       status: document.getElementById("handoff-copy-status"),
-      message: "پرامپت تحویل کپی شد. آن را در پایان همان سشن تحلیلگر بفرست.",
+      message: "پرامپت مستندسازی کپی شد. آن را بعد از پایان مشاوره در همان سشن اجرا کن.",
       useClientInput: false
     },
     {
