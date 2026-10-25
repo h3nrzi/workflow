@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b32">
+  <meta name="description" content="فاز صفر ورک‌فلو: دریافت درخواست مشتری، صورت‌بندی مسئله، شناخت ذی‌نفعان و تصمیم ورود به Product Discovery.">
+  <title>فاز صفر: دریافت و صورت‌بندی مسئله | ورک‌فلو</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
+  <div class="site">
+    <aside class="sidebar" aria-label="ناوبری اصلی">
+      <a class="brand" href="../" aria-label="صفحهٔ اصلی راهنمای ورک‌فلو">
+        <span class="brand-mark" aria-hidden="true">و</span><span><strong>ورک‌فلو</strong><small>راهنمای توسعهٔ نرم‌افزار</small></span>
+      </a>
+      <div class="sidebar-inner">
+        <div class="navigation-label">شروع</div>
+        <nav class="navigation" aria-label="فصل‌های راهنما">
+          <a href="../"><span class="nav-dot"></span>نمای کلی</a>
+          <a href="phase-0.html" aria-current="page"><span class="nav-number">۰۰</span>دریافت و صورت‌بندی مسئله</a>
+          <span class="nav-disabled"><span class="nav-number">۰۱</span>کشف محصول <em>در حال طراحی</em></span>
+        </nav>
+        <div class="navigation-label muted-label">مراحل آینده</div>
+        <nav class="navigation" aria-label="فازهای آینده">
+          <span class="nav-disabled"><span class="nav-number">۰۲</span>طراحی محصول</span>
+          <span class="nav-disabled"><span class="nav-number">۰۳</span>معماری و امکان‌سنجی</span>
+          <span class="nav-disabled"><span class="nav-number">۰۴</span>مشخصات و برنامه‌ریزی</span>
+          <span class="nav-disabled"><span class="nav-number">۰۵</span>پیاده‌سازی و بازبینی</span>
+          <span class="nav-disabled"><span class="nav-number">۰۶</span>تست و پذیرش</span>
+          <span class="nav-disabled"><span class="nav-number">۰۷</span>انتشار و عملیات</span>
+          <span class="nav-disabled"><span class="nav-number">۰۸</span>یادگیری و بهبود</span>
+        </nav>
+        <div class="sidebar-bottom">
+          <span class="sidebar-status"><span class="status-light"></span> سند زنده و در حال توسعه</span>
+          <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </aside>
+    <main id="content" class="main">
+      <div class="content-container">
+        <header class="topbar">
+          <span class="breadcrumb"><a href="../">مستندات</a><span class="slash">/</span><strong>فاز صفر</strong></span>
+          <a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-0.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <span aria-hidden="true">↗</span></a>
+        </header>
+        <div class="document-layout">
+          <article class="document">
+            <header class="doc-header">
+              <span class="doc-kicker"><span class="doc-number">۰۰</span> PHASE 00 <span class="kicker-divider">/</span> PROJECT INTAKE</span>
+              <h1>دریافت درخواست و <span>صورت‌بندی فرصت</span></h1>
+              <p class="doc-lead">از یک درخواست خام تا مسئله‌ای روشن که ارزش بررسی بیشتر داشته باشد؛ پیش از آنکه خودمان را به ساخت نرم‌افزار متعهد کنیم.</p>
+              <div class="doc-tags"><span>Business Analysis</span><span>Evidence-Gated</span><span>Human Decision</span></div>
+            </header>
+            <section class="document-section" id="goal">
+              <h2>هدف فاز</h2>
+              <p>مشخص کنیم مشتری چه می‌خواهد، چه مسئله‌ای پشت درخواست او وجود دارد، چه کسانی درگیرند و چرا بررسی این فرصت اهمیت دارد. خروجی این فاز <strong>مجوز ورود به کشف محصول</strong> است، نه تصمیم قطعی برای ساخت یک سیستم.</p>
+              <div class="statement"><span aria-hidden="true">✳</span><p>هنوز قرار نیست ثابت کنیم که باید نرم‌افزار جدیدی ساخته شود؛ قرار است بدانیم <strong>چه چیزی باید بررسی شود.</strong></p></div>
+            </section>
+            <section class="document-section" id="roles">
+              <h2>نقش‌ها و مسئولیت‌ها</h2>
+              <div class="table-scroll"><table><thead><tr><th>نقش</th><th>مسئولیت در این فاز</th></tr></thead><tbody>
+                <tr><td><strong>Business Analyst</strong> <span class="table-badge">راهبر</span></td><td>هدایت گفت‌وگو، تفکیک مسئله از راه‌حل و ثبت شواهد و ابهام‌ها.</td></tr>
+                <tr><td><strong>Product Manager</strong></td><td>بررسی ارزش احتمالی فرصت، کاربران و تناسب آن با اهداف کسب‌وکار.</td></tr>
+                <tr><td><strong>Client / Sponsor</strong> <span class="table-badge">تصمیم‌گیر</span></td><td>ارائهٔ اطلاعات، روشن‌کردن مسئله و تصمیم دربارهٔ ادامهٔ بررسی.</td></tr>
+                <tr><td><strong>Delivery Manager</strong></td><td>ثبت محدودیت‌های شناخته‌شدهٔ زمان و منابع در صورت نیاز.</td></tr>
+                <tr><td><strong>Tech Lead</strong></td><td>مشورت دربارهٔ ریسک‌های فنی آشکار، بدون طراحی زودهنگام معماری.</td></tr>
+                <tr><td><strong>AI Agent</strong></td><td>کمک به دسته‌بندی اطلاعات، پیشنهاد سؤال و مشخص‌کردن تناقض‌ها؛ بدون اختیار تصمیم‌گیری.</td></tr>
+              </tbody></table></div>
+            </section>
+            <section class="document-section" id="inputs">
+              <h2>ورودی‌ها</h2>
+              <p>یک درخواست خام برای شروع کافی است. جزئیات زیر در صورت وجود دریافت می‌شوند؛ اطلاعات ناموجود نباید با حدس جایگزین شوند.</p>
+              <ul class="rich-list">
+                <li>شرح اولیهٔ درخواست و دلیل مطرح‌شدن آن؛ ترجیحاً به زبان خود مشتری.</li>
+                <li>تصویری ابتدایی از کاربران، تیم‌ها و فرایند فعلی.</li>
+                <li>شواهد موجود مانند گزارش‌های مشکل، هزینه یا بازخورد کاربران.</li>
+                <li>محدودیت‌های شناخته‌شده: زمان، بودجه، مقررات یا وابستگی‌ها.</li>
+                <li>نام و مسئولیت Sponsor و سایر تصمیم‌گیرندگان.</li>
+              </ul>
+            </section>
+            <section class="document-section" id="activities">
+              <h2>فعالیت‌های اصلی</h2>
+              <div class="step-stack">
+                <div class="step"><span class="step-num">۰۱</span><div><h3>Request Capture</h3><p>خواستهٔ اولیه را همان‌طور که مطرح شده ثبت کنیم؛ آن را فوراً به فهرست قابلیت‌ها تبدیل نکنیم.</p><div class="step-result">خروجی: Original Request</div></div></div>
+                <div class="step"><span class="step-num">۰۲</span><div><h3>Problem Framing</h3><p>مشخص کنیم چه کسی، در چه شرایطی، با چه مشکلی مواجه می‌شود و پیامد آن چیست. تفاوت ادعا، فرضیه و واقعیت را ثبت کنیم.</p><div class="step-result">خروجی: Problem Hypothesis + Evidence Gaps</div></div></div>
+                <div class="step"><span class="step-num">۰۳</span><div><h3>Stakeholder & Constraint Mapping</h3><p>گروه‌های اثرپذیر، صاحب مسئله، صاحب تصمیم، محدودیت‌ها و ریسک‌های اولیه را شناسایی کنیم.</p><div class="step-result">خروجی: Stakeholder Map + Risk Log</div></div></div>
+                <div class="step"><span class="step-num">۰۴</span><div><h3>Opportunity Decision</h3><p>یافته‌ها را مرور کنیم تا Sponsor یکی از چهار تصمیم مشخص را با دلیل ثبت کند.</p><div class="step-result">خروجی: Decision Record</div></div></div>
+              </div>
+            </section>
+            <section class="document-section" id="patterns">
+              <h2>پترن‌ها و آنتی‌پترن‌ها</h2>
+              <div class="patterns-grid">
+                <div class="pattern-panel good"><div class="panel-heading"><span aria-hidden="true">✓</span><h3>چه کار کنیم؟</h3></div><ul>
+                  <li><strong>Problem Before Solution:</strong> ابتدا مسئله را بفهمیم.</li>
+                  <li><strong>Evidence over Assumption:</strong> شواهد و فرضیات را جدا ثبت کنیم.</li>
+                  <li><strong>Explicit Ownership:</strong> صاحب تصمیم را مشخص کنیم.</li>
+                  <li><strong>Progressive Elaboration:</strong> جزئیات را متناسب با دانسته‌ها اضافه کنیم.</li>
+                  <li><strong>Record Unknowns:</strong> ابهام‌ها را آشکار نگه داریم.</li>
+                  <li><strong>Human Decision Gate:</strong> برای عبور تأیید صریح بگیریم.</li>
+                </ul></div>
+                <div class="pattern-panel bad"><div class="panel-heading"><span aria-hidden="true">×</span><h3>چه کار نکنیم؟</h3></div><ul>
+                  <li><strong>Solution Jumping:</strong> مستقیم سراغ UI یا فناوری نرویم.</li>
+                  <li><strong>Fabricated Certainty:</strong> فرضیه را واقعیت جلوه ندهیم.</li>
+                  <li><strong>Ownerless Decisions:</strong> تصمیم را بی‌صاحب نگذاریم.</li>
+                  <li><strong>Premature Specification:</strong> قبل از شناخت مسئله Spec کامل نسازیم.</li>
+                  <li><strong>Premature Estimation:</strong> بدون اطلاعات تعهد قطعی ندهیم.</li>
+                  <li><strong>Auto-Progression:</strong> تأیید Agent را تأیید Sponsor ندانیم.</li>
+                </ul></div>
+              </div>
+              <div class="example"><span class="example-title">مثال</span><p>مشتری می‌گوید «سیستم مدیریت وظایف می‌خواهیم». سؤال این فاز «React بهتر است یا Vue؟» نیست؛ سؤال درست این است: <strong>«الان کارها چطور پیگیری می‌شوند و دقیقاً کجا مشکل ایجاد می‌شود؟»</strong></p></div>
+            </section>
+            <section class="document-section" id="deliverables">
+              <h2>خروجی‌های مورد انتظار</h2>
+              <div class="deliverable-list">
+                <div><span class="deliverable-letter">A</span><div><h3>Opportunity Brief</h3><p>درخواست، مسئلهٔ احتمالی، مخاطبان، اهمیت تجاری و معیارهای پیشنهادی موفقیت؛ کوتاه و قابل فهم.</p></div></div>
+                <div><span class="deliverable-letter">B</span><div><h3>Assumption & Risk Log</h3><p>ادعاها، شواهد، فرضیات، ریسک‌ها، اطلاعات مفقود و پرسش‌های باز با منابع روشن.</p></div></div>
+                <div><span class="deliverable-letter">C</span><div><h3>Opportunity Decision Record</h3><p>نتیجهٔ تصمیم Sponsor، دلیل آن، فرد مسئول و اقدام بعدی.</p></div></div>
+              </div>
+              <p class="small-note">در این فاز تولید PRD، طرح نهایی Figma، معماری یا تیکت پیاده‌سازی الزامی نیست.</p>
+            </section>
+            <section class="document-section" id="exit-gate">
+              <h2>شرط عبور از فاز صفر</h2>
+              <p>عبور باید بر پایهٔ شواهد و تصمیم انسانی باشد، نه صرفاً تکمیل یک فرم.</p>
+              <ul class="gate-list">
+                <li>درخواست اولیه و دلیل تجاری آن ثبت شده باشد.</li>
+                <li>کاربران یا صاحبان مسئله دست‌کم در سطح فرضیه مشخص باشند.</li>
+                <li>مسئله از راه‌حل پیشنهادی جدا شده باشد.</li>
+                <li>شواهد، فرضیات و موارد نامعلوم تفکیک شده باشند.</li>
+                <li>Sponsor و صاحب اختیار تصمیم مشخص باشند.</li>
+                <li>محدودیت‌ها و ریسک‌های آشکار ثبت شده باشند.</li>
+                <li>سؤال‌های اصلی مرحلهٔ Product Discovery معلوم باشند.</li>
+                <li>تصمیم رسمی، همراه با دلیل و مسئول پیگیری ثبت شده باشد.</li>
+              </ul>
+              <div class="table-scroll"><table><thead><tr><th>تصمیم</th><th>معنا</th></tr></thead><tbody>
+                <tr><td><strong>Proceed</strong></td><td>اجازهٔ ورود به Product Discovery، نه مجوز قطعی ساخت.</td></tr>
+                <tr><td><strong>Investigate</strong></td><td>جمع‌آوری اطلاعات مشخص و ارزیابی دوباره.</td></tr>
+                <tr><td><strong>Hold</strong></td><td>توقف موقت به‌دلیل اولویت، بودجه یا وابستگی.</td></tr>
+                <tr><td><strong>Reject</strong></td><td>کنارگذاشتن فرصت با دلیل مستند.</td></tr>
+              </tbody></table></div>
+            </section>
+            <section class="document-section" id="ai">
+              <h2>نقش هوش مصنوعی در این فاز</h2>
+              <p>Agent می‌تواند درخواست را خلاصه کند، تضادها را پیدا کند و برای مصاحبه با ذی‌نفعان سؤال بسازد؛ اما نمی‌تواند شواهد کاربران، محدودیت‌های سازمان یا تصمیم Sponsor را از خودش تولید کند.</p>
+              <p>در این نقطه <strong>Wayfinder ابزار پیش‌فرض نیست</strong>. اگر مقصدی تعریف‌شده و چند تصمیم پیچیدهٔ وابسته به هم داشته باشیم، می‌توانیم در فاز متناسب از آن کمک بگیریم.</p>
+            </section>
+            <nav class="doc-pagination" aria-label="جابه‌جایی بین فصل‌ها"><a href="../"><span>صفحهٔ قبل</span><strong>← نمای کلی ورک‌فلو</strong></a><div><span>مرحلهٔ بعد</span><strong>فاز یک · در حال طراحی</strong></div></nav>
+          </article>
+          <aside class="toc" aria-label="فهرست این صفحه"><div class="toc-sticky"><div class="toc-title">در این صفحه</div><a href="#goal">هدف فاز</a><a href="#roles">نقش‌ها</a><a href="#inputs">ورودی‌ها</a><a href="#activities">فعالیت‌ها</a><a href="#patterns">پترن‌ها و آنتی‌پترن‌ها</a><a href="#deliverables">خروجی‌ها</a><a href="#exit-gate">شرط عبور</a><a href="#ai">نقش AI</a><span class="toc-tip">اصل راهنما: تصمیم روشن، مالک مشخص، شواهد واقعی.</span></div></aside>
+        </div>
+        <footer class="footer"><span>فاز صفر · طرح Evidence-Gated Intake</span><span><a href="../">بازگشت به راهنما</a></span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
