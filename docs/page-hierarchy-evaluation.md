@@ -1,5 +1,7 @@
 # Page hierarchy and palettes — evaluation
 
+> Historical record: the current site is limited to phases 0–2. References below to removed phases describe earlier work, not current routes. Use [the current scope evaluation](scope-evaluation.md) for this change.
+
 Implemented 2026-10-26. Human evaluation is **pending**. This ticket follows the [UI/UX](ui-ux-evaluation.md) and [icon](icon-evaluation.md) tickets; their coverage is preserved separately.
 
 ## Migration sidebar cleanup — latest checkpoint

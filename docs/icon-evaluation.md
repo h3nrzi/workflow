@@ -1,5 +1,7 @@
 # Icon update — evaluation
 
+> Historical record: the current site is limited to phases 0–2. References below to removed phases describe earlier work, not current routes. Use [the current scope evaluation](scope-evaluation.md) for this change.
+
 Implemented 2026-10-26. Human evaluation is **pending**. This is a separate ticket from the [all-page UI/UX update](ui-ux-evaluation.md); those checkpoints remain available.
 
 ## First action

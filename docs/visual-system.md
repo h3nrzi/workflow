@@ -1,5 +1,7 @@
 # Workflow visual system
 
+> Historical record: the current site is limited to phases 0–2. References below to removed phases describe earlier work, not current routes. Use [the current scope evaluation](scope-evaluation.md) for this change.
+
 Initial implementation: 2026-10-25. Site-wide UI/UX update: 2026-10-26. User evaluation is pending. See [the hierarchy and palette evaluation](page-hierarchy-evaluation.md) for the latest preflight evidence. Earlier [UI/UX](ui-ux-evaluation.md) and [icon](icon-evaluation.md) checkpoints remain available.
 
 The visual idea is a working route: request → evidence → decision. The homepage introduces that sequence with a cobalt route diagram; each phase guide has a hero and its own palette, while workshops and tool guides use compact title headers. Persian content stays right aligned, with logical CSS properties where direction matters. The site remains static HTML and CSS with the existing prompt and navigation scripts.

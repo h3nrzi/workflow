@@ -64,23 +64,6 @@ body[data-page="prototyping"] { /* Rose */
   --hero-end: #941349;
   --hero-highlight: #f3d3e0;
 }
-body[data-page="phase-3"],
-body[data-page="migration"] { /* Amber */
-  --blue: #92400e;
-  --blue-hover: #75330b;
-  --blue-soft: #f6efeb;
-  --surface: #fbf8f7;
-  --line: #e7d5ca;
-  --ink: #292e44;
-  --muted: #5a5e6d;
-  --tone-900: #461f07;
-  --tone-700: #75330b;
-  --tone-500: #efe2db;
-  --tone-300: #d3b39f;
-  --hero-start: #321605;
-  --hero-end: #72320b;
-  --hero-highlight: #eadbd1;
-}
 body[data-page="workshop-0"] { /* Cyan */
   --blue: #0e7490;
   --blue-hover: #0b5d73;
@@ -199,8 +182,8 @@ body[data-page] .copy-prompt-button:hover { background: var(--blue-hover); }
 body[data-page] .p2-lane { background: var(--surface); border-color: var(--line); }
 body[data-page] .p2-lane strong { color: var(--ink); }
 body[data-page] :is(.p2-lane-index, .p2-lane-link, .p2-section-kicker, .p2-card-index, .p2-checklist li::before) { color: var(--blue); }
-body[data-page] :is(.p2-inline-note, .p2-check-panel, .p3-stage-guidance, .p3-prompt-target, .p3-panel-lead) { background: var(--blue-soft); border-color: var(--line); }
-body[data-page] :is(.p2-inline-note strong, .p3-stage-guidance strong, .p3-prompt-target strong, .p3-panel-lead strong) { color: var(--tone-700); }
+body[data-page] :is(.p2-inline-note, .p2-check-panel) { background: var(--blue-soft); border-color: var(--line); }
+body[data-page] .p2-inline-note strong { color: var(--tone-700); }
 body[data-page] :is(.prompt-tool, .handoff-panel, .p2-info-card, .p2-artifact, .p2-workshop-item) { border-color: var(--line); }
 body[data-page] .p2-workbench-intro { background: var(--tone-900); }
 body[data-page] .p2-workbench-intro :is(strong, span, small) { color: white; }
