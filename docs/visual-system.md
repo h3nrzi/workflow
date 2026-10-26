@@ -69,3 +69,9 @@ If the server is stopped, run `python3 -m http.server 8000` from the repository 
 | Error page | Open `/404.html` and use «بازگشت به صفحهٔ اصلی». | Matching visual system and working return link. |
 
 Record observations per feature, browser, and viewport. Implementation and preflight are complete; these checks do not imply user acceptance.
+
+## Phase 2 editorial redesign
+
+Phase-two design, the prototyping hub, and tool playbooks use styles scoped under `body.p2` in `assets/styles.css`; the earlier phases retain their established layout. A clear header separates the design and prototyping entry points, while a TaskFlow teaching thread connects flow, screen, interaction and acceptance. Collapsible deliverable details expose review questions progressively, and narrow viewports stack content. These descriptions document the implementation, not the results of browser testing.
+
+Editorial guidance and QA rules live in [Documentation standard](documentation-standard.md).

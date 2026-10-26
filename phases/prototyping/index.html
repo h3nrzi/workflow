@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/styles.css">
 </head>
-<body>
+<body class="p2 p2-prototype">
 <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
 <div class="site">
 <aside class="sidebar" aria-label="ناوبری اصلی">
@@ -31,50 +31,64 @@
 <main class="main" id="content"><div class="content-container">
 <header class="topbar"><span class="breadcrumb"><a href="../../">مستندات</a><span class="slash">/</span><a href="../phase-2.html">فاز دو</a><span class="slash">/</span><strong>پروتوتایپ</strong></span><a class="header-link" href="../phase-2.html">بازگشت به طراحی ←</a></header>
 <div class="document-layout"><article class="document">
-  <header class="doc-header">
-    <span class="doc-kicker"><span class="doc-number">۲B</span> ابزارها و ساخت نمونه</span>
-    <h1>مرکز پروتوتایپ و LLM 2</h1>
-    <p class="doc-lead">بستهٔ طراحی مستقل از ابزار را دریافت کن؛ سپس با پرامپت پایه و Playbook منتخب، یک پروتوتایپ بساز، بررسی کن و اصلاحات را تا پذیرش یا توقف مدیریت کن.</p>
-    <div class="doc-tags"><span>Common Copilot</span><span>Tool Playbooks</span><span>Acceptance Scenarios</span></div>
-    <a class="doc-primary-link" href="#tool-prompt">شروع مسیر Replit ←</a>
-  </header>
-  <details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">هدف بخش</span><span class="mobile-toc-chevron" aria-hidden="true">⌄</span></summary><nav class="mobile-toc-links" aria-label="بخش‌های این صفحه"><a href="#goal">هدف بخش</a>
-<a href="#entry">شرط ورود</a>
-<a href="#common">پرامپت پایه</a>
-<a href="#tools">فهرست ابزارها</a>
-<a href="#replit">مسیر Replit</a>
-<a href="#tool-prompt">پرامپت LLM 2</a>
-<a href="#finish">پایان و تحویل</a></nav></details>
-  <section class="document-section" id="goal">
-    <h2>یک دستیار مشترک، مسیرهای تخصصی</h2>
-    <p>LLM 2 دو مرجع دارد: <strong>Product Experience Package</strong> از LLM 1 و <strong>Tool Playbook</strong> ویژهٔ ابزار. پرامپت LLM دوم از ترکیب این دو با دستور مشترک ساخته می‌شود؛ نام ابزار را جایگزین نمی‌کنیم، بلکه روش مخصوص آن را اضافه می‌کنیم.</p>
-    <div class="prompt-flow"><div><span class="prompt-flow-number">۱</span><strong>Package A–F</strong><small>طراحی تأییدشده و مجوزها</small></div><span class="prompt-flow-arrow" aria-hidden="true">←</span><div><span class="prompt-flow-number">۲</span><strong>Copilot + Playbook</strong><small>پرامپت ابزار و اصلاحات</small></div><span class="prompt-flow-arrow" aria-hidden="true">←</span><div><span class="prompt-flow-number">۳</span><strong>Prototype Gate</strong><small>آزمون و تحویل</small></div></div>
-  </section>
-  <section class="document-section" id="entry">
-    <h2>Entry Gate و مجوز ساخت</h2>
-    <p>پیش از تولید پرامپت ساخت، نسخهٔ طراحی، ACها و تصمیم صاحب اختیار را بررسی کن. ساخت در Replit، اتصال سرویس، هزینه یا انتشار ممکن است مجوزهای مستقلی بخواهند.</p>
-    <div class="statement"><span aria-hidden="true">!</span><p>اگر مجوز اجرای پروتوتایپ وجود ندارد، LLM 2 باید فقط پیگیری مجوزها و اطلاعات حیاتی را انجام دهد؛ <strong>وجود دکمهٔ کپی یا بستهٔ طراحی، اجازهٔ ساخت ایجاد نمی‌کند.</strong></p></div>
-  </section>
-  <section class="document-section" id="common">
-    <h2>پرامپت پایهٔ مشترک چه می‌کند؟</h2>
-    <ul class="gate-list"><li>ورودی A–F و سناریوهای AC را بررسی و ابهام‌های مهم را جدا می‌کند.</li><li>بر مبنای Playbook ابزار منتخب یک پرامپت محصول‌محور می‌سازد.</li><li>پس از اجرای ابزار توسط توسعه‌دهنده، شواهد واقعی را دریافت و ارزیابی می‌کند.</li><li>برای اختلاف‌های قابل اشاره به FLOW/SCREEN/INT/AC اصلاح هدفمند می‌دهد.</li><li>در صورت بی‌پیشرفتی یا نیاز به تغییر اساسی، توقف/ارجاع به LLM 1 را پیشنهاد می‌دهد.</li><li>Prototype Handoff واقعی، با وضعیت سناریوها و مجوزهای جدا تولید می‌کند.</li></ul>
-  </section>
-  <section class="document-section" id="tools">
-    <h2>کاتالوگ مسیرهای ابزار</h2>
-    <p>هر ابزار پس از تجربه و آزمون می‌تواند مسیر تخصصی مستقل دریافت کند. برچسب‌های بلوغ یعنی Discovered، Experimenting، Validated و Documented؛ وضعیت هر ابزار با شواهد ثبت‌شده تعیین می‌شود.</p>
-    <div class="phase-list">
-      <a class="phase-card featured" href="tools/replit.html"><div class="phase-id"><strong>R</strong></div><div class="phase-info"><span class="mini-status drafting">Experimental</span><h3>Replit — مسیر اولیهٔ تجربی</h3><p>الگوی پرامپت محصول‌محور با الهام از تجربهٔ TaskFlow؛ نیازمند تکرار آزمایش و ثبت نتایج.</p><span class="phase-meta">پرامپت آغاز · چرخهٔ اصلاح · مشاهدهٔ نتایج</span></div><span class="phase-arrow" aria-hidden="true">↖</span></a>
-      <a class="phase-card" href="tools/stitch.html"><div class="phase-id"><strong>S</strong></div><div class="phase-info"><span class="mini-status planned">Discovered</span><h3>Google Stitch — در انتظار آزمایش</h3><p>مسیر هنوز Playbook اجرایی یا پرامپت آزموده‌شده ندارد؛ فقط برنامهٔ یادگیری.</p></div><span class="phase-arrow muted" aria-hidden="true">↖</span></a>
-    </div>
-    <p class="small-note">Figma Make، Lovable، Bolt، v0 و ابزارهای بعدی پس از آزمون در همین کاتالوگ اضافه می‌شوند؛ صرفِ شناسایی، به معنی معتبر بودن راهنمای ساخت نیست.</p>
-  </section>
-  <section class="document-section" id="replit">
-    <h2>راه‌اندازی مسیر Replit</h2>
-    <p>تنها Playbook اولیهٔ این نسخه بر اساس تجربهٔ TaskFlow به Replit اختصاص دارد. وظیفهٔ LLM 2 تولید یک پرامپت جدید از <strong>محصول واقعی همین پروژه</strong> است، نه کپی‌کردن مشخصات TaskFlow برای پروژه‌های دیگر.</p>
-    <p>پرامپت ترکیبی زیر سه بخش دارد: دستور مشترک، Product Experience Package واردشده و Playbook تجربی Replit. این پرامپت را باید در سشن <strong>LLM دوم</strong> اجرا کنی، نه مستقیماً در Replit؛ خروجی LLM دوم پرامپت شروع مخصوص Replit خواهد بود.</p>
-  </section>
-  <section class="document-section" id="tool-prompt">
-    <div class="prompt-section-heading"><span class="prompt-kicker">LLM 2 · Tool-Specific Copilot</span><h2>پرامپت شروع مسیر Replit</h2><p>بستهٔ کامل طراحی A تا F را از خروجی LLM اول کپی کن؛ اگر فقط بخش F را داری، ممکن است جزئیات جریان‌ها یا معیارهای پذیرش کافی نباشد.</p></div>
+  <header class="doc-header p2-hero p2-prototype-hero">
+<div class="p2-hero-top"><span class="p2-eyebrow"><span class="p2-spark" aria-hidden="true">✦</span> فاز ۰۲ / کارگاه اجرا</span><span class="p2-hero-marker">PROTOTYPE LAB</span></div>
+<h1>از Blueprint،<br><span>تا پروتوتایپ قابل بررسی.</span></h1>
+<p class="doc-lead">LLM دوم یک پرامپت یک‌باره تحویل نمی‌دهد. کمک می‌کند با ابزار منتخب، نمونه بسازی، نتیجهٔ واقعی را بررسی کنی و اصلاحات را تا رسیدن به معیارهای پذیرش یا توقف منطقی ادامه بدهی.</p>
+<div class="p2-hero-actions"><a class="p2-action-primary" href="#tool-prompt">ساخت پرامپت مخصوص Replit ↖</a><a class="p2-action-quiet" href="../phase-2.html">هنوز بستهٔ طراحی ندارم ←</a></div>
+<div class="p2-hero-foot"><span>ورودی: اسناد A–F</span><span>Replit: تجربی</span><span>ارزیابی با AC</span></div>
+</header>
+  <details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">شروع سریع</span><span class="mobile-toc-chevron" aria-hidden="true">⌄</span></summary><nav class="mobile-toc-links" aria-label="بخش‌های این صفحه">
+<a href="#goal">شروع سریع</a>
+<a href="#entry">مجوز و پیش‌نیاز</a>
+<a href="#common">چرخهٔ همراهی</a>
+<a href="#tools">انتخاب ابزار</a>
+<a href="#replit">پرامپت محصول‌محور</a>
+<a href="#tool-prompt">ابزار ساخت پرامپت</a>
+<a href="#finish">ارزیابی و تحویل</a>
+</nav></details>
+  <section class="document-section p2-reading-section" id="goal"><div class="p2-section-heading"><span class="p2-section-kicker">قبل از شروع · LLM دوم</span><h2>اینجا دقیقاً چه کاری انجام می‌دهیم؟</h2></div>
+<p class="p2-lead">با <strong>Product Experience Package</strong> تولیدشده در LLM اول و انتخاب یک ابزار، دستیار دوم پرامپت شروع مناسب آن ابزار را تولید می‌کند. بعد از اینکه تو خروجی واقعی را از ابزار آوردی، اختلاف‌ها را با ACها بررسی می‌کند. این روند تا پذیرش نمونه یا توقف با دلیل ادامه پیدا می‌کند.</p>
+<div class="p2-lane-grid">
+<div class="p2-lane p2-lane-a"><span class="p2-lane-index">LLM 2</span><strong>مشاور و بازبین</strong><span>بررسی ورودی، نوشتن درخواستِ مخصوص ابزار، تحلیل بازخورد واقعی و پیشنهاد اصلاح با شناسهٔ سناریو.</span></div>
+<div class="p2-lane p2-lane-b"><span class="p2-lane-index">Tool / Replit</span><strong>محیط تولید و اجرا</strong><span>دریافت پرامپت محصول‌محور و تولید نمونه. خروجی باید جداگانه باز و آزمایش شود؛ اعتماد به ادعای خود ابزار کافی نیست.</span></div>
+</div>
+<div class="p2-steps-track"><span>بستهٔ A–F</span><b aria-hidden="true">←</b><span>LLM 2</span><b aria-hidden="true">←</b><span>Replit / ابزار</span><b aria-hidden="true">←</b><span>نتیجهٔ واقعی</span><b aria-hidden="true">←</b><span>ارزیابی</span></div>
+<div class="p2-inline-note"><strong>نکتهٔ کاربردی:</strong> پرامپتی که این صفحه کپی می‌کند برای <strong>LLM دوم</strong> است، نه مستقیماً برای Replit. خود LLM دوم با توجه به اسناد پروژه، پرامپت محصول‌محور اختصاصی Replit را آماده می‌کند.</div></section>
+<section class="document-section p2-reading-section" id="entry"><div class="p2-section-heading"><span class="p2-section-kicker">Entry Gate · کنترل پیش از ساخت</span><h2>سه چیز را قبل از ارسال به ابزار بررسی کن</h2></div>
+<div class="p2-question-grid">
+<div class="p2-info-card"><span class="p2-card-index">A–F</span><h3>بستهٔ طراحی</h3><p>هدف، Scope، FLOW/SCREEN/INT، Visual Direction و سناریوهای AC را همراه با وضعیت ابهام‌ها وارد کن.</p></div>
+<div class="p2-info-card"><span class="p2-card-index">OK?</span><h3>مجوز روشن</h3><p>موافقت با طراحی یا تأیید فهم مساوی مجوز ساخت نمونه در ابزار بیرونی نیست؛ هزینه و دسترسی را جدا بررسی کن.</p></div>
+<div class="p2-info-card"><span class="p2-card-index">FIT</span><h3>تناسب ابزار</h3><p>ابزار انتخابی چه نوع خروجی می‌سازد؟ هدف پروژه نمونهٔ بصری است یا اپ تعاملی؟ قابلیت آزموده‌نشده را تضمینی ندان.</p></div>
+</div>
+<div class="p2-decision"><span class="p2-decision-tag">مرز اجرا</span><p><strong>اگر مجوز یا دادهٔ حیاتی وجود ندارد، دستیار نباید پرامپت ساخت صادر کند.</strong> باید فقط مانع و راه رفع آن را روشن کند. اگر فقط طراحی بصری مجاز است، اتصال بک‌اند، پرداخت، احراز هویت واقعی یا انتشار خودکار خارج از محدوده باقی می‌مانند.</p></div></section>
+<section class="document-section p2-reading-section" id="common"><div class="p2-section-heading"><span class="p2-section-kicker">روش مشترک · مستقل از ابزار</span><h2>چرخهٔ ساخت، دیدن، سنجیدن و اصلاح</h2></div>
+<p>نقش LLM دوم، تبدیل اسناد به عمل و <strong>کاهش اختلاف بین طراحی و نمونهٔ واقعی</strong> است. هر دور باید یک نتیجهٔ قابل مشاهده داشته باشد، نه فقط یک پرامپت طولانی‌تر.</p>
+<div class="p2-workshop-grid">
+<div class="p2-workshop-item"><span>01</span><h3>Prepare</h3><p>Design Gate و مجوزها را مرور کن؛ هدف نمونه، سناریوهای ضروری و Playbook ابزار را مشخص کن.</p><small>ورودی روشن و قابل دفاع</small></div>
+<div class="p2-workshop-item"><span>02</span><h3>Generate &amp; Build</h3><p>LLM دوم پرامپت شروع می‌دهد، تو آن را در ابزار اجرا می‌کنی و نتیجه را برمی‌گردانی.</p><small>پرامپت مخصوص ابزار + خروجی قابل مشاهده</small></div>
+<div class="p2-workshop-item"><span>03</span><h3>Inspect</h3><p>سناریوهای AC را با لینک، مشاهدهٔ دستی، تصویر یا کد موجود بررسی کن و کیفیت شاهد را ثبت کن.</p><small>Passed / Failed / Blocked / Not Tested</small></div>
+<div class="p2-workshop-item"><span>04</span><h3>Refine or Stop</h3><p>یک مشکل مهم را با شناسه هدف بگیر. اگر اصلاح پیشرفت ندارد، علت را بازنگری کن یا به طراحی برگرد.</p><small>اصلاح دقیق یا توقف با دلیل</small></div>
+</div>
+<div class="p2-example-panel"><div class="p2-example-header"><span>نمونهٔ بازخورد مفید به LLM دوم</span><code>INT-07 / AC-04</code></div><p>«در برد TaskFlow یک تسک را از To Do به Done منتقل کردم. خود کارت منتقل شد، اما تعداد تسک‌های تکمیل‌شده روی داشبورد تغییر نکرد. این رفتار را دستی مشاهده کردم؛ لینک و تصویر داشبورد را هم دارم.»</p><div class="p2-example-footer">این یک <strong>نمونهٔ آموزشی از گزارش خطا</strong> است، نه نتیجهٔ آزمون انجام‌شده در این پروژه.</div></div>
+<p>در این حالت، اصلاح خوب چیزی شبیه «فقط محاسبهٔ آمار داشبورد را با وضعیت جدید تسک‌ها هماهنگ کن و مسیر AC-04 را دوباره بررسی کن» خواهد بود؛ نه «کل اپ را بهتر کن».</p>
+<div class="p2-inline-note"><strong>مرز توقف:</strong> اگر دو یا سه تلاش پیاپی روی یک ایراد، پیشرفت قابل مشاهده نداشت، LLM دوم باید تشخیص دهد مشکل از ابهام Blueprint است یا محدودیت ابزار؛ نه اینکه درخواست قبلی را با کلمات جدید تکرار کند.</div></section>
+<section class="document-section p2-reading-section" id="tools"><div class="p2-section-heading"><span class="p2-section-kicker">فهرست پویا · نه تبلیغ ابزار</span><h2>کدام ابزار واقعاً مسیر مستند دارد؟</h2></div>
+<p>ابزارهای شناخته‌شده را از مسیرهای تجربه‌شده جدا می‌کنیم. وضعیت <strong>Discovered</strong> فقط یعنی ابزار شناسایی شده؛ <strong>Experimental</strong> یعنی تجربهٔ اولیه داریم؛ <strong>Validated</strong> به بررسی‌های تکرارپذیر و <strong>Documented</strong> به دستورالعمل دارای شواهد نیاز دارد.</p>
+<div class="p2-lane-grid p2-tools-grid">
+<a href="tools/replit.html" class="p2-lane p2-lane-a"><span class="p2-lane-index">EXPERIMENTAL</span><strong>Replit</strong><span>الگوی پرامپت محصول‌محور بر اساس تجربهٔ TaskFlow ثبت شده؛ چرخهٔ کاملِ ارزیابی هنوز نیازمند آزمایش بیشتر است.</span><span class="p2-lane-link">راهنمای تجربی Replit ←</span></a>
+<a href="tools/stitch.html" class="p2-lane p2-lane-b"><span class="p2-lane-index">DISCOVERED</span><strong>Google Stitch</strong><span>ابزار شناسایی شده، اما Playbook اختصاصی آزموده‌شده و مسیر اجرایی فعال در این راهنما ندارد.</span><span class="p2-lane-link">طرح آزمایش Stitch ←</span></a>
+</div>
+<p class="p2-small-muted">Figma Make، Lovable، Bolt، v0 و ابزارهای مشابه گزینه‌های مطالعهٔ آینده‌اند. تا وقتی آزمایش نشده‌اند، پرامپت تخصصی‌شان را به‌عنوان مسیر معتبر منتشر نمی‌کنیم.</p></section>
+<section class="document-section p2-reading-section" id="replit"><div class="p2-section-heading"><span class="p2-section-kicker">مسیر اولیه · Replit</span><h2>پرامپت محصول‌محور چه تفاوتی ایجاد می‌کند؟</h2></div>
+<p>در مثال TaskFlow، به‌جای اجبار Replit به یک فولدر یا فریم‌ورک خاص، درخواست دربارهٔ <strong>ارزش محصول، مخاطب، جریان‌ها، صفحات، تعاملات، دادهٔ نمایشی و مرزهای فنی</strong> نوشته شده بود. این تجربه یک سرنخ خوب است؛ تضمین موفقیت هر پروژه نیست.</p>
+<div class="p2-example-panel"><div class="p2-example-header"><span>بخشی از شیوهٔ توصیف محصول در تجربهٔ TaskFlow</span><span class="p2-chip">ورودی ثبت‌شده · نه تست تأییدشده</span></div>
+<blockquote class="p2-quote">Build a modern, interactive project and task management web application called TaskFlow.</blockquote>
+<p>بعد از چشم‌انداز محصول، به ابزار گفته شده بود صفحات اصلی (Dashboard، Projects، Kanban، Tasks)، تعاملات معنی‌دار، دادهٔ نمایشی و خارج‌بودن بک‌اند/احراز هویت واقعی از محدوده را رعایت کند.</p>
+<p><strong>تکمیل پیشنهادی:</strong> حالا LLM دوم باید همین رویکرد را با سناریوهای <code>FLOW</code>، رفتارهای <code>INT</code> و معیارهای <code>AC</code> حاصل از اسناد فاز دو دقیق‌تر کند؛ بدون تحمیل فناوری غیرضروری.</p></div>
+<div class="p2-split-note"><div><h3>LLM دوم چه می‌سازد؟</h3><p>یک درخواست شروع ساختاریافته و قابل ارسال به Replit، سپس اصلاح‌های متمرکز بر شکاف واقعی هر AC.</p></div><div><h3>چه چیزی را نباید وعده بدهد؟</h3><p>امنیت Production، احراز هویت واقعی، بک‌اند آماده یا موفقیت تست‌هایی که مشاهده نشده‌اند.</p></div></div></section>
+<section class="document-section p2-workbench" id="tool-prompt">
+    <div class="p2-workbench-intro"><span>WORKSPACE / 02</span><strong>کارگاه LLM دوم</strong><small>Package را وارد کن، پرامپت ترکیبی را به LLM دوم بده، سپس خروجیِ مخصوص Replit را در Replit اجرا کن.</small></div><div class="prompt-section-heading"><span class="prompt-kicker">LLM 2 · Tool-Specific Copilot</span><h2>پرامپت شروع مسیر Replit</h2><p>بستهٔ کامل طراحی A تا F را از خروجی LLM اول کپی کن؛ اگر فقط بخش F را داری، ممکن است جزئیات جریان‌ها یا معیارهای پذیرش کافی نباشد.</p></div>
     <div class="prompt-tool">
       <label for="prototype-package-input" class="prompt-label">Product Experience Package <span>بخش‌های A تا F</span></label>
       <p class="prompt-hint" id="prototype-package-hint">این متن فقط در مرورگر به پرامپت ترکیبی اضافه می‌شود و از سایت به سرور ارسال یا ذخیره نمی‌شود.</p>
@@ -117,7 +131,9 @@ Prototype Gate:
     </div>
     <div class="example"><span class="example-title">قالب Playbook تزریق‌شده</span><p>راهنمای Replit دارای وضعیت Experimental است. وقتی ابزار جدیدی را واقعاً آزمایش کردیم، می‌توانیم Playbook جدیدی با قواعد و محدودیت‌های آزموده‌شده جایگزین کنیم؛ تا آن زمان پرامپت شروع ابزار جدیدی فعال نمی‌شود.</p></div>
   </section>
-  <section class="document-section" id="finish">
+  <section class="document-section p2-reading-section p2-workbench-finish" id="finish">
+<div class="p2-section-heading"><span class="p2-section-kicker">Prototype Gate · گزارش واقعی</span><h2>پایان درست یعنی چه؟</h2></div>
+<div class="p2-status-grid"><div><span class="p2-state-label p2-state-pass">Passed</span><p>رفتار واقعاً بررسی شده است.</p></div><div><span class="p2-state-label p2-state-fail">Failed</span><p>رفتار با AC نمی‌خواند.</p></div><div><span class="p2-state-label p2-state-block">Blocked</span><p>مانع جلوی بررسی را گرفته است.</p></div><div><span class="p2-state-label p2-state-untested">Not Tested</span><p>شاهد کافی وجود ندارد.</p></div></div>
     <h2>پایان ارزیابی و Prototype Handoff</h2>
     <p>پس از دریافت نتایج واقعی، اجرای سناریوهای ضروری و تصمیم دربارهٔ توقف یا پذیرش، پرامپت پایانی را در همان سشن LLM دوم بفرست. خروجی، گزارش نتایج و بستهٔ مستقل انتقال خواهد بود؛ سندِ ناتمام مجوز ورود به Production نیست.</p>
     <div class="handoff-panel">
@@ -139,13 +155,15 @@ Prototype Gate:
   </section>
   <nav class="doc-pagination" aria-label="جابه‌جایی بین بخش‌ها"><a href="../phase-2.html"><span>بازگشت به طراحی</span><strong>← فاز دو · LLM 1</strong></a><a href="tools/replit.html"><span>مسیر تخصصی</span><strong>Playbook تجربی Replit ←</strong></a></nav>
 </article>
-<aside class="toc" aria-label="فهرست بخش‌های این صفحه"><nav class="toc-sticky" aria-label="بخش‌های صفحه"><div class="toc-header"><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#goal">هدف بخش</a>
-<a href="#entry">شرط ورود</a>
-<a href="#common">پرامپت پایه</a>
-<a href="#tools">فهرست ابزارها</a>
-<a href="#replit">مسیر Replit</a>
-<a href="#tool-prompt">پرامپت LLM 2</a>
-<a href="#finish">پایان و تحویل</a></div><a class="toc-shortcut" href="#tool-prompt">برو به پرامپت Replit ←</a></nav></aside>
+<aside class="toc" aria-label="فهرست بخش‌های این صفحه"><nav class="toc-sticky" aria-label="بخش‌های صفحه"><div class="toc-header"><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links">
+<a href="#goal">شروع سریع</a>
+<a href="#entry">مجوز و پیش‌نیاز</a>
+<a href="#common">چرخهٔ همراهی</a>
+<a href="#tools">انتخاب ابزار</a>
+<a href="#replit">پرامپت محصول‌محور</a>
+<a href="#tool-prompt">ابزار ساخت پرامپت</a>
+<a href="#finish">ارزیابی و تحویل</a>
+</div><a class="toc-shortcut" href="#tool-prompt">برو به پرامپت Replit ←</a></nav></aside>
 </div><footer class="footer"><span>Prototyping Copilot · Replit (Experimental)</span><span><a href="../phase-2.html">بازگشت به فاز دو</a></span></footer>
 </div></main></div>
 <script src="../../assets/prototyping-prompt.js" defer></script>
