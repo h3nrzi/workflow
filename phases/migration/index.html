@@ -3,49 +3,37 @@
 <main class="main" id="content"><div class="content-container"><header class="topbar"><span class="breadcrumb"><a href="../../">مستندات</a><span class="slash">/</span><a href="../phase-3.html">فاز سه</a><span class="slash">/</span><strong>کارگاه مهاجرت</strong></span><a class="header-link" href="../phase-3.html">بازگشت به آموزش ←</a></header>
 <div class="document-layout"><article class="document">
 <header class="doc-header p2-hero p3-hero"><div class="p2-hero-top"><span class="p2-eyebrow"><span class="p2-spark">✦</span> WORKSPACE / 03</span><span class="p2-hero-marker">PROMPT ENGINEERING LAB</span></div><h1>هر مرحله،<br><span>یک دستور مبتنی بر شواهد.</span></h1><p class="doc-lead">LLM اول پرامپت رو مهندسی می‌کنه؛ Coding Agent لوکال سورس رو می‌بینه و Skill رو اجرا می‌کنه. از گزارش واقعی هر مرحله برای تصمیم و دستور بعدی استفاده می‌کنیم.</p><div class="p2-hero-actions"><a class="p2-action-primary" href="#inputs">واردکردن اطلاعات پروژه ←</a><a class="p2-action-quiet" href="../phase-3.html#grill">اول آموزش Grill رو بخون ↙</a></div><div class="p2-hero-foot"><span>Local-first</span><span>grill-with-docs</span><span>Evidence → Prompt → Result</span></div></header>
+<nav class="p3-quick-nav" aria-label="مسیر اجرایی کارگاه"><a href="#inputs"><span>۰۱ · آماده‌سازی</span><strong>واردکردن Handoff</strong></a><a href="#kickoff"><span>۰۲ · مشاوره</span><strong>راه‌اندازی LLM 1</strong></a><a href="#inventory"><span>۰۳ · بررسی</span><strong>Local Agent</strong></a><a href="#roundtrip"><span>۰۴ · ادامه</span><strong>Skills و نتایج</strong></a></nav>
 <details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">راهنمای سریع</span><span class="mobile-toc-chevron" aria-hidden="true">⌄</span></summary><nav class="mobile-toc-links"><a href="#start">راهنمای سریع</a>
-<a href="#setup">آماده‌سازی Skills</a>
 <a href="#inputs">ورودی پروژه</a>
 <a href="#kickoff">پرامپت LLM 1</a>
-<a href="#inventory">دستور بررسی Agent</a>
-<a href="#roundtrip">همراهی مرحله‌ای</a>
-<a href="#finish">Handoff نهایی</a></nav></details>
+<a href="#inventory">بازرسی سورس</a>
+<a href="#setup">آماده‌سازی Skills</a>
+<a href="#roundtrip">اجرای مرحله‌ای</a>
+<a href="#finish">تحویل نهایی</a></nav></details>
 <section class="document-section p2-reading-section" id="start"><div class="p2-section-heading"><span class="p2-section-kicker">شروع / یک اصل مهم</span><h2>دو سشن با دو سطح دسترسی</h2></div>
 <p class="p2-lead"><strong>LLM 1</strong> مشاور مهندسی پرامپته؛ <strong>Coding Agent لوکال</strong> به سورس واقعی و Monorepo دسترسی داره. تو اطلاعات، پیشنهادها و نتایج واقعی رو بین این دو منتقل می‌کنی. این سایت به فایل‌های سیستم تو وصل نیست و هیچ دستوری رو خودش اجرا نمی‌کنه.</p>
 <div class="p2-lane-grid"><div class="p2-lane p2-lane-a"><span class="p2-lane-index">CONVERSATION</span><strong>LLM 1 · Prompt Engineer</strong><span>از Handoff فاز دو و گزارش Agent، درخواست مرحلهٔ بعد رو مهندسی و مسئله را اولویت‌بندی می‌کند.</span></div><div class="p2-lane p2-lane-b"><span class="p2-lane-index">LOCAL EXECUTION</span><strong>Coding Agent · Skills</strong><span>Repo را می‌بیند، grill-with-docs را با فراخوانی خودت اجرا می‌کند و در مراحل مجاز به کد دست می‌زند.</span></div></div>
 <div class="p3-flowline"><span>۱ · انتقال Context</span><b>←</b><span>۲ · بازرسی Local</span><b>←</b><span>۳ · Grill</span><b>←</b><span>۴ · اجرای مرحله‌ای</span></div>
 <p>اول ایمنی و مجوزها را بررسی کن؛ پرامپت بازرسیِ این صفحه عمداً اجازهٔ نصب، اجرا، تغییر فایل یا Commit نمی‌دهد. وقتی خودت نتیجه را تأیید کردی، Agent را وارد اجرای Skills کن.</p></section>
-<section class="document-section p2-reading-section" id="setup"><div class="p2-section-heading"><span class="p2-section-kicker">وابستگی واقعی / Matt Pocock Skills</span><h2>Skills را در Monorepo و Agent خودت آماده کن</h2></div>
-<p>راه نصب باید با Agent انتخابی و نسخهٔ فعلی مخزن Skills سازگار باشه. مستند اصلی <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a> مرجعه. برای استفاده از <code>grill-with-docs</code> دو Skill وابستهٔ <code>grilling</code> و <code>domain-modeling</code> هم لازم‌اند.</p>
-<div class="p3-example-terminal" dir="ltr"><div class="p3-terminal-top"><span></span><span></span><span></span><small>install — review CLI &amp; target agent before running</small></div><pre><code>npx skills add mattpocock/skills --skill=grill-with-docs
-npx skills add mattpocock/skills --skill=grilling
-npx skills add mattpocock/skills --skill=domain-modeling
 
-# in the coding agent, inside the intended repo
-/setup-matt-pocock-skills
-/grill-with-docs</code></pre></div>
-<p>می‌تونی سایر Skillهای مسیر (<code>to-spec</code>، <code>to-tickets</code>، <code>implement</code> و <code>code-review</code>) رو بر اساس کار چندمرحله‌ای نصب کنی. دستور Setup تنظیمات Tracker و مستندات رو می‌سازه؛ خروجی‌هاش رو قبل از Commit بررسی کن. برای Local Markdown لزوماً Tracker آنلاین لازم نیست.</p>
-<div class="p2-check-panel"><h3>پیش از Grill</h3><ul class="p2-checklist">
-<li>کار در ریپازیتوری درست، Branch درست و محل نوشتن مجاز انجام می‌شود.</li>
-<li>وابستگی‌های Skill بارگیری شده‌اند؛ فقط وجود عنوان <code>grill-with-docs</code> کافی نیست.</li>
-<li>بدان که اصطلاحات در <code>GLOSSARY.md</code> و تصمیم‌های بزرگ در <code>docs/adr/</code> نوشته می‌شوند؛ وجود یا نبود ADR را کنترل کن.</li>
-<li>اگر Monorepo چند حوزهٔ مستقل دارد، Setup ممکن است <code>GLOSSARY-MAP.md</code> و گلوسری هر حوزه را مطرح کند.</li>
-<li>اگر Skill پرسش‌ها را یک‌باره پرسید یا هیچ اثر مستندی نداشت، بارگیری Skillهای وابسته و محل اجرا را بررسی کن.</li>
-</ul></div>
-<p class="p2-small-muted">این دستورات راهنمای اجرای دستی‌اند؛ روی این سایت نصب یا اجرا نمی‌شوند. اگر نسخهٔ CLI یا Skill تغییر کرد، راهنمای رسمی همان نسخه اولویت داره.</p></section>
 <section class="document-section p2-reading-section" id="inputs"><div class="p2-section-heading"><span class="p2-section-kicker">ورودی / بدون ارسال به سایت</span><h2>سه ورودی لازم را آماده کن</h2></div>
 <p>این فرم فقط متن پرامپت‌های قابل کپی رو در مرورگر می‌سازه. پیش از انتقال اطلاعات به LLM بیرونی، نام مشتری، دادهٔ شخصی، کلیدها و اطلاعات محرمانه را حذف کن. اگر گزارش هنوز نداریم، فیلد را خالی بگذار؛ LLM اول باید مانع را صریح بگه.</p>
 <div class="p3-inputs">
+<div class="p3-panel-lead"><strong>ورودی‌های LLM اول</strong><span>اطلاعات واقعی یا «نامعلوم» بنویس؛ داده‌ها در این سایت ذخیره نمی‌شوند.</span></div>
 <label for="migration-handoff"><strong>۱. Prototype Handoff و نکات مهم فاز دو</strong><span>ACهای ضروری، مرز Demo و مجوز ساخت</span></label>
 <textarea class="client-request-input" id="migration-handoff" dir="auto" rows="6" placeholder="Project Experience Package / Prototype Handoff ..."></textarea>
 <label for="migration-source"><strong>۲. گزارش سورس پروتوتایپ در Local</strong><span>Snapshot، Revision، وابستگی‌های مشاهده‌شده و نتیجهٔ واقعی اجرا</span></label>
 <textarea class="client-request-input" id="migration-source" dir="auto" rows="5" placeholder="اگر هنوز بازرسی نکرده‌ای، خالی بگذار..."></textarea>
 <label for="migration-target"><strong>۳. قراردادهای Monorepo مقصد</strong><span>Workspaces، Scripts، محدودیت‌ها و بخش‌های نامعلوم</span></label>
 <textarea class="client-request-input" id="migration-target" dir="auto" rows="5" placeholder="ساختار واقعی پروژهٔ مقصد یا شرح آن..."></textarea>
+<div class="p3-input-feedback" id="migration-input-feedback" role="status" aria-live="polite">هنوز متنی وارد نشده؛ برای شروع از Handoff فاز دو استفاده کن.</div>
 </div>
 <div class="p2-inline-note"><strong>مرز شواهد:</strong> اگر فقط اسم Framework یا یک پوشه را حدس زده‌ای، با برچسب «فرضیه» بنویس. پرامپت‌ها برای «فهمیدن» ساخته می‌شوند، نه برای اعلام اینکه پروژه قبلاً بازرسی شده.</div></section>
+
 <section class="document-section p2-reading-section" id="kickoff"><div class="p2-section-heading"><span class="p2-section-kicker">PROMPT / 01</span><h2>LLM 1 را با زمینهٔ واقعی پروژه راه بینداز</h2></div>
 <p>این پرامپت رو در <strong>یک سشن تازهٔ LLM اول</strong> اجرا کن. ابتدا وضعیت ورود و کمبود اطلاعات رو ارزیابی می‌کنه و در صورت مجوز، دستور بازرسی یا Grill مناسب رو پیشنهاد می‌ده. تا وقتی نتیجهٔ Agent نیومده، LLM اول نباید مراحل بعد رو حدس بزنه.</p>
+<div class="p3-prompt-target"><span>مقصد پرامپت</span><strong>گفت‌وگوی LLM اول</strong><small>این متن را مستقیماً به Coding Agent نده.</small></div>
 <div class="prompt-tool"><div class="prompt-preview-top"><div><span class="prompt-label" id="migration-kickoff-label">Kickoff · Prompt Engineering Advisor</span><span class="prompt-preview-subtitle">ورودی‌های سه‌گانه بالا به متن اضافه می‌شوند.</span></div><button type="button" class="copy-prompt-button" id="migration-kickoff-copy">کپی پرامپت LLM اول ⧉</button></div><details class="prompt-details"><summary>متن کامل پرامپت شروع LLM 1</summary><textarea readonly id="migration-kickoff-preview" rows="17" aria-labelledby="migration-kickoff-label" spellcheck="false">تو مشاور «Prompt Engineering for Prototype-to-Monorepo Migration» من هستی. نقش تو طراحی درخواست‌های دقیق و مرحله‌ای برای یک Local Coding Agent دارای Skills مت پوکاک است؛ نه اجرای کد یا جعل مشاهدات سیستم. من توسعه‌دهنده‌ام و دسترسی به پروژه‌های لوکال را مدیریت می‌کنم.
 
 ورودی‌های قابل انتقال:
@@ -81,8 +69,10 @@ npx skills add mattpocock/skills --skill=domain-modeling
 ۱۲. در صورت گزارش پایان، Migration Handoff مستقل با وضعیت واقعی Build/Test/AC، مجوزها، ریسک‌ها و گام مجاز بعدی آماده کن. مهاجرت به Monorepo مساوی Production-readiness نیست.
 
 اول فقط Entry Gate و کفایت اطلاعات Local را بررسی کن. اگر اطلاعات لازم برای اقدام ایمن کافی است، یک «Inspection Brief» برای Local Coding Agent بده. پس از دریافت نتیجهٔ واقعی آن، به فراخوانی grill-with-docs راهنمایی کن. وارد Spec یا پیاده‌سازی خودکار نشو.</textarea></details><p class="prompt-status" id="migration-kickoff-status" role="status" aria-live="polite"></p></div></section>
+
 <section class="document-section p2-reading-section" id="inventory"><div class="p2-section-heading"><span class="p2-section-kicker">PROMPT / LOCAL AGENT</span><h2>قبل از اجرا، یک Inventory فقط-خواندنی بگیر</h2></div>
 <p>این متن برای <strong>Local Coding Agent</strong> است، نه LLM اول. هدفش شناخت واقعی کد بدون اجرای دستورات ناخواسته است. خروجی رو مرور کن و خلاصهٔ مجاز آن را به LLM اول برگردون.</p>
+<div class="p3-prompt-target p3-target-local"><span>مقصد پرامپت</span><strong>Local Coding Agent</strong><small>فقط بازرسی مجاز؛ بدون نصب، اجرا یا تغییر فایل.</small></div>
 <div class="prompt-tool"><div class="prompt-preview-top"><div><span class="prompt-label" id="migration-inventory-label">Read-Only Source &amp; Monorepo Inventory</span><span class="prompt-preview-subtitle">عدم نصب، تغییر فایل، Commit، اجرای سرور یا دسترسی Production</span></div><button type="button" class="copy-prompt-button" id="migration-inventory-copy">کپی دستور بازرسی ⧉</button></div><details class="prompt-details"><summary>متن دستور Coding Agent</summary><textarea readonly id="migration-inventory-preview" rows="15" aria-labelledby="migration-inventory-label" spellcheck="false">ROLE: Local Coding Agent — inspection only.
 PROJECT: migration of a prototype generated with an AI tool into an existing or proposed monorepo.
 
@@ -112,9 +102,29 @@ Report with exact file paths or commit references where possible:
 
 No file-read claim without actually reading it. If a path is hypothetical, call it hypothetical. End with a concise LOCAL READINESS REPORT the developer can share with LLM 1.</textarea></details><p class="prompt-status" id="migration-inventory-status" role="status" aria-live="polite"></p></div>
 <div class="p2-decision"><span class="p2-decision-tag">نکتهٔ عملی</span><p>دستور بازرسی، <strong>جایگزین اجرای واقعی پروتوتایپ</strong> نیست. اجرای Baseline، نصب وابستگی یا اجرای تست فقط بعد از بررسی ایمنی و مجوز جدا انجام می‌شه؛ نتیجهٔ هر اجرا باید مستند به دستور/فایل و مشاهدات واقعی باشد.</p></div></section>
+
+<section class="document-section p2-reading-section" id="setup"><div class="p2-section-heading"><span class="p2-section-kicker">وابستگی واقعی / Matt Pocock Skills</span><h2>Skills را در Monorepo و Agent خودت آماده کن</h2></div>
+<p>راه نصب باید با Agent انتخابی و نسخهٔ فعلی مخزن Skills سازگار باشه. مستند اصلی <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a> مرجعه. برای استفاده از <code>grill-with-docs</code> دو Skill وابستهٔ <code>grilling</code> و <code>domain-modeling</code> هم لازم‌اند.</p>
+<div class="p3-example-terminal" dir="ltr"><div class="p3-terminal-top"><span></span><span></span><span></span><small>install — review CLI &amp; target agent before running</small></div><pre><code>npx skills add mattpocock/skills --skill=grill-with-docs
+npx skills add mattpocock/skills --skill=grilling
+npx skills add mattpocock/skills --skill=domain-modeling
+
+# in the coding agent, inside the intended repo
+/setup-matt-pocock-skills
+/grill-with-docs</code></pre></div>
+<p>می‌تونی سایر Skillهای مسیر (<code>to-spec</code>، <code>to-tickets</code>، <code>implement</code> و <code>code-review</code>) رو بر اساس کار چندمرحله‌ای نصب کنی. دستور Setup تنظیمات Tracker و مستندات رو می‌سازه؛ خروجی‌هاش رو قبل از Commit بررسی کن. برای Local Markdown لزوماً Tracker آنلاین لازم نیست.</p>
+<div class="p2-check-panel"><h3>پیش از Grill</h3><ul class="p2-checklist">
+<li>کار در ریپازیتوری درست، Branch درست و محل نوشتن مجاز انجام می‌شود.</li>
+<li>وابستگی‌های Skill بارگیری شده‌اند؛ فقط وجود عنوان <code>grill-with-docs</code> کافی نیست.</li>
+<li>بدان که اصطلاحات در <code>GLOSSARY.md</code> و تصمیم‌های بزرگ در <code>docs/adr/</code> نوشته می‌شوند؛ وجود یا نبود ADR را کنترل کن.</li>
+<li>اگر Monorepo چند حوزهٔ مستقل دارد، Setup ممکن است <code>GLOSSARY-MAP.md</code> و گلوسری هر حوزه را مطرح کند.</li>
+<li>اگر Skill پرسش‌ها را یک‌باره پرسید یا هیچ اثر مستندی نداشت، بارگیری Skillهای وابسته و محل اجرا را بررسی کن.</li>
+</ul></div>
+<p class="p2-small-muted">این دستورات راهنمای اجرای دستی‌اند؛ روی این سایت نصب یا اجرا نمی‌شوند. اگر نسخهٔ CLI یا Skill تغییر کرد، راهنمای رسمی همان نسخه اولویت داره.</p></section>
+
 <section class="document-section p2-reading-section" id="roundtrip"><div class="p2-section-heading"><span class="p2-section-kicker">PROMPT / STEPS</span><h2>بعد از هر نتیجهٔ Agent، پرامپت مرحلهٔ بعد رو بساز</h2></div>
 <p>LLM اول رو در <strong>همان سشن Kickoff</strong> نگه دار. گزارش واقعیِ Local Agent رو وارد کن، مرحلهٔ فعلی رو انتخاب کن و درخواست مرحلهٔ بعد رو بساز. این درخواست به LLM اول می‌ره تا دستور هدفمند برای Agent تولید کنه؛ خودش Skill رو اجرا نمی‌کنه.</p>
-<div class="p3-inputs"><label for="migration-stage"><strong>مرحلهٔ جاری</strong><span>فقط مرحله‌ای که واقعاً به آن رسیده‌ای</span></label>
+<div class="p3-inputs p3-stage-form"><label for="migration-stage"><strong>مرحلهٔ جاری</strong><span>فقط مرحله‌ای که واقعاً به آن رسیده‌ای</span></label>
 <select id="migration-stage" class="p3-select">
 <option value="readiness">بازبینی گزارش Local</option>
 <option value="grill">Grill with Docs</option>
@@ -123,7 +133,9 @@ No file-read claim without actually reading it. If a path is hypothetical, call 
 <option value="implement">Implement</option>
 <option value="review">Review & Gate</option>
 </select>
+<div class="p3-stage-guidance" id="migration-stage-guidance" aria-live="polite"><strong id="migration-stage-goal">هدف مرحلهٔ انتخابی</strong><p id="migration-stage-gate">ملاحظات و شرط عبور مرحله پس از انتخاب نمایش داده می‌شوند.</p></div>
 <label for="migration-result"><strong>گزارش واقعی مرحلهٔ قبل</strong><span>مشاهده، فایل‌ها، خطا، Diff، خروجی تست یا سؤال‌های باز؛ بدون Secrets</span></label><textarea class="client-request-input" id="migration-result" dir="auto" rows="7" placeholder="خلاصهٔ قابل ارجاع از خروجی Agent و وضعیت تأیید..."></textarea></div>
+<div class="p3-prompt-target"><span>مقصد پرامپت</span><strong>همان گفت‌وگوی LLM اول</strong><small>با خروجی مرحلهٔ قبلی، دستور تازهٔ Agent را تولید می‌کند.</small></div>
 <div class="prompt-tool"><div class="prompt-preview-top"><div><span class="prompt-label" id="migration-stage-label">Stage Follow-up · LLM 1</span><span class="prompt-preview-subtitle">بر مبنای مرحلهٔ انتخابی و گزارش واردشده</span></div><button type="button" class="copy-prompt-button" id="migration-stage-copy">کپی پرامپت این مرحله ⧉</button></div><details class="prompt-details"><summary>متن پرامپت مرحلهٔ جاری</summary><textarea readonly id="migration-stage-preview" rows="16" aria-labelledby="migration-stage-label" spellcheck="false">این درخواست ادامهٔ سشن «Prompt Engineering Advisor» فاز ۳ است، نه شروع یک پروژهٔ تازه. من مرحلهٔ زیر را انتخاب کرده‌ام. فقط براساس اطلاعات واقعیِ همین سشن و گزارش منتقل‌شده پاسخ بده.
 
 CURRENT STAGE: {{STAGE}}
@@ -148,8 +160,10 @@ STAGE GOAL: {{GOAL}}
 
 در همین نوبت فقط مرحلهٔ انتخابی را پیش ببر.</textarea></details><p class="prompt-status" id="migration-stage-status" role="status" aria-live="polite"></p></div>
 <p>اگر گزارش جدیدی نداری، LLM اول باید فقط اطلاعات لازم رو بخواد، نه اینکه مثلاً قبل از Grill یک Spec بنویسه. <code>/grill-with-docs</code> رو عمداً در Local Agent صدا بزن و وضعیت واقعی <code>GLOSSARY.md</code> و ADRها رو کنترل کن.</p></section>
+
 <section class="document-section p2-reading-section" id="finish"><div class="p2-section-heading"><span class="p2-section-kicker">PROMPT / HANDOFF</span><h2>گزارش پایان مهاجرت را مستند کن</h2></div>
 <p>پس از دریافت Commitها، Diffها، نتایج تست و تصمیم واقعی دربارهٔ پذیرش، پرامپت پایانی رو <strong>در همان سشن LLM اول</strong> اجرا کن. حتی اگر مهاجرت مسدود شده، گزارش واقعیِ وضعیت و دلیل توقف ارزش داره.</p>
+<div class="p3-prompt-target"><span>مقصد پرامپت</span><strong>همان گفت‌وگوی LLM اول</strong><small>پس از بررسی شواهد، برای خروجی Migration Handoff.</small></div>
 <div class="prompt-tool"><div class="prompt-preview-top"><div><span class="prompt-label" id="migration-finish-label">Migration Review &amp; Handoff</span><span class="prompt-preview-subtitle">گزارش سناریوها، تصمیم‌ها و گام مجاز بعدی</span></div><button type="button" class="copy-prompt-button" id="migration-finish-copy">کپی پرامپت Handoff ⧉</button></div><details class="prompt-details"><summary>متن کامل پرامپت خروجی</summary><textarea readonly id="migration-finish-preview" rows="14" aria-labelledby="migration-finish-label" spellcheck="false">در همان سشن LLM 1 فاز ۳، «Migration Review &amp; Handoff» را فقط از شواهد ارائه‌شده تهیه کن. اگر هنوز واقعاً مهاجرت یا تست انجام نشده، خروجی را Draft / Blocked معرفی کن.
 
 بخش‌های خروجی:
@@ -165,11 +179,11 @@ G) Migration Handoff مستقل برای سشن بعد: نسخهٔ سورس و �
 <div class="p2-inline-note"><strong>شرط پایان:</strong> خروجی این مرحله «کد قابل اجرا در Monorepo با شواهد» است، نه تأیید امنیت Production. نتیجهٔ تست‌های انجام‌نشده را Not Tested ثبت کن.</div></section>
 <nav class="doc-pagination" aria-label="جابه‌جایی"><a href="../phase-3.html"><span>راهنمای این فاز</span><strong>← مهاجرت به Monorepo</strong></a><a href="#finish"><span>پایان همین فاز</span><strong>Migration Handoff ←</strong></a></nav></article>
 <aside class="toc" aria-label="فهرست صفحه"><nav class="toc-sticky"><div class="toc-header"><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#start">راهنمای سریع</a>
-<a href="#setup">آماده‌سازی Skills</a>
 <a href="#inputs">ورودی پروژه</a>
 <a href="#kickoff">پرامپت LLM 1</a>
-<a href="#inventory">دستور بررسی Agent</a>
-<a href="#roundtrip">همراهی مرحله‌ای</a>
-<a href="#finish">Handoff نهایی</a></div><a class="toc-shortcut" href="#inputs">شروع با Handoff ←</a></nav></aside></div>
+<a href="#inventory">بازرسی سورس</a>
+<a href="#setup">آماده‌سازی Skills</a>
+<a href="#roundtrip">اجرای مرحله‌ای</a>
+<a href="#finish">تحویل نهایی</a></div><a class="toc-shortcut" href="#inputs">شروع با Handoff ←</a></nav></aside></div>
 <footer class="footer"><span>Prompt Engineering · Local Agent · Migration Gate</span><span><a href="../phase-3.html">آموزش فاز سه</a></span></footer></div></main></div>
 <script src="../../assets/migration-prompt.js" defer></script><script src="../../assets/phase-0-navigation.js" defer></script></body></html>

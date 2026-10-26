@@ -20,15 +20,12 @@ assets/
   phase-1-prompt.js        آماده‌سازی و کپی دو پرامپت فاز یک
   phase-2-prompt.js        دو پرامپت طراحی محصول در LLM اول
   prototyping-prompt.js    آماده‌سازی پرامپت پایه + Playbook برای LLM دوم
-  migration-prompt.js      پرامپت‌های LLM 1، بررسی Local و مراحل Skills فاز سه
   phase-0-navigation.js    ناوبری هوشمند فهرست در صفحات فازها
   favicon.svg              آیکون سایت
 phases/
   phase-0.html             فاز صفر: Project Intake & Opportunity Framing
   phase-1.html             فاز یک: Adaptive Product Discovery
   phase-2.html             فاز دو: Product Design & Prototyping
-  phase-3.html             فاز سه: AI Prototype to Monorepo Migration
-  migration/               کارگاه LLM 1 و Local Coding Agent
   prototyping/             مرکز پروتوتایپ و Playbook ابزارها
 .nojekyll                  انتشار مستقیم فایل‌های ایستا
 ```
@@ -62,7 +59,7 @@ https://h3nrzi.github.io/workflow/
 
 بعد از طراحی و تأیید هر فاز، صفحهٔ جدیدی مانند `phases/phase-1.html` بسازید، از ساختار صفحهٔ فاز صفر پیروی کنید و لینک آن را در منوی صفحهٔ اصلی و صفحات فازها فعال کنید. هر فاز باید حداقل هدف، نقش‌ها، ورودی‌ها، فعالیت‌ها، پترن‌ها، آنتی‌پترن‌ها، خروجی‌ها و Exit Gate داشته باشد.
 
-فازهای صفر تا سه منتشر شده‌اند. فازهای بعدی پس از طراحی و تأیید تکمیل می‌شوند.
+فاز یک با معماری Adaptive Discovery منتشر شده است. فازهای بعدی همچنان پس از تأیید طراحی خواهند شد.
 
 ## اجرای مستقیم پرامپت فاز صفر
 
@@ -133,15 +130,3 @@ https://h3nrzi.github.io/workflow/
 - **Prototype Gate:** هر سناریو Passed / Failed / Blocked / Not Tested می‌شود؛ خروجی نمونه، نتایج بررسی و Prototype Handoff ثبت می‌شوند. طراحی، ساخت نمونه، هزینه، دسترسی و ورود به Production مجوزهای مستقل دارند.
 
 برای نمونه‌های ساخته‌شده با Replit یا ابزارهای مشابه، تولید کد فرانت‌اند مساوی آمادگی تولید یا مجوز انتشار نیست.
-
-
-## فاز سه: مهاجرت سورس پروتوتایپ به Monorepo
-
-در `phases/phase-3.html` روش **Preserve Before Refactor** پیاده شده است: ابتدا سورس واقعی ابزار AI با بررسی ایمنی، Snapshot و Baseline شناخته می‌شود و سپس تحت هدایت LLM اول و Local Coding Agent به Monorepo واقعی منتقل می‌شود.
-
-مسیر اصلی: Local Readiness → `/grill-with-docs` → (در صورت چندسشنی بودن، `/to-spec` و `/to-tickets`) → `/implement` برای هر Ticket → `/code-review` و Migration Gate. در کار کوچک، Spec/Tickets الزام ندارند.
-
-- **LLM 1:** در `phases/migration/index.html` Prompt Engineering Advisor است؛ با Handoff فاز دو و گزارش واقعی Agent، دستور مرحلهٔ جاری را آماده می‌کند. دسترسی خودکار به کد لوکال ندارد.
-- **Local Agent:** سورس واقعی را بررسی می‌کند؛ بازرسی اولیه فقط-خواندنی است. نصب وابستگی‌ها، اجرای اسکریپت یا تغییر کد به مجوز و بررسی ایمنی نیاز دارد.
-- **Skills:** `grill-with-docs` به `grilling` و `domain-modeling` وابسته است. واژگان در `GLOSSARY.md`، ADRهای واقعاً واجد شرایط در `docs/adr/` و تنظیمات Tracker در `docs/agents/` ثبت می‌شوند. برای کار چندمرحله‌ای `setup-matt-pocock-skills` ضروری است. [مستند اصلی](https://github.com/mattpocock/skills/blob/main/docs/engineering/grill-with-docs.md).
-- **خروجی:** گزارش Baseline، تصمیم‌ها، Spec/Tickets در صورت نیاز، سورس مهاجرت‌یافته با شواهد تست و Migration Handoff. Build موفق به معنی Production-readiness نیست.
