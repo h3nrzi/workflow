@@ -18,11 +18,15 @@ assets/
   styles.css               استایل مشترک و RTL
   phase-0-prompt.js        آماده‌سازی و کپی پرامپت فاز صفر
   phase-1-prompt.js        آماده‌سازی و کپی دو پرامپت فاز یک
+  phase-2-prompt.js        دو پرامپت طراحی محصول در LLM اول
+  prototyping-prompt.js    آماده‌سازی پرامپت پایه + Playbook برای LLM دوم
   phase-0-navigation.js    ناوبری هوشمند فهرست در صفحات فازها
   favicon.svg              آیکون سایت
 phases/
   phase-0.html             فاز صفر: Project Intake & Opportunity Framing
   phase-1.html             فاز یک: Adaptive Product Discovery
+  phase-2.html             فاز دو: Product Design & Prototyping
+  prototyping/             مرکز پروتوتایپ و Playbook ابزارها
 .nojekyll                  انتشار مستقیم فایل‌های ایستا
 ```
 
@@ -107,3 +111,16 @@ https://h3nrzi.github.io/workflow/
 5. **Exit Gate:** خروجی‌ها پیش‌نویس هستند؛ عبور به مرحلهٔ بعد تنها برای گام صریحاً مورد تأیید مشتری مجاز است. تفکیک شواهد کاربران واقعی از فرضیات و شبیه‌سازی الزامی است.
 
 ابزار کپی در مرورگر اجرا می‌شود و داده‌ها را به سرور ارسال یا ذخیره نمی‌کند. استفاده از LLM بیرونی تابع ملاحظات محرمانگی پروژه است.
+
+
+## فاز دو: طراحی محصول و پروتوتایپ
+
+فاز دو در `phases/phase-2.html` طراحی مستقل از ابزار را با ساخت و ارزیابی نمونه در یک فاز ادغام می‌کند، اما دو LLM و دو کنترل کیفیت دارد.
+
+- **LLM 1** با Project Handoff فاز یک، در صورت وجود مجوز طراحی، گفت‌وگوی UX را پیش می‌برد. پرامپت ۱ سند نهایی تولید نمی‌کند؛ پس از Design Understanding Gate، پرامپت ۲ در همان سشن یک Product Experience Package شش‌بخشی (A تا F) تولید می‌کند.
+- **قرارداد انتقال:** Blueprint، User Flows & Screen Map، Interaction Specification، Visual Direction & Optional Wireframes، Acceptance Scenarios و Prototyping Handoff. شناسه‌های FLOW/SCREEN/INT/AC برای ارجاع دقیق حفظ می‌شوند.
+- **LLM 2** در `phases/prototyping/index.html` بستهٔ A تا F، پرامپت پایهٔ مشترک و Playbook ابزار منتخب را دریافت می‌کند. تولید پرامپت محصول‌محور فقط آغاز کار است؛ این دستیار چرخهٔ Build → Inspect → Refine → Accept/Stop را با شواهد واقعی دنبال می‌کند.
+- **Replit:** مسیر نخست بر پایهٔ تجربهٔ اولیهٔ TaskFlow و با وضعیت «Experimental» ارائه می‌شود؛ قواعد اثبات‌نشده نتیجهٔ قطعی نیستند. ابزارهای دیگر تا زمان آزمایش، Playbook اجرایی معتبر ندارند.
+- **Prototype Gate:** هر سناریو Passed / Failed / Blocked / Not Tested می‌شود؛ خروجی نمونه، نتایج بررسی و Prototype Handoff ثبت می‌شوند. طراحی، ساخت نمونه، هزینه، دسترسی و ورود به Production مجوزهای مستقل دارند.
+
+برای نمونه‌های ساخته‌شده با Replit یا ابزارهای مشابه، تولید کد فرانت‌اند مساوی آمادگی تولید یا مجوز انتشار نیست.
