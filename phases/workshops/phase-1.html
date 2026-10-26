@@ -3,35 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#244ed8">
+  <meta name="theme-color" content="#7e22ce">
   <meta name="description" content="فاز یک ورک‌فلو: کشف محصول تطبیقی با مشاورهٔ LLM، شواهد واقعی کاربران، Understanding Gate و بستهٔ تحویل.">
   <title>کارگاه اجرایی فاز 1 | ورک‌فلو</title>
-  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/styles.css?v=brand-1">
+  <link rel="stylesheet" href="../../assets/themes.css">
 </head>
-<body>
+<body data-page="workshop-1" data-page-kind="subpage">
   <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
   <div class="site">
     <aside class="sidebar" aria-label="ناوبری اصلی">
-      <a class="brand" href="../../" aria-label="صفحهٔ اصلی راهنمای ورک‌فلو">
-        <span class="brand-mark" aria-hidden="true">و</span><span><strong>ورک‌فلو</strong><small>راهنمای توسعهٔ نرم‌افزار</small></span>
-      </a>
+      <a class="brand" href="../../" aria-label="صفحهٔ اصلی راهنمای ورک‌فلو"><img class="brand-logo" src="../../assets/brand/workflow-logo.svg" alt="ورک‌فلو" width="230" height="80" decoding="async"></a>
       <div class="sidebar-inner">
         <div class="navigation-label">شروع</div>
         <nav class="navigation" aria-label="فصل‌های راهنما">
-          <a href="../../"><span class="nav-dot"></span>نمای کلی</a>
-          <a href="../phase-0.html"><span class="nav-number">۰۰</span>دریافت و صورت‌بندی مسئله</a>
-<a class="nav-child" href="../workshops/phase-0.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه صورت‌بندی</a>
-          <a href="../phase-1.html" ><span class="nav-number">۰۱</span>کشف محصول تطبیقی</a>
-<a class="nav-child" href="../workshops/phase-1.html" aria-current="page"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه کشف محصول</a>
-          <a href="../phase-2.html"><span class="nav-number">۰۲</span>طراحی و پروتوتایپ</a>
-<a class="nav-child" href="../workshops/phase-2.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه طراحی</a>
-<a class="nav-child" href="../prototyping/index.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه پروتوتایپ</a>
-          <a href="../phase-3.html"><span class="nav-number">۰۳</span>مهاجرت به Monorepo</a>
-<a class="nav-child" href="../migration/index.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه مهاجرت</a>
+          <a href="../../"><svg viewBox="0 0 24 24" class="icon nav-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#home"></use></svg>نمای کلی</a>
+          <a href="../phase-0.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#message"></use></svg><span class="nav-phase-number">۰۰</span></span>دریافت و صورت‌بندی مسئله</a>
+<a class="nav-child" href="phase-0.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#message"></use></svg>کارگاه صورت‌بندی</a>
+          <a href="../phase-1.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#search"></use></svg><span class="nav-phase-number">۰۱</span></span>کشف محصول تطبیقی</a>
+<a class="nav-child" href="phase-1.html" aria-current="page"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#search"></use></svg>کارگاه کشف محصول</a>
+          <a href="../phase-2.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#pen"></use></svg><span class="nav-phase-number">۰۲</span></span>طراحی و پروتوتایپ</a>
+<a class="nav-child" href="phase-2.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#pen"></use></svg>کارگاه طراحی</a>
+<a class="nav-child" href="../prototyping/index.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#panels"></use></svg>کارگاه پروتوتایپ</a>
+          <a href="../phase-3.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#branch"></use></svg><span class="nav-phase-number">۰۳</span></span>مهاجرت به Monorepo</a>
+<a class="nav-child" href="../migration/index.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#branch"></use></svg>کارگاه مهاجرت</a>
         </nav>
         <div class="navigation-label muted-label">مراحل آینده</div>
         <nav class="navigation" aria-label="فازهای آینده">
@@ -45,38 +44,38 @@
         </nav>
         <div class="sidebar-bottom">
           <span class="sidebar-status"><span class="status-light"></span> سند زنده و در حال توسعه</span>
-          <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#external"></use></svg></span></a>
         </div>
       </div>
     </aside>
     <main id="content" class="main">
       <div class="content-container">
         <header class="topbar">
-          <span class="breadcrumb"><a href="../../">مستندات</a><span class="slash">/</span><strong>فاز یک</strong></span>
-          <a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/workshops/phase-1.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <span aria-hidden="true">↗</span></a>
+          <span class="breadcrumb"><a href="../../">مستندات</a><span class="slash">/</span><strong>کارگاه کشف محصول</strong></span>
+          <a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/workshops/phase-1.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#external"></use></svg></span></a>
         </header>
+        <details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست کارگاه</span><span class="mobile-toc-current" id="mobile-toc-current">ورودی و پرامپت مشاور</span><span class="mobile-toc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#chevron"></use></svg></span></summary><nav class="mobile-toc-links" aria-label="بخش‌های کارگاه"><a href="#prompt-tool">ورودی و پرامپت مشاور</a><a href="#handoff-prompt">پرامپت مستندسازی</a></nav></details>
         <div class="document-layout">
           <article class="document">
-            <header class="doc-header">
-              <span class="doc-kicker"><span class="doc-number">۰۱</span> کشف محصول متناسب با شواهد</span>
-              <h1>کشف محصول تطبیقی</h1>
-              <p class="doc-lead">برای چه کسانی چه مسئله‌ای مهم است، چه شواهدی داریم و کدام فرصت ارزش بررسی بیشتر دارد؟ از فهم مشترک تا تصمیم آگاهانه، بدون پریدن به راه‌حل.</p>
-              <div class="doc-tags"><span>Adaptive Discovery</span><span>Evidence-Driven</span><span>Human Decision</span></div>
-              <a class="doc-primary-link" href="#prompt-tool">رفتن به پرامپت‌های فاز یک <span aria-hidden="true">←</span></a>
-            </header>
+            <header class="subpage-header" aria-labelledby="page-title">
+  <span class="subpage-eyebrow"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#terminal"></use></svg>ابزارهای اجرایی</span>
+  <h1 id="page-title">کارگاه کشف محصول</h1>
+  <p class="doc-lead">بستهٔ تحویل فاز صفر را وارد کن و پس از مشاوره، مستندات کشف محصول را استخراج کن.</p>
+  <nav class="subpage-actions" aria-label="مسیر مرتبط"><a href="../phase-1.html"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-right"></use></svg>بازگشت به آموزش فاز یک</a></nav>
+</header>
             
-            <section class="document-section"><h2>کارگاه اجرایی فاز 1</h2><p>ابزارهای این صفحه مخصوص اجرای پرامپت‌ها هستند. پیش از شروع، <a href="../phase-1.html">آموزش و شرط ورود فاز 1</a> را مطالعه کن.</p></section>
+            <section class="document-section"><h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#terminal"></use></svg></span>کارگاه اجرایی فاز 1</h2><p>ابزارهای این صفحه مخصوص اجرای پرامپت‌ها هستند. پیش از شروع، <a href="../phase-1.html">آموزش و شرط ورود فاز 1</a> را مطالعه کن.</p></section>
 <section class="document-section" id="prompt-tool">
               <div class="prompt-section-heading">
                 <span class="prompt-kicker">اجرای مستقیم فاز یک با LLM</span>
-                <h2>پرامپت‌های مشاوره و مستندسازی</h2>
+                <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#folder"></use></svg></span>پرامپت‌های مشاوره و مستندسازی</h2>
                 <p>ابتدا بستهٔ تحویل فاز صفر را وارد کن. پرامپت اول در یک سشن مستقل فقط مشاوره می‌دهد و به Understanding Gate می‌رسد. سپس پرامپت دوم را در <strong>همان سشن</strong> اجرا کن تا پنج خروجی ساخته شوند.</p>
               </div>
               <div class="prompt-flow" aria-label="ترتیب اجرای فاز یک">
                 <div><span class="prompt-flow-number">۱</span><strong>ورودی فاز صفر</strong><small>Project Handoff</small></div>
-                <span class="prompt-flow-arrow" aria-hidden="true">←</span>
+                <span class="prompt-flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-left"></use></svg></span>
                 <div><span class="prompt-flow-number">۲</span><strong>پرامپت مشاور</strong><small>گفت‌وگو تا فهم مشترک</small></div>
-                <span class="prompt-flow-arrow" aria-hidden="true">←</span>
+                <span class="prompt-flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-left"></use></svg></span>
                 <div><span class="prompt-flow-number">۳</span><strong>پرامپت مستندساز</strong><small>پنج خروجی و بستهٔ تحویل</small></div>
               </div>
               <div class="prompt-tool">
@@ -88,10 +87,10 @@
                     <span class="prompt-label" id="phase-one-advisor-label">پرامپت ۱ · مشاور کشف محصول</span>
                     <span class="prompt-preview-subtitle">فقط سؤال، تحلیل و رفع ابهام؛ بدون تولید مستندات یا تعهد به اجرا.</span>
                   </div>
-                  <button type="button" class="copy-prompt-button" id="phase-one-advisor-copy">کپی پرامپت مشاور <span aria-hidden="true">⧉</span></button>
+                  <button type="button" class="copy-prompt-button" id="phase-one-advisor-copy">کپی پرامپت مشاور <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#copy"></use></svg></span></button>
                 </div>
                 <details class="prompt-details">
-                  <summary>مشاهده و بررسی پرامپت مشاور</summary>
+                  <summary><svg viewBox="0 0 24 24" class="icon disclosure-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#chevron"></use></svg>مشاهده و بررسی پرامپت مشاور</summary>
                   <textarea readonly id="phase-one-advisor-preview" rows="17" spellcheck="false" aria-labelledby="phase-one-advisor-label">تو «مشاور کشف محصول» من هستی. من توسعه‌دهندهٔ پروژه‌ام و با مشتری و در صورت امکان کاربران واقعی ارتباط برقرار می‌کنم. به من کمک کن براساس Project Handoff فاز صفر، دربارهٔ کاربران، مسئله و ارزش احتمالی محصول به درک مشترک برسیم. وظیفهٔ این پرامپت فقط گفت‌وگو و هدایت بررسی است؛ هیچ سند نهایی تولید نکن.
 
 ورودی فاز صفر:
@@ -149,10 +148,10 @@
                     <span class="prompt-label" id="phase-one-docs-label">پرامپت مستندسازی فاز یک</span>
                     <span class="prompt-preview-subtitle">A تا E؛ بخش E مستقل و قابل انتقال به سشن بعدی است.</span>
                   </div>
-                  <button type="button" class="copy-prompt-button" id="phase-one-docs-copy">کپی پرامپت مستندسازی <span aria-hidden="true">⧉</span></button>
+                  <button type="button" class="copy-prompt-button" id="phase-one-docs-copy">کپی پرامپت مستندسازی <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#copy"></use></svg></span></button>
                 </div>
                 <details class="prompt-details">
-                  <summary>مشاهده و بررسی پرامپت مستندسازی</summary>
+                  <summary><svg viewBox="0 0 24 24" class="icon disclosure-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#chevron"></use></svg>مشاهده و بررسی پرامپت مستندسازی</summary>
                   <textarea readonly id="phase-one-docs-preview" rows="17" spellcheck="false" aria-labelledby="phase-one-docs-label">گفت‌وگوی فاز یک (Adaptive Product Discovery) اکنون در وضعیت Shared Understanding Reached، Conditional Understanding یا Blocked / On Hold قرار دارد. از تمام اطلاعات واقعی موجود در همین سشن، پنج خروجی زیر را در یک پاسخ Markdown بساز. سؤال جدید نپرس؛ وارد طراحی، تصمیم‌گیری به‌جای مشتری یا اجرا نشو.
 
 قواعد استخراج:
@@ -204,8 +203,9 @@
                 </ol>
               </div>
             </section>
-            <nav class="doc-pagination"><a href="../phase-1.html">← بازگشت به آموزش فاز 1</a></nav>
+            <nav class="doc-pagination"><a href="../phase-1.html"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-left"></use></svg> بازگشت به آموزش فاز 1</a></nav>
           </article>
+          <aside class="toc" aria-label="فهرست کارگاه"><nav class="toc-sticky" aria-label="بخش‌های کارگاه"><div class="toc-header"><span class="toc-title">در این کارگاه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#prompt-tool">ورودی و پرامپت مشاور</a><a href="#handoff-prompt">پرامپت مستندسازی</a></div><a class="toc-shortcut" href="../phase-1.html">بازگشت به آموزش <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-left"></use></svg></span></a></nav></aside>
           
         </div>
         <footer class="footer"><span>شناخت کاربران · شواهد واقعی · تصمیم آگاهانه</span><span><a href="../../">بازگشت به راهنما</a></span></footer>

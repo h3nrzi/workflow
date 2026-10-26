@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Original Workflow outline icons. Shared 24 × 24 grid; no runtime dependency. -->
+  <symbol id="home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/><path d="M9 7h6"/></symbol>
+  <symbol id="message" viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H8l-5 3 1-7a8 8 0 0 1-1-4 8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z"/><path d="M8 9h8M8 13h5"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 5 5M7 10.5h7M10.5 7v7"/></symbol>
+  <symbol id="pen" viewBox="0 0 24 24"><path d="m15 3 6 6-10 10-8 2 2-8ZM12 6l6 6M5 13l6 6M3 21l5-5"/></symbol>
+  <symbol id="panels" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12M6 6h.01M9 6h.01M12 13h6M12 17h4"/></symbol>
+  <symbol id="branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M6 7v10M18 7v2a6 6 0 0 1-6 6H6"/></symbol>
+  <symbol id="file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8ZM14 3v5h5M8 12h8M8 16h6"/></symbol>
+  <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
+  <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+  <symbol id="arrow-up-left" viewBox="0 0 24 24"><path d="M18 18 6 6M6 16V6h10"/></symbol>
+  <symbol id="external" viewBox="0 0 24 24"><path d="M14 3h7v7M21 3 11 13M10 5H4v16h16v-6"/></symbol>
+  <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+  <symbol id="sparkles" viewBox="0 0 24 24"><path d="m10 3 2.2 6.8L19 12l-6.8 2.2L10 21l-2.2-6.8L1 12l6.8-2.2ZM20 2v6M17 5h6"/></symbol>
+  <symbol id="chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h11M4 18h16"/></symbol>
+  <symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 4v3"/></symbol>
+  <symbol id="route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h9a4 4 0 0 1 0 8H8a3 3 0 0 0 0 6h9"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="clipboard" viewBox="0 0 24 24"><path d="M8 5H4v16h16V5h-4"/><rect x="8" y="2" width="8" height="5" rx="2"/><path d="m7 12 1 1 2-2M13 12h4m-10 5 1 1 2-2M13 17h4"/></symbol>
+  <symbol id="flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-6 10a1.3 1.3 0 0 0 1 2h14a1.3 1.3 0 0 0 1-2L14 9V3M7 14h10M9 18h.01M14 17h.01"/></symbol>
+  <symbol id="rocket" viewBox="0 0 24 24"><path d="M9 15C9 8 15 3 21 3c0 6-5 12-12 12Zm0 0-4-1 2-5 4-1M9 15l1 4 5-2 1-4M6 18l-3 3M3 17l1-1M8 21l1-1"/><circle cx="16" cy="8" r="2"/></symbol>
+  <symbol id="folder" viewBox="0 0 24 24"><path d="M3 7V4h7l3 3h8v14H3ZM3 11h18"/></symbol>
+  <symbol id="compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m16 8-2 6-6 2 2-6ZM12 2v2M12 20v2M2 12h2M20 12h2"/></symbol>
+  <symbol id="code" viewBox="0 0 24 24"><path d="m7 6-5 6 5 6m10-12 5 6-5 6M14 3l-4 18"/></symbol>
+  <symbol id="book" viewBox="0 0 24 24"><path d="M12 5C9 3 5 3 2 4v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1ZM12 5v16M5 8h4M5 12h4M15 8h4M15 12h4"/></symbol>
+  <symbol id="terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="m6 8 4 4-4 4M13 16h5"/></symbol>
+</svg>

@@ -3,35 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#244ed8">
+  <meta name="theme-color" content="#9f1239">
   <meta name="description" content="فاز دو ورک‌فلو: طراحی تجربهٔ محصول با LLM، ساخت Product Experience Package و پروتوتایپ با دستیار تخصصی ابزار.">
   <title>کارگاه اجرایی فاز 2 | ورک‌فلو</title>
-  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/styles.css?v=brand-1">
+  <link rel="stylesheet" href="../../assets/themes.css">
 </head>
-<body class="p2 p2-design">
+<body class="p2 p2-design" data-page="workshop-2" data-page-kind="subpage">
   <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
   <div class="site">
     <aside class="sidebar" aria-label="ناوبری اصلی">
-      <a class="brand" href="../../" aria-label="صفحهٔ اصلی راهنمای ورک‌فلو">
-        <span class="brand-mark" aria-hidden="true">و</span><span><strong>ورک‌فلو</strong><small>راهنمای توسعهٔ نرم‌افزار</small></span>
-      </a>
+      <a class="brand" href="../../" aria-label="صفحهٔ اصلی راهنمای ورک‌فلو"><img class="brand-logo" src="../../assets/brand/workflow-logo.svg" alt="ورک‌فلو" width="230" height="80" decoding="async"></a>
       <div class="sidebar-inner">
         <div class="navigation-label">شروع</div>
         <nav class="navigation" aria-label="فصل‌های راهنما">
-          <a href="../../"><span class="nav-dot"></span>نمای کلی</a>
-          <a href="../phase-0.html"><span class="nav-number">۰۰</span>صورت‌بندی مسئله</a>
-<a class="nav-child" href="../workshops/phase-0.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه صورت‌بندی</a>
-          <a href="../phase-1.html"><span class="nav-number">۰۱</span>کشف محصول تطبیقی</a>
-<a class="nav-child" href="../workshops/phase-1.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه کشف محصول</a>
-          <a href="../phase-2.html" ><span class="nav-number">۰۲</span>طراحی و پروتوتایپ</a>
-<a class="nav-child" href="../workshops/phase-2.html" aria-current="page"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه طراحی</a>
-<a class="nav-child" href="../prototyping/index.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه پروتوتایپ</a>
-          <a href="../phase-3.html"><span class="nav-number">۰۳</span>مهاجرت به Monorepo</a>
-<a class="nav-child" href="../migration/index.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه مهاجرت</a>
+          <a href="../../"><svg viewBox="0 0 24 24" class="icon nav-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#home"></use></svg>نمای کلی</a>
+          <a href="../phase-0.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#message"></use></svg><span class="nav-phase-number">۰۰</span></span>دریافت و صورت‌بندی مسئله</a>
+<a class="nav-child" href="phase-0.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#message"></use></svg>کارگاه صورت‌بندی</a>
+          <a href="../phase-1.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#search"></use></svg><span class="nav-phase-number">۰۱</span></span>کشف محصول تطبیقی</a>
+<a class="nav-child" href="phase-1.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#search"></use></svg>کارگاه کشف محصول</a>
+          <a href="../phase-2.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#pen"></use></svg><span class="nav-phase-number">۰۲</span></span>طراحی و پروتوتایپ</a>
+<a class="nav-child" href="phase-2.html" aria-current="page"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#pen"></use></svg>کارگاه طراحی</a>
+<a class="nav-child" href="../prototyping/index.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#panels"></use></svg>کارگاه پروتوتایپ</a>
+          <a href="../phase-3.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#branch"></use></svg><span class="nav-phase-number">۰۳</span></span>مهاجرت به Monorepo</a>
+<a class="nav-child" href="../migration/index.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#branch"></use></svg>کارگاه مهاجرت</a>
         </nav>
         <div class="navigation-label muted-label">مراحل آینده</div>
         <nav class="navigation" aria-label="فازهای آینده">
@@ -44,31 +43,31 @@
         </nav>
         <div class="sidebar-bottom">
           <span class="sidebar-status"><span class="status-light"></span> سند زنده و در حال توسعه</span>
-          <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#external"></use></svg></span></a>
         </div>
       </div>
     </aside>
     <main id="content" class="main"><div class="content-container">
-      <header class="topbar"><span class="breadcrumb"><a href="../../">مستندات</a><span class="slash">/</span><strong>فاز دو</strong></span><a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/workshops/phase-2.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع ↗</a></header>
-      <div class="document-layout">
+      <header class="topbar"><span class="breadcrumb"><a href="../../">مستندات</a><span class="slash">/</span><strong>کارگاه طراحی محصول</strong></span><a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/workshops/phase-2.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#external"></use></svg></a></header>
+      <details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست کارگاه</span><span class="mobile-toc-current" id="mobile-toc-current">ورودی و پرامپت مشاور</span><span class="mobile-toc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#chevron"></use></svg></span></summary><nav class="mobile-toc-links" aria-label="بخش‌های کارگاه"><a href="#prompt-tool">ورودی و پرامپت مشاور</a><a href="#docs-prompt">پرامپت مستندسازی</a></nav></details>
+        <div class="document-layout">
         <article class="document">
-          <header class="doc-header p2-hero">
-  <div class="p2-hero-top"><span class="p2-eyebrow"><span class="p2-spark" aria-hidden="true">✦</span> فاز ۰۲ / راهنمای اجرایی</span><span class="p2-hero-marker">DESIGN → PROTOTYPE</span></div>
-  <h1>از شناخت مسئله،<br><span>تا تجربه‌ای که می‌شود آزمود.</span></h1>
-  <p class="doc-lead">این فاز فقط دربارهٔ طراحی صفحه نیست. با LLM اول مشخص می‌کنی کاربر چه مسیری را طی می‌کند، هر بخش چه رفتاری دارد و «نمونهٔ قابل قبول» یعنی چه. بعد LLM دوم با ابزار انتخابی همان طراحی را به پروتوتایپ تبدیل و ارزیابی می‌کند.</p>
-  <div class="p2-hero-actions"><a class="p2-action-primary" href="#prompt-tool">شروع کار با LLM اول <span aria-hidden="true">↖</span></a><a class="p2-action-quiet" href="../prototyping/index.html">قبلاً طراحی کرده‌ام؛ LLM دوم <span aria-hidden="true">←</span></a></div>
-  <div class="p2-hero-foot"><span>دو دستیار مستقل</span><span>شش سند قابل انتقال</span><span>دو دروازهٔ کنترل کیفیت</span></div>
+          <header class="subpage-header" aria-labelledby="page-title">
+  <span class="subpage-eyebrow"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#terminal"></use></svg>ابزارهای اجرایی</span>
+  <h1 id="page-title">کارگاه طراحی محصول</h1>
+  <p class="doc-lead">بستهٔ تحویل فاز یک را وارد کن و از مشاورهٔ طراحی به بستهٔ تجربهٔ محصول برس.</p>
+  <nav class="subpage-actions" aria-label="مسیر مرتبط"><a href="../phase-2.html"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-right"></use></svg>بازگشت به آموزش فاز دو</a><a href="../prototyping/index.html">کارگاه پروتوتایپ <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-left"></use></svg></a></nav>
 </header>
           
-<section class="document-section"><h2>کارگاه اجرایی فاز 2</h2><p>ابزارهای این صفحه مخصوص اجرای پرامپت‌ها هستند. پیش از شروع، <a href="../phase-2.html">آموزش و شرط ورود فاز 2</a> را مطالعه کن.</p></section>
+<section class="document-section"><h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#terminal"></use></svg></span>کارگاه اجرایی فاز 2</h2><p>ابزارهای این صفحه مخصوص اجرای پرامپت‌ها هستند. پیش از شروع، <a href="../phase-2.html">آموزش و شرط ورود فاز 2</a> را مطالعه کن.</p></section>
 <section class="document-section p2-workbench" id="prompt-tool">
-            <div class="p2-workbench-intro"><span>WORKSPACE / 01</span><strong>کارگاه اجرای پرامپت‌ها</strong><small>مطالعه کافی است؛ نیازی به نصب یا اتصال حساب نداری. این بخش فقط متن قابل کپی تولید می‌کند.</small></div><div class="prompt-section-heading"><span class="prompt-kicker">LLM 1 · طراحی محصول</span><h2>پرامپت اول — مشاور طراحی</h2><p>Project Handoff فاز یک را وارد کن. مشاور فقط مکالمه و طراحی تعاملی را مدیریت می‌کند؛ اسناد رسمی در پرامپت دوم تولید می‌شوند.</p></div>
+            <div class="p2-workbench-intro"><span>WORKSPACE / 01</span><strong>کارگاه اجرای پرامپت‌ها</strong><small>مطالعه کافی است؛ نیازی به نصب یا اتصال حساب نداری. این بخش فقط متن قابل کپی تولید می‌کند.</small></div><div class="prompt-section-heading"><span class="prompt-kicker">LLM 1 · طراحی محصول</span><h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#pen"></use></svg></span>پرامپت اول — مشاور طراحی</h2><p>Project Handoff فاز یک را وارد کن. مشاور فقط مکالمه و طراحی تعاملی را مدیریت می‌کند؛ اسناد رسمی در پرامپت دوم تولید می‌شوند.</p></div>
             <div class="prompt-tool">
               <label class="prompt-label" for="phase-two-handoff">Project Handoff فاز یک <span>ورودی اصلی</span></label>
               <p class="prompt-hint" id="phase-two-handoff-hint">بخش E فاز یک را اینجا قرار بده؛ اگر ورودی خالی باشد مشاور فقط Handoff را درخواست می‌کند. داده‌ها در سایت ذخیره نمی‌شوند.</p>
               <textarea class="client-request-input" id="phase-two-handoff" aria-describedby="phase-two-handoff-hint" dir="auto" rows="7" placeholder="Project Handoff فاز یک: کاربران، مشکلات، فرصت‌ها، شواهد، مجوزهای واقعی و گام مجاز..."></textarea>
-              <div class="prompt-preview-top"><div><span class="prompt-label" id="phase-two-advisor-label">پرامپت ۱ · Product Experience Designer</span><span class="prompt-preview-subtitle">مشاوره تا Design Gate، بدون سند نهایی.</span></div><button type="button" class="copy-prompt-button" id="phase-two-advisor-copy">کپی پرامپت مشاور <span aria-hidden="true">⧉</span></button></div>
-              <details class="prompt-details"><summary>مشاهده و بررسی متن مشاور</summary><textarea readonly id="phase-two-advisor-preview" rows="17" spellcheck="false" aria-labelledby="phase-two-advisor-label">تو مشاور Product Experience Design من هستی. من توسعه‌دهندهٔ پروژه‌ام و تصمیم‌های واقعی، پاسخ‌های مشتری و شواهد فازهای قبل را منتقل می‌کنم. مأموریت تو همراهی تعاملی برای روشن‌کردن تجربهٔ محصول است؛ نه تولید خودکار مستندات رسمی یا کدنویسی.
+              <div class="prompt-preview-top"><div><span class="prompt-label" id="phase-two-advisor-label">پرامپت ۱ · Product Experience Designer</span><span class="prompt-preview-subtitle">مشاوره تا Design Gate، بدون سند نهایی.</span></div><button type="button" class="copy-prompt-button" id="phase-two-advisor-copy">کپی پرامپت مشاور <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#copy"></use></svg></span></button></div>
+              <details class="prompt-details"><summary><svg viewBox="0 0 24 24" class="icon disclosure-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#chevron"></use></svg>مشاهده و بررسی متن مشاور</summary><textarea readonly id="phase-two-advisor-preview" rows="17" spellcheck="false" aria-labelledby="phase-two-advisor-label">تو مشاور Product Experience Design من هستی. من توسعه‌دهندهٔ پروژه‌ام و تصمیم‌های واقعی، پاسخ‌های مشتری و شواهد فازهای قبل را منتقل می‌کنم. مأموریت تو همراهی تعاملی برای روشن‌کردن تجربهٔ محصول است؛ نه تولید خودکار مستندات رسمی یا کدنویسی.
 
 ورودی از فاز یک:
 &lt;discovery_handoff&gt;
@@ -118,8 +117,8 @@ Design Understanding Gate:
               <span class="prompt-kicker">LLM 1 · همان سشن، پس از Design Gate</span>
               <h3>پرامپت دوم — تولید Product Experience Package</h3>
               <p>پرامپت دوم را بعد از تأیید طراحی یا توقف مشروط <strong>در همان سشن مشاور</strong> اجرا کن تا شش سند از تاریخچهٔ واقعی مکالمه استخراج شود.</p>
-              <div class="prompt-preview-top"><div><span class="prompt-label" id="phase-two-docs-label">پرامپت مستندسازی</span><span class="prompt-preview-subtitle">شش خروجی A تا F؛ مستقل از ابزار.</span></div><button type="button" class="copy-prompt-button" id="phase-two-docs-copy">کپی پرامپت مستندسازی <span aria-hidden="true">⧉</span></button></div>
-              <details class="prompt-details"><summary>مشاهده و بررسی متن مستندساز</summary><textarea readonly id="phase-two-docs-preview" rows="17" spellcheck="false" aria-labelledby="phase-two-docs-label">گفت‌وگوی طراحی فاز دو اکنون به Design Understanding Reached، Conditional Design Understanding یا Design Blocked / On Hold رسیده است. از تمام محتوای همین سشن و Handoff فاز یک، «Product Experience Package» را در شش بخش Markdown بساز. سؤال تازه نپرس و به جای مشتری تصمیم نگیر.
+              <div class="prompt-preview-top"><div><span class="prompt-label" id="phase-two-docs-label">پرامپت مستندسازی</span><span class="prompt-preview-subtitle">شش خروجی A تا F؛ مستقل از ابزار.</span></div><button type="button" class="copy-prompt-button" id="phase-two-docs-copy">کپی پرامپت مستندسازی <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#copy"></use></svg></span></button></div>
+              <details class="prompt-details"><summary><svg viewBox="0 0 24 24" class="icon disclosure-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#chevron"></use></svg>مشاهده و بررسی متن مستندساز</summary><textarea readonly id="phase-two-docs-preview" rows="17" spellcheck="false" aria-labelledby="phase-two-docs-label">گفت‌وگوی طراحی فاز دو اکنون به Design Understanding Reached، Conditional Design Understanding یا Design Blocked / On Hold رسیده است. از تمام محتوای همین سشن و Handoff فاز یک، «Product Experience Package» را در شش بخش Markdown بساز. سؤال تازه نپرس و به جای مشتری تصمیم نگیر.
 
 قواعد:
 - آخرین توافق‌ها و اصلاحات معتبر را لحاظ کن. هر تصمیم مهم را با منبع [تأیید مشتری]، [تأیید توسعه‌دهنده]، [شاهد کاربر/مستند]، [پیشنهاد طراحی]، [فرضیه] یا [نامعلوم] مشخص کن.
@@ -163,8 +162,9 @@ Design Understanding Gate:
             </div>
             <div class="prompt-after"><h3>مراحل استفاده</h3><ol><li>Project Handoff فاز یک را وارد و پرامپت ۱ را در سشن LLM اول اجرا کن.</li><li>Design Gate را تأیید یا موارد باز و توقف را روشن کن.</li><li>پرامپت ۲ را در همان سشن اجرا و بستهٔ A تا F را بررسی کن.</li><li>اگر ساخت نمونه مجاز است، بسته را به <a href="../prototyping/index.html">LLM 2 در مرکز پروتوتایپ</a> منتقل کن.</li></ol></div>
           </section>
-          <nav class="doc-pagination"><a href="../phase-2.html">← بازگشت به آموزش فاز 2</a></nav>
+          <nav class="doc-pagination"><a href="../phase-2.html"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-left"></use></svg> بازگشت به آموزش فاز 2</a></nav>
         </article>
+          <aside class="toc" aria-label="فهرست کارگاه"><nav class="toc-sticky" aria-label="بخش‌های کارگاه"><div class="toc-header"><span class="toc-title">در این کارگاه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#prompt-tool">ورودی و پرامپت مشاور</a><a href="#docs-prompt">پرامپت مستندسازی</a></div><a class="toc-shortcut" href="../phase-2.html">بازگشت به آموزش <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../assets/icons.svg#arrow-left"></use></svg></span></a></nav></aside>
         
       </div>
       <footer class="footer"><span>Product Design · Prototype · Human Decision</span><span><a href="../../">بازگشت به راهنما</a></span></footer>

@@ -3,35 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#244ed8">
+  <meta name="theme-color" content="#6d28d9">
   <meta name="description" content="فاز یک ورک‌فلو: کشف محصول تطبیقی با مشاورهٔ LLM، شواهد واقعی کاربران، Understanding Gate و بستهٔ تحویل.">
   <title>فاز یک: کشف محصول تطبیقی | ورک‌فلو</title>
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/styles.css?v=brand-1">
+  <link rel="stylesheet" href="../assets/themes.css">
 </head>
-<body>
+<body data-page="phase-1" data-page-kind="guide">
   <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
   <div class="site">
     <aside class="sidebar" aria-label="ناوبری اصلی">
-      <a class="brand" href="../" aria-label="صفحهٔ اصلی راهنمای ورک‌فلو">
-        <span class="brand-mark" aria-hidden="true">و</span><span><strong>ورک‌فلو</strong><small>راهنمای توسعهٔ نرم‌افزار</small></span>
-      </a>
+      <a class="brand" href="../" aria-label="صفحهٔ اصلی راهنمای ورک‌فلو"><img class="brand-logo" src="../assets/brand/workflow-logo.svg" alt="ورک‌فلو" width="230" height="80" decoding="async"></a>
       <div class="sidebar-inner">
         <div class="navigation-label">شروع</div>
         <nav class="navigation" aria-label="فصل‌های راهنما">
-          <a href="../"><span class="nav-dot"></span>نمای کلی</a>
-          <a href="phase-0.html"><span class="nav-number">۰۰</span>دریافت و صورت‌بندی مسئله</a>
-<a class="nav-child" href="workshops/phase-0.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه صورت‌بندی</a>
-          <a href="phase-1.html" aria-current="page"><span class="nav-number">۰۱</span>کشف محصول تطبیقی</a>
-<a class="nav-child" href="workshops/phase-1.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه کشف محصول</a>
-          <a href="phase-2.html"><span class="nav-number">۰۲</span>طراحی و پروتوتایپ</a>
-<a class="nav-child" href="workshops/phase-2.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه طراحی</a>
-<a class="nav-child" href="prototyping/index.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه پروتوتایپ</a>
-          <a href="phase-3.html"><span class="nav-number">۰۳</span>مهاجرت به Monorepo</a>
-<a class="nav-child" href="migration/index.html"><span class="nav-child-mark" aria-hidden="true">↳</span>کارگاه مهاجرت</a>
+          <a href="../"><svg viewBox="0 0 24 24" class="icon nav-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#home"></use></svg>نمای کلی</a>
+          <a href="phase-0.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#message"></use></svg><span class="nav-phase-number">۰۰</span></span>دریافت و صورت‌بندی مسئله</a>
+<a class="nav-child" href="workshops/phase-0.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#message"></use></svg>کارگاه صورت‌بندی</a>
+          <a href="phase-1.html" aria-current="page"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#search"></use></svg><span class="nav-phase-number">۰۱</span></span>کشف محصول تطبیقی</a>
+<a class="nav-child" href="workshops/phase-1.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#search"></use></svg>کارگاه کشف محصول</a>
+          <a href="phase-2.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#pen"></use></svg><span class="nav-phase-number">۰۲</span></span>طراحی و پروتوتایپ</a>
+<a class="nav-child" href="workshops/phase-2.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#pen"></use></svg>کارگاه طراحی</a>
+<a class="nav-child" href="prototyping/index.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#panels"></use></svg>کارگاه پروتوتایپ</a>
+          <a href="phase-3.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#branch"></use></svg><span class="nav-phase-number">۰۳</span></span>مهاجرت به Monorepo</a>
+<a class="nav-child" href="migration/index.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#branch"></use></svg>کارگاه مهاجرت</a>
         </nav>
         <div class="navigation-label muted-label">مراحل آینده</div>
         <nav class="navigation" aria-label="فازهای آینده">
@@ -45,7 +44,7 @@
         </nav>
         <div class="sidebar-bottom">
           <span class="sidebar-status"><span class="status-light"></span> سند زنده و در حال توسعه</span>
-          <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#external"></use></svg></span></a>
         </div>
       </div>
     </aside>
@@ -53,22 +52,22 @@
       <div class="content-container">
         <header class="topbar">
           <span class="breadcrumb"><a href="../">مستندات</a><span class="slash">/</span><strong>فاز یک</strong></span>
-          <a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-1.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <span aria-hidden="true">↗</span></a>
+          <a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-1.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#external"></use></svg></span></a>
         </header>
         <div class="document-layout">
           <article class="document">
-            <header class="doc-header">
+            <header class="doc-header page-hero" aria-labelledby="page-title">
               <span class="doc-kicker"><span class="doc-number">۰۱</span> کشف محصول متناسب با شواهد</span>
-              <h1>کشف محصول تطبیقی</h1>
+              <h1 id="page-title">کشف محصول تطبیقی</h1>
               <p class="doc-lead">برای چه کسانی چه مسئله‌ای مهم است، چه شواهدی داریم و کدام فرصت ارزش بررسی بیشتر دارد؟ از فهم مشترک تا تصمیم آگاهانه، بدون پریدن به راه‌حل.</p>
               <div class="doc-tags"><span>Adaptive Discovery</span><span>Evidence-Driven</span><span>Human Decision</span></div>
-              <a class="doc-primary-link" href="workshops/phase-1.html">رفتن به پرامپت‌های فاز یک <span aria-hidden="true">←</span></a>
+              <a class="doc-primary-link" href="workshops/phase-1.html">رفتن به پرامپت‌های فاز یک <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></span></a>
             </header>
             <details class="mobile-toc" id="mobile-toc">
               <summary>
                 <span class="mobile-toc-title">فهرست صفحه</span>
                 <span class="mobile-toc-current" id="mobile-toc-current">هدف فاز</span>
-                <span class="mobile-toc-chevron" aria-hidden="true">⌄</span>
+                <span class="mobile-toc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#chevron"></use></svg></span>
               </summary>
               <nav class="mobile-toc-links" aria-label="بخش‌های این صفحه">
                 <a href="#goal">هدف فاز</a>
@@ -84,14 +83,14 @@
               </nav>
             </details>
             <section class="document-section" id="goal">
-              <h2>هدف این فاز</h2>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#target"></use></svg></span>هدف این فاز</h2>
               <p>فاز صفر مسئله و تصمیم‌های اولیه را روشن کرده است. اینجا با توجه به نوع پروژه و سطح عدم‌قطعیت، شناخت کاربران، زمینهٔ استفاده، پیامد مشکلات و کیفیت شواهد را عمیق‌تر می‌کنیم. هدف ساخت پرسونا، لیست فیچر یا طراحی صفحه نیست؛ هدف کاهش عدم‌قطعیتِ تصمیم محصول است.</p>
-              <div class="statement"><span aria-hidden="true">✳</span><p><strong>کشف محصول برای همهٔ پروژه‌ها اجباری نیست.</strong> اگر Project Handoff مسیر فنی دیگری پیشنهاد می‌دهد، ابتدا همان مسیر و مجوز واقعی را روشن می‌کنیم.</p></div>
+              <div class="statement"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#sparkles"></use></svg></span><p><strong>کشف محصول برای همهٔ پروژه‌ها اجباری نیست.</strong> اگر Project Handoff مسیر فنی دیگری پیشنهاد می‌دهد، ابتدا همان مسیر و مجوز واقعی را روشن می‌کنیم.</p></div>
             </section>
             <section class="document-section" id="entry-gate">
-              <h2>شرط ورود (Entry Gate)</h2>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>شرط ورود (Entry Gate)</h2>
               <p>ورودی اصلی، بخش <strong>Project Handoff</strong> فاز صفر است. قبل از هر مصاحبه یا تحلیل تازه، LLM باید نوع پروژه، تصمیم واقعی مشتری و محدودهٔ مجاز بررسی را بخواند.</p>
-              <div class="table-scroll"><table>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
                 <thead><tr><th>وضعیت Handoff</th><th>رفتار مجاز</th></tr></thead>
                 <tbody>
                   <tr><td>کشف محصول صریحاً مجاز است</td><td>با حفظ شروط وارد گفت‌وگوی مشاورهٔ فاز یک شو.</td></tr>
@@ -103,8 +102,8 @@
               <p class="small-note">Shared Understanding فاز صفر به‌تنهایی مجوز انجام پژوهش یا ورود به فاز بعدی نیست.</p>
             </section>
             <section class="document-section" id="roles">
-              <h2>نقش‌ها و مسئولیت‌ها</h2>
-              <div class="table-scroll"><table>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#users"></use></svg></span>نقش‌ها و مسئولیت‌ها</h2>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
                 <thead><tr><th>نقش</th><th>کار اصلی</th><th>مرز اختیار</th></tr></thead>
                 <tbody>
                   <tr><td><strong>LLM · مشاور Discovery</strong></td><td>سؤال‌های ضروری، نقد شواهد، تحلیل ابهام‌ها و روش بررسی فرضیات.</td><td>به جای کاربر پاسخ یا نتیجهٔ پژوهش نمی‌سازد.</td></tr>
@@ -115,7 +114,7 @@
               </table></div>
             </section>
             <section class="document-section" id="activities">
-              <h2>مسیر تطبیقی گفت‌وگو</h2>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#route"></use></svg></span>مسیر تطبیقی گفت‌وگو</h2>
               <p>یک LLM کافی است و مراحل زیر ترتیب خشک ندارند. عمق هر بخش با شواهد موجود، ارزش تصمیم و ریسک اشتباه‌بودن فرضیه تغییر می‌کند.</p>
               <div class="step-stack">
                 <div class="step"><span class="step-num">۰۱</span><div><h3>تشخیص مسیر و عمق کشف</h3><p>محصول جدید یا موجود؟ کاربران و شواهد شناخته‌شده‌اند؟ بررسی محدود مجاز است یا کامل؟</p><div class="step-result">تمرکز فقط روی ابهام‌های مؤثر</div></div></div>
@@ -126,7 +125,7 @@
               <div class="example"><span class="example-title">نمونه</span><p>اگر مشتری «سامانهٔ رزرو آنلاین» می‌خواهد، سؤال بهتر این است: «الان نوبت‌ها چطور مدیریت می‌شوند و کدام مشکل بیشترین اثر را دارد؟» نه اینکه فوراً تقویم و درگاه پرداخت طراحی کنیم.</p></div>
             </section>
             <section class="document-section" id="understanding-gate">
-              <h2>مرز پایان مشاوره (Understanding Gate)</h2>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>مرز پایان مشاوره (Understanding Gate)</h2>
               <p>پرامپت اول وقتی به انتها نزدیک می‌شود که دربارهٔ هفت موضوع زیر یا درک معتبر داریم، یا ابهام مهم و راه بررسی آن مشخص است.</p>
               <ul class="gate-list">
                 <li>گروه‌های کاربران هدف</li>
@@ -137,7 +136,7 @@
                 <li>فرضیات و ریسک‌های حیاتی</li>
                 <li>تصمیم بعدی و مسئول پیگیری</li>
               </ul>
-              <div class="table-scroll"><table>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
                 <thead><tr><th>وضعیت پایان</th><th>معنا</th></tr></thead>
                 <tbody>
                   <tr><td><strong>Shared Understanding Reached</strong></td><td>توسعه‌دهنده برداشت کوتاه مشاور را صریحاً تأیید کرده است؛ نه لزوماً کاربر یا مشتری.</td></tr>
@@ -148,7 +147,7 @@
               <p class="small-note">پرامپت اول هیچ‌کدام از مستندات رسمی را نمی‌سازد. پس از تأیید فهم یا توقف مشروط، پرامپت دوم را در همان سشن اجرا کن.</p>
             </section>
             <section class="document-section" id="deliverables">
-              <h2>پنج خروجی پرامپت دوم</h2>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#folder"></use></svg></span>پنج خروجی پرامپت دوم</h2>
               <div class="deliverable-list">
                 <div><span class="deliverable-letter">A</span><div><h3>User &amp; Problem Insights</h3><p>گروه‌های کاربری، زمینهٔ استفاده، مشکلات واقعی یا فرضی، پیامدها و ارزش مورد انتظار با منابع مشخص.</p></div></div>
                 <div><span class="deliverable-letter">B</span><div><h3>Assumption &amp; Evidence Register</h3><p>ادعاها، شواهد، اعتبار منبع، خطر نادرستی و راه و مسئول بررسی.</p></div></div>
@@ -159,9 +158,9 @@
               <p class="small-note">خروجی‌ها حتی با اطلاعات ناقص می‌توانند «پیش‌نویس» باشند؛ نبود شواهد نباید با پژوهش یا یافتهٔ ساخته‌شده پنهان شود.</p>
             </section>
             <section class="document-section" id="exit-gate">
-              <h2>شرط عبور از فاز یک (Exit Gate)</h2>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>شرط عبور از فاز یک (Exit Gate)</h2>
               <p>پایان گفت‌وگو و تحویل پنج سند به‌تنهایی اجازهٔ طراحی یا ساخت نمی‌دهد. تصمیم واقعی مشتری/نمایندهٔ مجاز دربارهٔ گام بعدی باید روشن و دارای محدوده باشد.</p>
-              <div class="table-scroll"><table>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
                 <thead><tr><th>وضعیت</th><th>گام متناسب</th></tr></thead>
                 <tbody>
                   <tr><td>فهم، شواهد و تصمیم کافی؛ گام بعدی صریحاً تأیید شده</td><td>فقط اقدام بعدیِ تأییدشده، مثلاً آغاز طراحی محصول.</td></tr>
@@ -174,15 +173,15 @@
               <p class="small-note">موافقت با بررسی، توافق مالی، اعطای دسترسی و مجوز شروع اجرا مستقل‌اند. تصمیم Proceed هم فقط برای گام مشخص معتبر است.</p>
             </section>
             <section class="document-section" id="patterns">
-              <h2>پترن‌ها و آنتی‌پترن‌ها</h2>
+              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>پترن‌ها و آنتی‌پترن‌ها</h2>
               <div class="patterns-grid">
-                <div class="pattern-panel good"><div class="panel-heading"><span aria-hidden="true">✓</span><h3>کار درست</h3></div><ul>
+                <div class="pattern-panel good"><div class="panel-heading"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#check"></use></svg></span><h3>کار درست</h3></div><ul>
                   <li><strong>Problem Before Feature:</strong> مسئله و زمینه را قبل از راه‌حل روشن کن.</li>
                   <li><strong>Evidence With Source:</strong> نوع و منبع هر شاهد را مشخص کن.</li>
                   <li><strong>Risk-Based Depth:</strong> عمق بررسی را با ریسک تنظیم کن.</li>
                   <li><strong>Lean Validation:</strong> برای فرضیهٔ مهم، روش بررسی متناسب پیشنهاد بده.</li>
                 </ul></div>
-                <div class="pattern-panel bad"><div class="panel-heading"><span aria-hidden="true">×</span><h3>کار نادرست</h3></div><ul>
+                <div class="pattern-panel bad"><div class="panel-heading"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#close"></use></svg></span><h3>کار نادرست</h3></div><ul>
                   <li><strong>Invented Research:</strong> مصاحبه، پرسونا یا دادهٔ استفاده نساز.</li>
                   <li><strong>Feature Jumping:</strong> زودهنگام فیچر یا UI مشخص نکن.</li>
                   <li><strong>Endless Questions:</strong> سؤال تکراری یا بی‌اثر نپرس.</li>
@@ -190,10 +189,10 @@
                 </ul></div>
               </div>
             </section>
-            <section class="document-section" id="prompt-tool"><h2>کارگاه اجرایی فاز 1</h2><p>آموزش، روش انجام و شرایط عبور در همین صفحه قرار دارند؛ ابزار تولید پرامپت در صفحه‌ای مستقل ارائه می‌شود.</p><p><a class="doc-primary-link" href="workshops/phase-1.html">ورود به کارگاه فاز 1 ←</a></p></section>
+            <section class="document-section" id="prompt-tool"><h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#terminal"></use></svg></span>کارگاه اجرایی فاز 1</h2><p>آموزش، روش انجام و شرایط عبور در همین صفحه قرار دارند؛ ابزار تولید پرامپت در صفحه‌ای مستقل ارائه می‌شود.</p><p><a class="doc-primary-link" href="workshops/phase-1.html">ورود به کارگاه فاز 1 <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></a></p></section>
             <nav class="doc-pagination" aria-label="جابه‌جایی بین فصل‌ها">
-              <a href="phase-0.html"><span>فاز قبل</span><strong>← فاز صفر · صورت‌بندی فرصت</strong></a>
-              <a href="phase-2.html"><span>مرحلهٔ بعد</span><strong>فاز دو · طراحی و پروتوتایپ ←</strong></a>
+              <a href="phase-0.html"><span>فاز قبل</span><strong><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg> فاز صفر · صورت‌بندی فرصت</strong></a>
+              <a href="phase-2.html"><span>مرحلهٔ بعد</span><strong>فاز دو · طراحی و پروتوتایپ <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></strong></a>
             </nav>
           </article>
           <aside class="toc" aria-label="فهرست بخش‌های این صفحه">
@@ -215,7 +214,7 @@
                 <a href="workshops/phase-1.html">پرامپت مشاور</a>
                 <a href="workshops/phase-1.html">پرامپت مستندسازی</a>
               </div>
-              <a class="toc-shortcut" href="workshops/phase-1.html">برو به ابزارهای اجرایی <span aria-hidden="true">←</span></a>
+              <a class="toc-shortcut" href="workshops/phase-1.html">برو به ابزارهای اجرایی <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></span></a>
             </nav>
           </aside>
         </div>

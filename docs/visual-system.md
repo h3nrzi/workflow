@@ -1,12 +1,12 @@
 # Workflow visual system
 
-Implemented 2026-10-25. User evaluation is pending.
+Initial implementation: 2026-10-25. Site-wide UI/UX update: 2026-10-26. User evaluation is pending. See [the hierarchy and palette evaluation](page-hierarchy-evaluation.md) for the latest preflight evidence. Earlier [UI/UX](ui-ux-evaluation.md) and [icon](icon-evaluation.md) checkpoints remain available.
 
-The visual idea is a working route: request → evidence → decision. The homepage introduces that sequence with a cobalt route diagram; the phase guide uses the same visual vocabulary for ordered activities and actions. Persian content stays right aligned, with logical CSS properties where direction matters. The site remains static HTML and CSS with the existing prompt and navigation scripts.
+The visual idea is a working route: request → evidence → decision. The homepage introduces that sequence with a cobalt route diagram; each phase guide has a hero and its own palette, while workshops and tool guides use compact title headers. Persian content stays right aligned, with logical CSS properties where direction matters. The site remains static HTML and CSS with the existing prompt and navigation scripts.
 
 ## Tokens and hierarchy
 
-The source of truth is `assets/styles.css`, in `:root`.
+Shared layout and default tokens live in `assets/styles.css`. Route-specific palettes and hero/header rules live in `assets/themes.css`, loaded after the shared stylesheet. The table below describes the overview defaults; every route sets its own accent, text, surfaces, borders and supporting shades.
 
 | Role | Token | Value |
 | --- | --- | --- |
@@ -17,22 +17,36 @@ The source of truth is `assets/styles.css`, in `:root`.
 | Reading surface | `--paper` | `#FFFFFF` |
 | Boundaries | `--line` | `#D7DFED` |
 
-Vazirmatn serves all text. Body text is 15px; document prose is 14px with 2.15 line height, reducing to 13px on phones. Document section headings are 24px, and the main headings scale with viewport width. Weight 800 is reserved for prominent headings and selected navigation; regular text is 400. Tahoma and sans-serif are fallbacks.
+Vazirmatn serves all text. Body text and document prose are 16px, including on phones, with 2.1 line height for Persian prose. Compact cards and supporting labels use 12–15px. Editable fields and selectors use 16px. Document section headings are 24px, and the main headings scale with viewport width. Weight 800 is reserved for prominent headings and selected navigation; regular text is 400. Tahoma and sans-serif are fallbacks.
 
 Spacing uses a 4px base with 8, 12, 16, 20, 24, 28, 32, and larger reading gaps. Small controls use 6px corners; work areas use 10px. The distinctive brand shape has alternating 16px and 5px corners. Ordinary reading sections do not need their own containers or shadows.
 
-Color has a job: cobalt means action or current position; green and rose distinguish recommended and discouraged practices; amber identifies examples and cautions. Text labels accompany these states. Future phases remain clearly labeled as unavailable.
+Color has a job: the current page’s accent marks actions and location; green and rose distinguish recommended and discouraged practices; amber identifies examples and cautions. Text labels accompany these states. Future phases remain clearly labeled as unavailable.
+
+## Page hierarchy and palettes
+
+The overview and phase-zero through phase-three guides each have one `.page-hero`. All seven workshops/tool subpages have a `.subpage-header` and no hero. The 404 utility retains its standalone `.error-hero` with recovery content. Each route has a `data-page` palette; prototyping shares phase two’s rose palette and the migration workshop shares phase three’s amber palette. These pairs use grouped selectors so their full token sets stay synchronized. `data-page-kind` records each route’s place in the hierarchy. See [the palette table and evaluation checkpoints](page-hierarchy-evaluation.md). Status meanings remain consistent across palettes.
+
+## Site logo
+
+Every brand link displays the approved outlined Persian wordmark and flow mark as a single local SVG image, with alt text and an accessible homepage link. The image has explicit dimensions to reserve its aspect ratio; CSS displays it at 220px on desktop and 180px below 900px. Versioned stylesheet and favicon URLs prevent cached old branding from surviving a normal refresh. See [brand assets and integration evaluation](../assets/brand/README.md).
+
+## Icons
+
+The original Workflow outline set lives in `assets/icons.svg`: 30 reusable symbols on a 24px grid, with rounded strokes at 1.8px. Every page uses this local sprite; no icon package or external icon request is required. Phase numbers remain visible alongside their navigation icons. Message, search, pen, panels and branch symbols identify the main activities; heading badges reinforce the corresponding section meaning. The approved Workflow logo in `assets/brand/workflow-logo.svg` replaces the old letter badge across all 13 pages. It keeps its cobalt/ink identity independently of page palettes; the favicon reuses `workflow-mark.svg`, with a white version for dark browser chrome.
+
+Inline SVG instances use `currentColor`, `aria-hidden="true"` and `focusable="false"`; visible text supplies the accessible name. Standard icons display at 20px, compact controls at 18px, overview illustrations at 26–28px and the error-page compass at 48px. Checklist pseudo-elements use the same check geometry as a CSS mask. Arrows are chosen for their RTL action/context rather than automatically mirroring every icon. See [icon evaluation](icon-evaluation.md) for this ticket's preflight evidence and human checkpoints.
 
 ## Responsive and interaction rules
 
 - At 1250px and below, the document index becomes a sticky disclosure. Selecting an entry closes it; section anchors leave 90px for the index.
-- At 900px and below, the navigation rail becomes the top navigation.
+- At 900px and below, the navigation rail becomes a collapsible top menu with a 48px button, expanded state and Escape support. Without JavaScript the links stay visible.
 - At 650px and below, the route becomes horizontal, reading panels stack, and prompt-copy buttons span their work area.
-- Controls have visible keyboard focus; copy buttons have a 44px minimum height. Details expose native disclosure behavior. Tables scroll inside their own container.
+- Controls have visible keyboard focus; copy buttons and index links have a 44px minimum height. Details expose native disclosure behavior. Tables scroll inside their own keyboard-focusable container. Workshop pages have desktop and mobile indexes.
 - There is no automatic animation. Smooth scrolling is disabled when reduced motion is requested.
 - New phases should reuse the document header, reading sections, table wrapper, callouts, and tool components. Keep the route illustration specific to the overview.
 
-## Recorded preflight
+## Initial recorded preflight (2026-10-25)
 
 Executed against the local static server on port 8000 in Chrome.
 
@@ -52,7 +66,7 @@ Executed against the local static server on port 8000 in Chrome.
 
 One screenshot capture timed out; the next capture succeeded. Browser viewport override was reset after evaluation. Reduced-motion behavior was inspected in CSS; OS-level reduced-motion and other browser engines were not exercised.
 
-## Hands-on evaluation
+## Initial hands-on evaluation (2026-10-25)
 
 First action: open **http://localhost:8000/** and compare the overview at your normal browser width and at 390px.
 
@@ -70,8 +84,8 @@ If the server is stopped, run `python3 -m http.server 8000` from the repository 
 
 Record observations per feature, browser, and viewport. Implementation and preflight are complete; these checks do not imply user acceptance.
 
-## Phase 2 editorial redesign
+## Earlier phase 2 editorial redesign
 
-Phase-two design, the prototyping hub, and tool playbooks use styles scoped under `body.p2` in `assets/styles.css`; the earlier phases retain their established layout. A clear header separates the design and prototyping entry points, while a TaskFlow teaching thread connects flow, screen, interaction and acceptance. Collapsible deliverable details expose review questions progressively, and narrow viewports stack content. These descriptions document the implementation, not the results of browser testing.
+Phase-two design, the prototyping hub, and tool playbooks use styles scoped under `body.p2` in `assets/styles.css`; the earlier phases retain their reading structure. The later hierarchy update gives every main guide a hero and removes promotional heroes from subpages; palette colors now come from route tokens. A clear header separates the design and prototyping entry points, while a TaskFlow teaching thread connects flow, screen, interaction and acceptance. Collapsible deliverable details expose review questions progressively, and narrow viewports stack content. These descriptions document the implementation, not the results of browser testing.
 
 Editorial guidance and QA rules live in [Documentation standard](documentation-standard.md).
