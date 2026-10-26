@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#6d28d9">
   <meta name="description" content="فاز یک ورک‌فلو: کشف محصول تطبیقی با مشاورهٔ LLM، شواهد واقعی کاربران، Understanding Gate و بستهٔ تحویل.">
-  <title>فاز یک: کشف محصول تطبیقی | ورک‌فلو</title>
+  <title>فاز یک: کشف مسئله و MVP کامل — ورک‌فلو</title>
   <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,168 +43,60 @@
           <a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-1.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#external"></use></svg></span></a>
         </header>
         <div class="document-layout">
-          <article class="document">
-            <header class="doc-header page-hero" aria-labelledby="page-title">
-              <span class="doc-kicker"><span class="doc-number">۰۱</span> کشف محصول متناسب با شواهد</span>
-              <h1 id="page-title">کشف محصول تطبیقی</h1>
-              <p class="doc-lead">برای چه کسانی چه مسئله‌ای مهم است، چه شواهدی داریم و کدام فرصت ارزش بررسی بیشتر دارد؟ از فهم مشترک تا تصمیم آگاهانه، بدون پریدن به راه‌حل.</p>
-              <div class="doc-tags"><span>Adaptive Discovery</span><span>Evidence-Driven</span><span>Human Decision</span></div>
-              <a class="doc-primary-link" href="workshops/phase-1.html">رفتن به پرامپت‌های فاز یک <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></span></a>
-            </header>
-            <details class="mobile-toc" id="mobile-toc">
-              <summary>
-                <span class="mobile-toc-title">فهرست صفحه</span>
-                <span class="mobile-toc-current" id="mobile-toc-current">هدف فاز</span>
-                <span class="mobile-toc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#chevron"></use></svg></span>
-              </summary>
-              <nav class="mobile-toc-links" aria-label="بخش‌های این صفحه">
-                <a href="#goal">هدف فاز</a>
-                <a href="#entry-gate">شرط ورود</a>
-                <a href="#roles">نقش‌ها</a>
-                <a href="#activities">مسیر تطبیقی</a>
-                <a href="#understanding-gate">مرز پایان مشاوره</a>
-                <a href="#deliverables">خروجی‌ها</a>
-                <a href="#exit-gate">شرط عبور</a>
-                <a href="#patterns">پترن‌ها</a>
-                <a href="workshops/phase-1.html">پرامپت مشاور</a>
-                <a href="workshops/phase-1.html">پرامپت مستندسازی</a>
-              </nav>
-            </details>
-            <section class="document-section" id="goal">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#target"></use></svg></span>هدف این فاز</h2>
-              <p>فاز صفر مسئله و تصمیم‌های اولیه را روشن کرده است. اینجا با توجه به نوع پروژه و سطح عدم‌قطعیت، شناخت کاربران، زمینهٔ استفاده، پیامد مشکلات و کیفیت شواهد را عمیق‌تر می‌کنیم. هدف ساخت پرسونا، لیست فیچر یا طراحی صفحه نیست؛ هدف کاهش عدم‌قطعیتِ تصمیم محصول است.</p>
-              <div class="statement"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#sparkles"></use></svg></span><p><strong>کشف محصول برای همهٔ پروژه‌ها اجباری نیست.</strong> اگر Project Handoff مسیر فنی دیگری پیشنهاد می‌دهد، ابتدا همان مسیر و مجوز واقعی را روشن می‌کنیم.</p></div>
-            </section>
-            <section class="document-section" id="entry-gate">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>شرط ورود (Entry Gate)</h2>
-              <p>ورودی اصلی، بخش <strong>Project Handoff</strong> فاز صفر است. قبل از هر مصاحبه یا تحلیل تازه، LLM باید نوع پروژه، تصمیم واقعی مشتری و محدودهٔ مجاز بررسی را بخواند.</p>
-              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
-                <thead><tr><th>وضعیت Handoff</th><th>رفتار مجاز</th></tr></thead>
-                <tbody>
-                  <tr><td>کشف محصول صریحاً مجاز است</td><td>با حفظ شروط وارد گفت‌وگوی مشاورهٔ فاز یک شو.</td></tr>
-                  <tr><td>فقط بررسی محدود تأیید شده</td><td>صرفاً همان بخش را بررسی کن؛ دامنه را خودکار گسترش نده.</td></tr>
-                  <tr><td>تصمیم یا تأیید مشتری نامعلوم است</td><td>فقط برای رفع مانع و پیگیری تصمیم سؤال کن؛ Discovery کامل را شروع نکن.</td></tr>
-                  <tr><td>نوع پروژه به بررسی فنی نیاز دارد</td><td>مسیر متناسب مثل امکان‌سنجی مهاجرت یا عیب‌یابی را پیشنهاد بده و کشف محصول را تحمیل نکن.</td></tr>
-                </tbody>
-              </table></div>
-              <p class="small-note">Shared Understanding فاز صفر به‌تنهایی مجوز انجام پژوهش یا ورود به فاز بعدی نیست.</p>
-            </section>
-            <section class="document-section" id="roles">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#users"></use></svg></span>نقش‌ها و مسئولیت‌ها</h2>
-              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
-                <thead><tr><th>نقش</th><th>کار اصلی</th><th>مرز اختیار</th></tr></thead>
-                <tbody>
-                  <tr><td><strong>LLM · مشاور Discovery</strong></td><td>سؤال‌های ضروری، نقد شواهد، تحلیل ابهام‌ها و روش بررسی فرضیات.</td><td>به جای کاربر پاسخ یا نتیجهٔ پژوهش نمی‌سازد.</td></tr>
-                  <tr><td><strong>توسعه‌دهنده</strong></td><td>انتقال Handoff، هماهنگی با مشتری/کاربران و تأیید برداشت مشترک.</td><td>تأیید فهم، تصمیم مشتری نیست.</td></tr>
-                  <tr><td><strong>مشتری یا نمایندهٔ مجاز</strong></td><td>هدف تجاری، محدودیت، اولویت و تصمیم ادامه.</td><td>گفتهٔ او شاهد مستقل رفتار کاربران نیست.</td></tr>
-                  <tr><td><strong>کاربران واقعی</strong></td><td>در صورت دسترسی، ارائهٔ شواهد دربارهٔ تجربه و مشکلات.</td><td>تصمیم تجاری را بدون اختیار مشخص نمی‌گیرند.</td></tr>
-                </tbody>
-              </table></div>
-            </section>
-            <section class="document-section" id="activities">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#route"></use></svg></span>مسیر تطبیقی گفت‌وگو</h2>
-              <p>یک LLM کافی است و مراحل زیر ترتیب خشک ندارند. عمق هر بخش با شواهد موجود، ارزش تصمیم و ریسک اشتباه‌بودن فرضیه تغییر می‌کند.</p>
-              <div class="step-stack">
-                <div class="step"><span class="step-num">۰۱</span><div><h3>تشخیص مسیر و عمق کشف</h3><p>محصول جدید یا موجود؟ کاربران و شواهد شناخته‌شده‌اند؟ بررسی محدود مجاز است یا کامل؟</p><div class="step-result">تمرکز فقط روی ابهام‌های مؤثر</div></div></div>
-                <div class="step"><span class="step-num">۰۲</span><div><h3>شناخت کاربران و زمینهٔ مسئله</h3><p>کاربران چه کاری می‌خواهند انجام دهند، الان چطور پیش می‌روند و کجا با مانع مواجه می‌شوند؟</p><div class="step-result">تفکیک نیاز و مسئله از راه‌حل دلخواه</div></div></div>
-                <div class="step"><span class="step-num">۰۳</span><div><h3>بررسی کیفیت شواهد</h3><p>کدام ادعا سند یا مشاهدهٔ واقعی دارد؟ برای فرضیهٔ حیاتی چه بررسی کم‌هزینه‌ای مناسب است؟</p><div class="step-result">شناسایی شکاف دانش و روش پیگیری</div></div></div>
-                <div class="step"><span class="step-num">۰۴</span><div><h3>روشن‌کردن فرصت‌ها</h3><p>کدام مشکلات ارزش بررسی بیشتر دارند؟ اولویت کیفی را بدون عدد و امتیاز ساختگی روشن می‌کنیم.</p><div class="step-result">فرصت‌های قابل بررسی، نه بک‌لاگ فیچر</div></div></div>
-              </div>
-              <div class="example"><span class="example-title">نمونه</span><p>اگر مشتری «سامانهٔ رزرو آنلاین» می‌خواهد، سؤال بهتر این است: «الان نوبت‌ها چطور مدیریت می‌شوند و کدام مشکل بیشترین اثر را دارد؟» نه اینکه فوراً تقویم و درگاه پرداخت طراحی کنیم.</p></div>
-            </section>
-            <section class="document-section" id="understanding-gate">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>مرز پایان مشاوره (Understanding Gate)</h2>
-              <p>پرامپت اول وقتی به انتها نزدیک می‌شود که دربارهٔ هفت موضوع زیر یا درک معتبر داریم، یا ابهام مهم و راه بررسی آن مشخص است.</p>
-              <ul class="gate-list">
-                <li>گروه‌های کاربران هدف</li>
-                <li>مسئله و زمینهٔ انجام کار</li>
-                <li>راهکار یا وضعیت فعلی</li>
-                <li>پیامد مشکل و ارزش مورد انتظار</li>
-                <li>منبع و کیفیت شواهد</li>
-                <li>فرضیات و ریسک‌های حیاتی</li>
-                <li>تصمیم بعدی و مسئول پیگیری</li>
-              </ul>
-              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
-                <thead><tr><th>وضعیت پایان</th><th>معنا</th></tr></thead>
-                <tbody>
-                  <tr><td><strong>Shared Understanding Reached</strong></td><td>توسعه‌دهنده برداشت کوتاه مشاور را صریحاً تأیید کرده است؛ نه لزوماً کاربر یا مشتری.</td></tr>
-                  <tr><td><strong>Conditional Understanding</strong></td><td>دانسته‌ها روشن‌اند اما فرضیه یا دادهٔ حیاتی هنوز باید بررسی شود؛ مسیر پیگیری مشخص است.</td></tr>
-                  <tr><td><strong>Blocked / On Hold</strong></td><td>مجوز، ورودی یا منبع اساسی وجود ندارد؛ ادامهٔ پرسش فعلاً ارزش تازه‌ای ایجاد نمی‌کند.</td></tr>
-                </tbody>
-              </table></div>
-              <p class="small-note">پرامپت اول هیچ‌کدام از مستندات رسمی را نمی‌سازد. پس از تأیید فهم یا توقف مشروط، پرامپت دوم را در همان سشن اجرا کن.</p>
-            </section>
-            <section class="document-section" id="deliverables">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#folder"></use></svg></span>پنج خروجی پرامپت دوم</h2>
-              <div class="deliverable-list">
-                <div><span class="deliverable-letter">A</span><div><h3>User &amp; Problem Insights</h3><p>گروه‌های کاربری، زمینهٔ استفاده، مشکلات واقعی یا فرضی، پیامدها و ارزش مورد انتظار با منابع مشخص.</p></div></div>
-                <div><span class="deliverable-letter">B</span><div><h3>Assumption &amp; Evidence Register</h3><p>ادعاها، شواهد، اعتبار منبع، خطر نادرستی و راه و مسئول بررسی.</p></div></div>
-                <div><span class="deliverable-letter">C</span><div><h3>Prioritized Opportunities &amp; Validation Plan</h3><p>فرصت‌های مسئله‌محور با اولویت کیفی و روش پیشنهادی اعتبارسنجی.</p></div></div>
-                <div><span class="deliverable-letter">D</span><div><h3>Discovery Decision Record</h3><p>وضعیت فهم، گزینه‌های ادامه، تصمیم واقعی، شروط و صاحب اختیار.</p></div></div>
-                <div><span class="deliverable-letter">E</span><div><h3>Project Handoff</h3><p>سند مستقل برای سشن بعدی، شامل یافته‌های دارای منبع، ریسک‌ها، مجوزها و گام واقعاً مجاز.</p></div></div>
-              </div>
-              <p class="small-note">خروجی‌ها حتی با اطلاعات ناقص می‌توانند «پیش‌نویس» باشند؛ نبود شواهد نباید با پژوهش یا یافتهٔ ساخته‌شده پنهان شود.</p>
-            </section>
-            <section class="document-section" id="exit-gate">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>شرط عبور از فاز یک (Exit Gate)</h2>
-              <p>پایان گفت‌وگو و تحویل پنج سند به‌تنهایی اجازهٔ طراحی یا ساخت نمی‌دهد. تصمیم واقعی مشتری/نمایندهٔ مجاز دربارهٔ گام بعدی باید روشن و دارای محدوده باشد.</p>
-              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table>
-                <thead><tr><th>وضعیت</th><th>گام متناسب</th></tr></thead>
-                <tbody>
-                  <tr><td>فهم، شواهد و تصمیم کافی؛ گام بعدی صریحاً تأیید شده</td><td>فقط اقدام بعدیِ تأییدشده، مثلاً آغاز طراحی محصول.</td></tr>
-                  <tr><td>فرضیهٔ مهم هنوز بی‌شاهد است</td><td>Investigate: تحقیق، مصاحبه یا بررسی مجاز پیش از تصمیم.</td></tr>
-                  <tr><td>مشتری هنوز تصمیم نداده</td><td>در انتظار تأیید مشتری؛ عبور خودکار ممنوع.</td></tr>
-                  <tr><td>دسترسی یا دادهٔ اساسی وجود ندارد</td><td>Hold یا بررسی محدود با مجوز.</td></tr>
-                  <tr><td>شواهد ارزش فرصت را رد می‌کنند</td><td>پیشنهاد Reject یا بازنگری؛ تصمیم نهایی با مشتری.</td></tr>
-                </tbody>
-              </table></div>
-              <p class="small-note">موافقت با بررسی، توافق مالی، اعطای دسترسی و مجوز شروع اجرا مستقل‌اند. تصمیم Proceed هم فقط برای گام مشخص معتبر است.</p>
-            </section>
-            <section class="document-section" id="patterns">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>پترن‌ها و آنتی‌پترن‌ها</h2>
-              <div class="patterns-grid">
-                <div class="pattern-panel good"><div class="panel-heading"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#check"></use></svg></span><h3>کار درست</h3></div><ul>
-                  <li><strong>Problem Before Feature:</strong> مسئله و زمینه را قبل از راه‌حل روشن کن.</li>
-                  <li><strong>Evidence With Source:</strong> نوع و منبع هر شاهد را مشخص کن.</li>
-                  <li><strong>Risk-Based Depth:</strong> عمق بررسی را با ریسک تنظیم کن.</li>
-                  <li><strong>Lean Validation:</strong> برای فرضیهٔ مهم، روش بررسی متناسب پیشنهاد بده.</li>
-                </ul></div>
-                <div class="pattern-panel bad"><div class="panel-heading"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#close"></use></svg></span><h3>کار نادرست</h3></div><ul>
-                  <li><strong>Invented Research:</strong> مصاحبه، پرسونا یا دادهٔ استفاده نساز.</li>
-                  <li><strong>Feature Jumping:</strong> زودهنگام فیچر یا UI مشخص نکن.</li>
-                  <li><strong>Endless Questions:</strong> سؤال تکراری یا بی‌اثر نپرس.</li>
-                  <li><strong>Automatic Approval:</strong> تأیید توسعه‌دهنده را مجوز مشتری ندان.</li>
-                </ul></div>
-              </div>
-            </section>
-            <section class="document-section" id="prompt-tool"><h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#terminal"></use></svg></span>کارگاه اجرایی فاز 1</h2><p>آموزش، روش انجام و شرایط عبور در همین صفحه قرار دارند؛ ابزار تولید پرامپت در صفحه‌ای مستقل ارائه می‌شود.</p><p><a class="doc-primary-link" href="workshops/phase-1.html">ورود به کارگاه فاز 1 <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></a></p></section>
-            <nav class="doc-pagination" aria-label="جابه‌جایی بین فصل‌ها">
-              <a href="phase-0.html"><span>فاز قبل</span><strong><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg> فاز صفر · صورت‌بندی فرصت</strong></a>
-              <a href="phase-2.html"><span>مرحلهٔ بعد</span><strong>فاز دو · طراحی و پروتوتایپ <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></strong></a>
-            </nav>
-          </article>
-          <aside class="toc" aria-label="فهرست بخش‌های این صفحه">
-            <nav class="toc-sticky" aria-label="بخش‌های صفحه">
-              <div class="toc-header">
-                <span class="toc-overline">راهنمای مطالعه</span>
-                <span class="toc-title">در این صفحه</span>
-                <div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div>
-              </div>
-              <div class="toc-links">
-                <a href="#goal">هدف فاز</a>
-                <a href="#entry-gate">شرط ورود</a>
-                <a href="#roles">نقش‌ها</a>
-                <a href="#activities">مسیر تطبیقی</a>
-                <a href="#understanding-gate">مرز پایان مشاوره</a>
-                <a href="#deliverables">خروجی‌ها</a>
-                <a href="#exit-gate">شرط عبور</a>
-                <a href="#patterns">پترن‌ها</a>
-                <a href="workshops/phase-1.html">پرامپت مشاور</a>
-                <a href="workshops/phase-1.html">پرامپت مستندسازی</a>
-              </div>
-              <a class="toc-shortcut" href="workshops/phase-1.html">برو به ابزارهای اجرایی <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></span></a>
-            </nav>
-          </aside>
+          <article class="document"><header class="doc-header page-hero">
+<h1 id="page-title">فاز یک: کشف مسئله و MVP کامل</h1>
+<p class="doc-lead">از درخواست محصول جدید فول‌استک تا بستهٔ مرجع قابل انتقال؛ مثال‌ها آموزشی‌اند.</p><a class="doc-primary-link" href="workshops/phase-1.html">آموزش و مسیر مرتبط</a></header>
+<details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">بخش‌ها</span></summary>
+<nav class="mobile-toc-links" aria-label="بخش‌های صفحه"><a href="#goal">کشف مسئله و تعیین MVP کامل</a><a href="#entry-gate">ورودی و مجوز</a><a href="#roles">منبع و مسئولیت</a><a href="#activities">از کار واقعی تا محدوده</a><a href="#understanding-gate">برداشت مشترک</a><a href="#deliverables">نسخهٔ مرحلهٔ یک بستهٔ مرجع</a><a href="#exit-gate">شرط پایان و گام بعدی</a><a href="#patterns">معیار کیفیت و شکست</a><a href="#prompt-tool">کارگاه فاز یک</a>
+</nav>
+</details>
+<section class="document-section p2-reading-section" id="goal">
+<h2>کشف مسئله و تعیین MVP کامل</h2>
+<p>ورودی، نسخهٔ مرحلهٔ صفر بستهٔ مرجع محصول است. هدف، شناخت کار واقعی کاربر و انتخاب کمترین مجموعهٔ کارهای ایجادکنندهٔ یک نتیجهٔ کامل و مفید است. چند صفحهٔ ناقص MVP نیست.</p>
+</section>
+<section class="document-section p2-reading-section" id="entry-gate">
+<h2>ورودی و مجوز</h2>
+<p>بستهٔ مرجع و حدود اختیار را بخوان. نبود مجوز، اقدام وابسته را متوقف می‌کند. اگر فقط مصاحبهٔ کوتاه مجاز است، همان بررسی محدود ممکن است؛ اجازهٔ طراحی یا هزینه از آن نتیجه نمی‌شود. پیشنهاد AI یا سکوت، مجوز نیست.</p>
+</section>
+<section class="document-section p2-reading-section" id="roles">
+<h2>منبع و مسئولیت</h2>
+<p>توسعه‌دهنده شواهد را جمع و نسخهٔ معتبر بسته را نگهداری می‌کند؛ کارفرمای صاحب اختیار دربارهٔ هدف، محدوده و ریسک تصمیم می‌گیرد؛ مشاور سؤال و پیشنهاد می‌دهد. تأیید فهم توسعه‌دهنده، تصمیم کارفرما، توافق مالی و مجوز بررسی، ابزار، توسعه و انتشار مستقل‌اند.</p>
+<p>مشاهدهٔ کاربر، گفتهٔ کارفرما، گزارش توسعه‌دهنده، فرضیه و شبیه‌سازی را با منبع جدا کن. در نبود دسترسی به کاربر می‌توان برای یادگیری ادامه داد، اما تأیید نیاز کاربر ادعا نمی‌شود.</p>
+</section>
+<section class="document-section p2-reading-section" id="activities">
+<h2>از کار واقعی تا محدوده</h2>
+<p>کاربر، محرک شروع کار، مراحل فعلی، اصطکاک و نتیجه را ثبت کن. گزینه‌های واقعاً متفاوت را مقایسه کن: آیا نظم‌دادن به روش فعلی کافی است یا محصول تازه ارزش دارد؟ برای هر گزینه فایده، ریسک و دلیل انتخاب بنویس؛ برای تصمیم کوچک گزینهٔ تصنعی لازم نیست.</p>
+<p><strong>ادامهٔ آموزشی TaskFlow:</strong> کاربر فرضی سرپرست کار را ثبت و مسئول تعیین می‌کند؛ همکار وضعیت را تغییر می‌دهد؛ سرپرست انجام را می‌بیند. گزینهٔ ساده: جدول مشترک با هزینهٔ کم و ریسک فراموشی تغییر وضعیت. گزینهٔ محصول: جریان مسئولیت روشن با هزینهٔ ساخت و ریسک پذیرش تیم. انتخاب محصول هنوز فرضیه است؛ مشاهدهٔ چرخهٔ فعلی برای بررسی آن لازم است.</p>
+<p>MVP پیشنهادی آموزشی: ثبت ← واگذاری ← تغییر وضعیت ← مشاهدهٔ نتیجه. پرداخت، اپ بومی و گزارش پیشرفته خارج از نسخه؛ درخواست‌های آینده جدا. وضعیت تأیید محدوده و موارد خارج: در انتظار تصمیم واقعی کارفرما.</p>
+<p>معیار پیشنهادی: کاربر بتواند یک کار را از ثبت تا مشاهدهٔ انجام بدون کمک تکمیل کند؛ مقدار هدف و خط مبنا هنوز تأیید نشده. فرضیهٔ نیاز با مشاهدهٔ کار واقعی پیگیری شود؛ مسئول هماهنگی توسعه‌دهنده. ریسک فنی: چه کسی اجازهٔ تغییر کار دیگری را دارد و در تأخیر شبکه چه می‌بیند؟ بررسی ریسک اکنون است؛ انتخاب نهایی stack، دیتابیس، ORM و API بعداً.</p>
+</section>
+<section class="document-section p2-reading-section" id="understanding-gate">
+<h2>برداشت مشترک</h2>
+<p>در هر نوبت حداکثر سه سؤال مهم و پاسخ‌پذیر مطرح کن؛ ابتدا سؤال فوری توسعه‌دهنده را پاسخ بده. پس از تغییر دامنه یا طولانی‌شدن گفتگو خلاصهٔ تصمیم‌ها و ابهام‌ها را به‌روز کن. مجهول بی‌پاسخ را با اثر و راه پیگیری ثبت کن. وقتی سؤال حیاتی پاسخ‌پذیر باقی نماند، برداشت مشترک را برای تأیید یا اصلاح عرضه کن.</p>
+</section>
+<section class="document-section p2-reading-section" id="deliverables">
+<h2>نسخهٔ مرحلهٔ یک بستهٔ مرجع</h2>
+<p>بستهٔ مرجع محصول یک مرجع منطقی است. نسخه، مرحله، زمینه و درخواست، نتیجهٔ مطلوب و کاربران، شواهد و فرضیات، گزینه‌ها و تصمیم‌ها، محدودهٔ MVP و خارج آن، معیارهای موفقیت، ریسک‌ها و مجوزها، رفتار و طراحی، نتایج ارزیابی و گام بعدی را با نام معنایی نگه دار. بخش بررسی‌نشده صریح بماند.</p>
+<p>در تغییر تصمیم، تصمیم معتبر و تصمیم جایگزین‌شده، دلیل و صاحب تصمیم و اثر آن بر محدوده، طراحی و ارزیابی را ثبت کن. تحویل به سشن تازه باید همهٔ قواعد، شرایط و ضمیمه‌های ضروری را همراه داشته باشد؛ نبود دسترسی به ضمیمه را پنهان نکن. سایت ذخیره یا همگام‌سازی نمی‌کند؛ انتقال نسخهٔ معتبر مسئولیت توسعه‌دهنده است.</p>
+<p>نسخهٔ آموزشی ۰٫۲ چرخهٔ کامل، گزینه‌های مقایسه‌شده، محدودهٔ پیشنهادی، خارج محدوده، معیار و فرضیات آزمون را به ۰٫۱ اضافه می‌کند. اگر گزارش پیشرفته حذف شد، تصمیم قبلی و اثر حذف بر طراحی را هم ثبت کن.</p>
+</section>
+<section class="document-section p2-reading-section" id="exit-gate">
+<h2>شرط پایان و گام بعدی</h2>
+<p>MVP و موارد خارج آن روشن و وضعیت تصمیم واقعی کارفرما ثبت شده باشد. در نبود تأیید، خروجی «در انتظار تأیید» است؛ فقط بررسی واقعاً مجاز ادامه می‌یابد. بسته را با شروط و ضمیمه‌ها به <a href="phase-2.html">فاز دو</a> منتقل کن.</p>
+</section>
+<section class="document-section p2-reading-section" id="patterns">
+<h2>معیار کیفیت و شکست</h2>
+<p>خوب: برای هر قابلیت نشان بده کدام کار لازم برای نتیجهٔ کامل را ممکن می‌کند. شکست: با گفتهٔ یک کارفرما نیاز همهٔ کاربران را تأییدشده بدانی، یا پرداخت را صرفاً چون در آگهی بوده به MVP اضافه کنی. کمبود شواهد را با مسئول و اقدام پیگیری ثبت کن.</p>
+</section>
+<section class="document-section p2-reading-section" id="prompt-tool">
+<h2>کارگاه فاز یک</h2>
+<p><a href="workshops/phase-1.html">نسخهٔ مرحلهٔ صفر بسته را وارد کن</a>؛ فرمان جمع‌بندی را در پایان همان سشن اجرا کن.</p>
+</section>
+</article>
+          <aside class="toc" aria-label="فهرست صفحه">
+<nav class="toc-sticky"><div class="toc-header"><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#goal">کشف مسئله و تعیین MVP کامل</a><a href="#entry-gate">ورودی و مجوز</a><a href="#roles">منبع و مسئولیت</a><a href="#activities">از کار واقعی تا محدوده</a><a href="#understanding-gate">برداشت مشترک</a><a href="#deliverables">نسخهٔ مرحلهٔ یک بستهٔ مرجع</a><a href="#exit-gate">شرط پایان و گام بعدی</a><a href="#patterns">معیار کیفیت و شکست</a><a href="#prompt-tool">کارگاه فاز یک</a></div>
+</nav>
+</aside>
         </div>
         <footer class="footer"><span>شناخت کاربران · شواهد واقعی · تصمیم آگاهانه</span><span><a href="../">بازگشت به راهنما</a></span></footer>
       </div>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f766e">
   <meta name="description" content="فاز صفر ورک‌فلو: دریافت درخواست مشتری، صورت‌بندی مسئله، شناخت ذی‌نفعان و تصمیم ورود به Product Discovery.">
-  <title>فاز صفر: دریافت و صورت‌بندی مسئله | ورک‌فلو</title>
+  <title>فاز صفر: فهم درخواست و تصمیم ادامه — ورک‌فلو</title>
   <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,148 +43,60 @@
           <a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-0.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#external"></use></svg></span></a>
         </header>
         <div class="document-layout">
-          <article class="document">
-            <header class="doc-header page-hero" aria-labelledby="page-title">
-              <span class="doc-kicker"><span class="doc-number">۰۰</span> دریافت و بررسی درخواست</span>
-              <h1 id="page-title">دریافت درخواست و صورت‌بندی فرصت</h1>
-              <p class="doc-lead">از درخواست خام تا فهم مشترک با کمک مشاور هوش مصنوعی؛ مستندات را فقط پس از پایان گفت‌وگو استخراج می‌کنیم.</p>
-              <div class="doc-tags"><span>Business Analysis</span><span>Evidence-Gated</span><span>Human Decision</span></div>
-              <a class="doc-primary-link" href="workshops/phase-0.html">رفتن به پرامپت‌های اجرایی <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></span></a>
-            </header>
-            <details class="mobile-toc" id="mobile-toc">
-              <summary>
-                <span class="mobile-toc-title">فهرست صفحه</span>
-                <span class="mobile-toc-current" id="mobile-toc-current">هدف این مرحله</span>
-                <span class="mobile-toc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#chevron"></use></svg></span>
-              </summary>
-              <nav class="mobile-toc-links" aria-label="بخش‌های این صفحه">
-                <a href="#goal">هدف فاز</a>
-                <a href="#roles">نقش‌ها</a>
-                <a href="#inputs">ورودی‌ها</a>
-                <a href="#activities">فعالیت‌ها</a>
-                <a href="#patterns">پترن‌ها و آنتی‌پترن‌ها</a>
-                <a href="#deliverables">خروجی‌ها</a>
-                <a href="#exit-gate">شرط عبور</a>
-                <a href="#ai">نقش دستیار</a>
-                <a href="workshops/phase-0.html">پرامپت تحلیلگر</a>
-                <a href="workshops/phase-0.html">پرامپت تحویل</a>
-                <a href="workshops/phase-0.html">شبیه‌ساز کارفرما</a>
-              </nav>
-            </details>
-            <section class="document-section" id="goal">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#target"></use></svg></span>هدف این مرحله</h2>
-              <p>درخواست مشتری را با کمک دستیار تحلیل کسب‌وکار روشن کنیم، سؤال‌های ضروری را بپرسیم و به یک برداشت مشترک برسیم. پرامپت اول صرفاً مشاوره و گفت‌وگوست؛ پرامپت دوم مستندات را از همان مکالمه استخراج می‌کند.</p>
-              <div class="statement"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#sparkles"></use></svg></span><p>خواستنِ یک نرم‌افزار، به معنی اثباتِ نیاز به ساخت آن نیست. <strong>اول مسئله را بشناسیم.</strong></p></div>
-            </section>
-            <section class="document-section" id="roles">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#users"></use></svg></span>سه نقش مشخص</h2>
-              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table><thead><tr><th>نقش</th><th>مسئولیت</th></tr></thead><tbody>
-                <tr><td><strong>مشتری</strong> <span class="table-badge">صاحب نیاز و تصمیم</span></td><td>مسئله، شرایط و محدودیت‌ها را توضیح می‌دهد؛ خود او یا نمایندهٔ دارای اختیارش دربارهٔ ادامهٔ بررسی تصمیم می‌گیرد.</td></tr>
-                <tr><td><strong>توسعه‌دهنده</strong> <span class="table-badge">هماهنگ‌کننده</span></td><td>درخواست و پاسخ‌ها را منتقل می‌کند، سؤال‌های باز را از مشتری می‌پرسد و برداشت مشترک را تأیید یا اصلاح می‌کند.</td></tr>
-                <tr><td><strong>LLM / Agent</strong> <span class="table-badge">دستیار تحلیل کسب‌وکار</span></td><td>در پرامپت اول مشاوره می‌دهد و ابهام‌ها را پیگیری می‌کند؛ فقط در پرامپت دوم مستندات و بستهٔ تحویل می‌سازد.</td></tr>
-              </tbody></table></div>
-              <p class="small-note">در تیم‌های بزرگ‌تر ممکن است تحلیلگر کسب‌وکار واقعی هم مشارکت کند؛ اما اجرای این راهنما به تعریف نقش‌های مصنوعی متعدد برای مدل وابسته نیست.</p>
-            </section>
-            <section class="document-section" id="inputs">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#book"></use></svg></span>ورودی‌ها</h2>
-              <p>برای شروع تنها <strong>درخواست خام مشتری</strong> لازم است؛ توسعه‌دهنده می‌تواند همان را در ابزار انتهای صفحه وارد کند. باقی اطلاعات در گفت‌وگو جمع‌آوری می‌شود.</p>
-              <ul class="rich-list">
-                <li>درخواست مشتری با کلمات خودش؛ بدون تبدیل فوری به فهرست قابلیت‌ها.</li>
-                <li>اطلاعات در دسترس دربارهٔ روند فعلی کار و کسانی که با مشکل مواجه‌اند.</li>
-                <li>شواهد، محدودیت‌ها و پاسخ‌های مشتری؛ تنها اگر واقعاً ارائه شده‌اند.</li>
-              </ul>
-              <p class="small-note">اگر داده‌ای موجود نیست، آن را «نامعلوم» ثبت می‌کنیم؛ نیازی نیست قبل از شروع همه‌چیز آماده باشد.</p>
-            </section>
-            <section class="document-section" id="activities">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#book"></use></svg></span>مراحل کار</h2>
-              <div class="step-stack">
-                <div class="step"><span class="step-num">۰۱</span><div><h3>دریافت درخواست</h3><p>توسعه‌دهنده متن مشتری را وارد می‌کند؛ LLM آن را بدون افزودن نیازهای جدید بازگو می‌کند.</p><div class="step-result">در گفت‌وگو: برداشت اولیهٔ درخواست</div></div></div>
-                <div class="step"><span class="step-num">۰۲</span><div><h3>شناخت مسئله</h3><p>با سؤال‌های کوتاه و هدفمند، مشکل واقعی را از راه‌حل پیشنهادی جدا می‌کنیم.</p><div class="step-result">در گفت‌وگو: فرضیهٔ مسئله و سؤال‌های حیاتی</div></div></div>
-                <div class="step"><span class="step-num">۰۳</span><div><h3>روشن‌کردن شواهد و محدودیت‌ها</h3><p>شرایط فعلی، گفته‌های مشتری، شواهد، محدودیت‌ها، ریسک‌ها و ندانسته‌ها را از هم تفکیک می‌کنیم.</p><div class="step-result">در گفت‌وگو: مسائل روشن و ابهام‌های قابل پیگیری</div></div></div>
-                <div class="step"><span class="step-num">۰۴</span><div><h3>درک مشترک و پایان گفت‌وگو</h3><p>دستیار برداشت کوتاهی ارائه می‌دهد و توسعه‌دهنده آن را تأیید یا اصلاح می‌کند. اگر پاسخ حیاتی در دسترس نیست، وضعیت مشروط و موارد باز روشن می‌شوند؛ سپس با پرامپت دوم مستندات استخراج می‌شوند.</p><div class="step-result">مرز پایان: Shared Understanding یا درک مشروطِ ثبت‌شده</div></div></div>
-              </div>
-            </section>
-            <section class="document-section" id="patterns">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>پترن‌ها و آنتی‌پترن‌ها</h2>
-              <div class="patterns-grid">
-                <div class="pattern-panel good"><div class="panel-heading"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#check"></use></svg></span><h3>چه کار کنیم؟</h3></div><ul>
-                  <li><strong>Problem First:</strong> اول مشکل را بفهمیم، بعد دربارهٔ راه‌حل فکر کنیم.</li>
-                  <li><strong>Ask, Don't Guess:</strong> ابهام‌های مهم را با سؤال کوتاه پیگیری کنیم.</li>
-                  <li><strong>Evidence Matters:</strong> گفته‌ها، شواهد و فرضیات را تفکیک کنیم.</li>
-                  <li><strong>Keep It Lean:</strong> فقط ابهام‌های مهم را پیگیری کنیم و پرسش بی‌پایان نسازیم.</li>
-                  <li><strong>Two Prompts:</strong> ابتدا فهم مشترک؛ سپس مستندسازی و بررسی تصمیم واقعی مشتری.</li>
-                </ul></div>
-                <div class="pattern-panel bad"><div class="panel-heading"><span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#close"></use></svg></span><h3>چه کار نکنیم؟</h3></div><ul>
-                  <li><strong>Solution Jumping:</strong> مستقیماً سراغ فهرست امکانات یا فناوری نرویم.</li>
-                  <li><strong>Question Overload:</strong> ده‌ها سؤال را یک‌جا از توسعه‌دهنده نپرسیم.</li>
-                  <li><strong>Invented Facts:</strong> آمار، شواهد یا پاسخ مشتری نسازیم.</li>
-                  <li><strong>Premature Planning:</strong> بودجه و زمان قطعی، معماری یا تیکت اجرا تعیین نکنیم.</li>
-                  <li><strong>Automatic Approval:</strong> خروجی LLM را معادل تصمیم مشتری ندانیم.</li>
-                </ul></div>
-              </div>
-              <div class="example"><span class="example-title">مثال</span><p>مشتری می‌گوید «سیستم مدیریت وظایف می‌خواهیم». سؤال مناسب این است: <strong>«الان وظایف چگونه پیگیری می‌شوند و کدام مشکل بیشترین اثر را دارد؟»</strong> نه اینکه «React بهتر است یا Vue؟»</p></div>
-            </section>
-            <section class="document-section" id="deliverables">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#folder"></use></svg></span>خروجی‌های پرامپت دوم</h2>
-              <div class="deliverable-list">
-                <div><span class="deliverable-letter">A</span><div><h3>Opportunity Brief</h3><p>خلاصهٔ درخواست، فرضیهٔ مسئله، کاربران اثرپذیر، ارزش احتمالی حل آن و روش پیشنهادی سنجش موفقیت.</p></div></div>
-                <div><span class="deliverable-letter">B</span><div><h3>Assumption &amp; Risk Log</h3><p>گفته‌های مشتری، شواهد واقعی و منابعشان، فرضیات، محدودیت‌ها، ریسک‌ها و سؤال‌های باز.</p></div></div>
-                <div><span class="deliverable-letter">C</span><div><h3>Opportunity Decision Record</h3><p>گزینه‌های ادامه، بررسی بیشتر، تعویق یا رد؛ انتخاب صریح مشتری (در صورت وجود)، دلیل و اقدام بعدی.</p></div></div>
-                <div><span class="deliverable-letter">D</span><div><h3>Project Handoff</h3><p>بستهٔ مستقلِ قابل انتقال به سشن بعدی شامل فهم مسئله، سطح قطعیت، تصمیم‌ها، شروط و اقدام مجاز.</p></div></div>
-              </div>
-              <p class="small-note">پرامپت اول هیچ‌کدام از این سندها را تولید نمی‌کند. تنها بعد از رسیدن به درک مشترک یا توقف مشروط، پرامپت دوم را در همان سشن اجرا کن. خروجی‌ها پیش‌نویس‌اند تا مشتری واقعی تصمیم و شروط لازم را تأیید کند.</p>
-            </section>
-            <section class="document-section" id="exit-gate">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#shield"></use></svg></span>شرط عبور</h2>
-              <p>دو مرز جدا داریم: <strong>Understanding Gate</strong> برای پایان مشاوره، و <strong>تصمیم واقعی مشتری</strong> برای اجازهٔ عبور به گام متناسب با پروژه. تأیید برداشت توسط توسعه‌دهنده جای موافقت مشتری را نمی‌گیرد.</p>
-              <ul class="gate-list">
-                <li>درخواست، وضعیت فعلی و مسئلهٔ احتمالی روشن‌اند یا ابهام حیاتی و راه پیگیری آن مشخص است.</li>
-                <li>نتیجهٔ مورد انتظار و افراد اثرپذیر روشن‌اند یا به‌عنوان نامعلوم شناسایی شده‌اند.</li>
-                <li>گفته‌ها، شواهد و فرضیات از هم جدا شده‌اند.</li>
-                <li>محدودیت‌ها، ریسک‌ها و سؤال‌های باز معلوم‌اند یا صریحاً «نامعلوم» ثبت شده‌اند.</li>
-                <li>شخص دارای اختیار تصمیم‌گیری مشخص است یا نبود این اطلاعات به‌عنوان مانع ثبت شده است.</li>
-                <li>توسعه‌دهنده برداشت کوتاه دستیار را تأیید می‌کند؛ در نبود اطلاعات حیاتی، وضعیت «درک مشترک مشروط» روشن است. تصمیم مشتری برای عبور جدا ثبت می‌شود.</li>
-              </ul>
-              <div class="table-scroll" tabindex="0" role="region" aria-label="جدول؛ برای مشاهدهٔ ستون‌ها پیمایش کنید"><table><thead><tr><th>تصمیم</th><th>معنا</th></tr></thead><tbody>
-                <tr><td><strong>Proceed</strong></td><td>اجازهٔ ادامهٔ بررسی متناسب با پروژه (مثلاً کشف محصول یا ارزیابی فنی)؛ بدون تعهد به اجرا.</td></tr>
-                <tr><td><strong>Investigate</strong></td><td>ابتدا اطلاعات بیشتری جمع کنیم.</td></tr>
-                <tr><td><strong>Hold</strong></td><td>فعلاً بررسی را متوقف کنیم.</td></tr>
-                <tr><td><strong>Reject</strong></td><td>درخواست را با دلیل کنار بگذاریم.</td></tr>
-              </tbody></table></div>
-              <p class="small-note">اگر تصمیم معتبر هنوز دریافت نشده، وضعیت «در انتظار تأیید مشتری» باقی می‌ماند؛ خود LLM مرحله را تأیید نمی‌کند.</p>
-            </section>
-            <section class="document-section" id="ai">
-              <h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#book"></use></svg></span>مرز وظیفهٔ دستیار هوش مصنوعی</h2>
-              <p>مدل فقط <strong>دستیار تحلیل کسب‌وکار</strong> است؛ نه مجموعه‌ای از نقش‌های سازمانی فرضی. در پرامپت اول کنار توسعه‌دهنده سؤال می‌پرسد، پاسخ‌ها را بررسی می‌کند و مرز پایان گفت‌وگو را تشخیص می‌دهد؛ <strong>هیچ سند رسمی تولید نمی‌کند</strong>. در پرامپت دوم سه سند و بستهٔ تحویل استخراج می‌شوند. مشتری دربارهٔ ادامهٔ کار تصمیم می‌گیرد.</p>
-              <p>در گفت‌وگوهای طولانی، دستیار باید تصمیم‌ها و شروطشان را حفظ کند، تغییر درخواست را مشخص کند و هر چند رفت‌وبرگشت یک جمع‌بندی کوتاه بدهد؛ بدون تکرار سؤال‌های پاسخ‌داده‌شده.</p><p>هر مرحلهٔ این راهنما می‌تواند در یک گفت‌وگوی مستقل اجرا شود. برای شروع این مرحله، ابزار یا Skill خاصی لازم نیست.</p>
-            </section>
-            
-            <section class="document-section" id="prompt-tool"><h2><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#terminal"></use></svg></span>کارگاه اجرایی فاز 0</h2><p>آموزش، روش انجام و شرایط عبور در همین صفحه قرار دارند؛ ابزار تولید پرامپت در صفحه‌ای مستقل ارائه می‌شود.</p><p><a class="doc-primary-link" href="workshops/phase-0.html">ورود به کارگاه فاز 0 <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></a></p></section>
-                        <nav class="doc-pagination" aria-label="جابه‌جایی بین فصل‌ها"><a href="../"><span>صفحهٔ قبل</span><strong><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg> نمای کلی ورک‌فلو</strong></a><a href="phase-1.html"><span>مرحلهٔ بعد</span><strong>فاز یک · کشف محصول تطبیقی <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></strong></a></nav>
-          </article>
-          <aside class="toc" aria-label="فهرست بخش‌های این صفحه">
-            <nav class="toc-sticky" aria-label="بخش‌های صفحه">
-              <div class="toc-header">
-                <span class="toc-overline">راهنمای مطالعه</span>
-                <span class="toc-title">در این صفحه</span>
-                <div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div>
-              </div>
-              <div class="toc-links">
-                <a href="#goal">هدف فاز</a>
-                <a href="#roles">نقش‌ها</a>
-                <a href="#inputs">ورودی‌ها</a>
-                <a href="#activities">فعالیت‌ها</a>
-                <a href="#patterns">پترن‌ها و آنتی‌پترن‌ها</a>
-                <a href="#deliverables">خروجی‌ها</a>
-                <a href="#exit-gate">شرط عبور</a>
-                <a href="#ai">نقش دستیار</a>
-                <a href="workshops/phase-0.html">پرامپت تحلیلگر</a>
-                <a href="workshops/phase-0.html">پرامپت تحویل</a>
-                <a href="workshops/phase-0.html">شبیه‌ساز کارفرما</a>
-              </div>
-              <a class="toc-shortcut" href="workshops/phase-0.html">برو به ابزارهای اجرایی <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#arrow-left"></use></svg></span></a>
-            </nav>
-          </aside>
+          <article class="document"><header class="doc-header page-hero">
+<h1 id="page-title">فاز صفر: فهم درخواست و تصمیم ادامه</h1>
+<p class="doc-lead">از درخواست محصول جدید فول‌استک تا بستهٔ مرجع قابل انتقال؛ مثال‌ها آموزشی‌اند.</p><a class="doc-primary-link" href="workshops/phase-0.html">آموزش و مسیر مرتبط</a></header>
+<details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">بخش‌ها</span></summary>
+<nav class="mobile-toc-links" aria-label="بخش‌های صفحه"><a href="#goal">از درخواست تا تصمیم ادامه</a><a href="#roles">نقش و اختیار</a><a href="#inputs">درخواست مستقیم و آگهی آموزشی</a><a href="#activities">روش بررسی درخواست</a><a href="#patterns">خروجی خوب و حالت شکست</a><a href="#deliverables">نخستین نسخهٔ بستهٔ مرجع محصول</a><a href="#exit-gate">شرط پایان و اقدام بعدی</a><a href="#ai">دو فرمان و تمرین</a><a href="#prompt-tool">کارگاه فاز صفر</a>
+</nav>
+</details>
+<section class="document-section p2-reading-section" id="goal">
+<h2>از درخواست تا تصمیم ادامه</h2>
+<p>این مسیر برای ساخت محصول جدید فول‌استک است. پیش از قول ساخت، بفهم چه نتیجه‌ای لازم است و چه بررسی‌ای مجاز است. درخواست «پنل می‌خواهم» راه‌حل پیشنهادی است؛ نتیجهٔ مطلوب را جدا ثبت کن.</p>
+</section>
+<section class="document-section p2-reading-section" id="roles">
+<h2>نقش و اختیار</h2>
+<p>توسعه‌دهنده شواهد را جمع و نسخهٔ معتبر بسته را نگهداری می‌کند؛ کارفرمای صاحب اختیار دربارهٔ هدف، محدوده و ریسک تصمیم می‌گیرد؛ مشاور سؤال و پیشنهاد می‌دهد. تأیید فهم توسعه‌دهنده، تصمیم کارفرما، توافق مالی و مجوز بررسی، ابزار، توسعه و انتشار مستقل‌اند.</p>
+<p>بستهٔ مرجع و حدود اختیار را بخوان. نبود مجوز، اقدام وابسته را متوقف می‌کند. اگر فقط مصاحبهٔ کوتاه مجاز است، همان بررسی محدود ممکن است؛ اجازهٔ طراحی یا هزینه از آن نتیجه نمی‌شود. پیشنهاد AI یا سکوت، مجوز نیست.</p>
+</section>
+<section class="document-section p2-reading-section" id="inputs">
+<h2>درخواست مستقیم و آگهی آموزشی</h2>
+<p><strong>مثال پیوستهٔ تألیفی و آموزشی: TaskFlow.</strong> درخواست مستقیم مشتری: «تیم خدماتی ما کارها را در پیام‌رسان تقسیم می‌کند؛ می‌خواهم کارهای جاافتاده کمتر شود. یک پنل بسازید.» این گفته هنوز شاهد مستقل رفتار کاربران نیست.</p>
+<p><strong>آگهی آموزشی:</strong> «برای تیم خدمات یک محصول فول‌استک مدیریت کار می‌خواهیم: ثبت کار، مسئول، وضعیت، گزارش، پرداخت و اپ موبایل.» فهرست قابلیت‌ها را تعهد ساخت حساب نکن. سؤال مؤثر: آخرین کار جاافتاده چگونه رخ داد و چه کسی نتیجه را تأیید می‌کند؟</p>
+<p>خروجی آموزشی نسخهٔ ۰٫۱: نتیجهٔ مطلوب = هیچ کار واگذارشده بی‌مسئول نماند؛ منبع = گفتهٔ فرضی کارفرما؛ شاهد واقعی = موجود نیست؛ محدودیت = زمان و بودجه نامعلوم؛ مجوز فرضی = فقط بررسی جریان فعلی؛ گام بعدی = درخواست نمونهٔ بی‌نام کارهای جاافتاده از کارفرما. این مجوز آموزشی برای پروژهٔ واقعی معتبر نیست.</p>
+</section>
+<section class="document-section p2-reading-section" id="activities">
+<h2>روش بررسی درخواست</h2>
+<p>متن خام را حفظ کن. با کارفرما زمینه، کار فعلی، پیامد مشکل، نتیجهٔ مطلوب، محدودیت‌ها و صاحب اختیار را روشن کن. هر ادعا را با نوع و منبع ثبت کن؛ برای فرضیهٔ پرریسک مسئول و روش بررسی بنویس. بعد گام پیشنهادی را با گام واقعاً مجاز مقایسه کن.</p>
+<p>در هر نوبت حداکثر سه سؤال مهم و پاسخ‌پذیر مطرح کن؛ ابتدا سؤال فوری توسعه‌دهنده را پاسخ بده. پس از تغییر دامنه یا طولانی‌شدن گفتگو خلاصهٔ تصمیم‌ها و ابهام‌ها را به‌روز کن. مجهول بی‌پاسخ را با اثر و راه پیگیری ثبت کن. وقتی سؤال حیاتی پاسخ‌پذیر باقی نماند، برداشت مشترک را برای تأیید یا اصلاح عرضه کن.</p>
+</section>
+<section class="document-section p2-reading-section" id="patterns">
+<h2>خروجی خوب و حالت شکست</h2>
+<p>خوب: «گزارش جاافتادن کار از کارفرما؛ هنوز نمونه نداریم؛ مسئول پیگیری توسعه‌دهنده؛ فقط بررسی جریان مجاز است.» شکست: فهرست قابلیت‌های آگهی را محدودهٔ تأییدشده بنامی یا برای پرکردن قالب بودجه و تأیید بسازی. اگر هدف بنیادی روشن نیست، آن را مانع با راه پیگیری ثبت کن.</p>
+</section>
+<section class="document-section p2-reading-section" id="deliverables">
+<h2>نخستین نسخهٔ بستهٔ مرجع محصول</h2>
+<p>بستهٔ مرجع محصول یک مرجع منطقی است. نسخه، مرحله، زمینه و درخواست، نتیجهٔ مطلوب و کاربران، شواهد و فرضیات، گزینه‌ها و تصمیم‌ها، محدودهٔ MVP و خارج آن، معیارهای موفقیت، ریسک‌ها و مجوزها، رفتار و طراحی، نتایج ارزیابی و گام بعدی را با نام معنایی نگه دار. بخش بررسی‌نشده صریح بماند.</p>
+<p>در تغییر تصمیم، تصمیم معتبر و تصمیم جایگزین‌شده، دلیل و صاحب تصمیم و اثر آن بر محدوده، طراحی و ارزیابی را ثبت کن. تحویل به سشن تازه باید همهٔ قواعد، شرایط و ضمیمه‌های ضروری را همراه داشته باشد؛ نبود دسترسی به ضمیمه را پنهان نکن. سایت ذخیره یا همگام‌سازی نمی‌کند؛ انتقال نسخهٔ معتبر مسئولیت توسعه‌دهنده است.</p>
+</section>
+<section class="document-section p2-reading-section" id="exit-gate">
+<h2>شرط پایان و اقدام بعدی</h2>
+<p>برداشت مشترک تأیید یا اصلاح شده، یا کمبود بنیادی و راه پیگیری روشن باشد. فرمان دوم از همان گفتگو نسخهٔ مرحلهٔ صفر را استخراج می‌کند؛ مصاحبهٔ تازه و پاسخ‌سازی ممنوع است. برداشت تأییدنشده پیش‌نویس می‌ماند. فقط با مجوز مربوط بسته را به <a href="phase-1.html">فاز یک</a> ببر.</p>
+</section>
+<section class="document-section p2-reading-section" id="ai">
+<h2>دو فرمان و تمرین</h2>
+<p>در هر نوبت حداکثر سه سؤال مهم و پاسخ‌پذیر مطرح کن؛ ابتدا سؤال فوری توسعه‌دهنده را پاسخ بده. پس از تغییر دامنه یا طولانی‌شدن گفتگو خلاصهٔ تصمیم‌ها و ابهام‌ها را به‌روز کن. مجهول بی‌پاسخ را با اثر و راه پیگیری ثبت کن. وقتی سؤال حیاتی پاسخ‌پذیر باقی نماند، برداشت مشترک را برای تأیید یا اصلاح عرضه کن.</p>
+<p>فرمان اول بررسی و گفتگو، فرمان دوم جمع‌بندی در همان سشن است. شبیه‌ساز کارفرما در کارگاه صرفاً تمرین اختیاری است؛ تأیید فرضی شاهد یا مجوز نیست.</p>
+</section>
+<section class="document-section p2-reading-section" id="prompt-tool">
+<h2>کارگاه فاز صفر</h2>
+<p><a href="workshops/phase-0.html">درخواست را وارد کن و پرامپت کامل را ببین</a>. اولین اقدام: درخواست مستقیم TaskFlow را برای تمرین وارد کن.</p>
+</section>
+</article>
+          <aside class="toc" aria-label="فهرست صفحه">
+<nav class="toc-sticky"><div class="toc-header"><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#goal">از درخواست تا تصمیم ادامه</a><a href="#roles">نقش و اختیار</a><a href="#inputs">درخواست مستقیم و آگهی آموزشی</a><a href="#activities">روش بررسی درخواست</a><a href="#patterns">خروجی خوب و حالت شکست</a><a href="#deliverables">نخستین نسخهٔ بستهٔ مرجع محصول</a><a href="#exit-gate">شرط پایان و اقدام بعدی</a><a href="#ai">دو فرمان و تمرین</a><a href="#prompt-tool">کارگاه فاز صفر</a></div>
+</nav>
+</aside>
         </div>
         <footer class="footer"><span>دریافت درخواست · شناخت مسئله · تصمیم مشتری</span><span><a href="../">بازگشت به راهنما</a></span></footer>
       </div>
