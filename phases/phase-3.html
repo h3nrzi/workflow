@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#244ed8"><meta name="description" content="فاز سه ورک‌فلو: مهاجرت کنترل‌شدهٔ سورس AI به Monorepo با grill-with-docs و Local Coding Agent."><title>فاز سه: مهاجرت پروتوتایپ به Monorepo | ورک‌فلو</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/styles.css"></head>
+<body class="p2 p3"><a class="skip-link" href="#content">رفتن به محتوای اصلی</a><div class="site">
+<aside class="sidebar" aria-label="ناوبری اصلی"><a class="brand" href="../" aria-label="صفحهٔ اصلی راهنما"><span class="brand-mark" aria-hidden="true">و</span><span><strong>ورک‌فلو</strong><small>راهنمای توسعهٔ نرم‌افزار</small></span></a><div class="sidebar-inner"><div class="navigation-label">شروع</div><nav class="navigation" aria-label="فصل‌های راهنما">
+<a href="../"><span class="nav-dot"></span>نمای کلی</a><a href="phase-0.html"><span class="nav-number">۰۰</span>صورت‌بندی مسئله</a><a href="phase-1.html"><span class="nav-number">۰۱</span>کشف محصول تطبیقی</a><a href="phase-2.html"><span class="nav-number">۰۲</span>طراحی و پروتوتایپ</a><a href="phase-3.html" aria-current="page"><span class="nav-number">۰۳</span>مهاجرت به Monorepo</a></nav>
+<div class="navigation-label muted-label">مراحل آینده</div><nav class="navigation" aria-label="فازهای آینده"><span class="nav-disabled"><span class="nav-number">۰۴</span>مشخصات و برنامه‌ریزی</span><span class="nav-disabled"><span class="nav-number">۰۵</span>پیاده‌سازی و بازبینی</span><span class="nav-disabled"><span class="nav-number">۰۶</span>تست و پذیرش</span><span class="nav-disabled"><span class="nav-number">۰۷</span>انتشار و عملیات</span><span class="nav-disabled"><span class="nav-number">۰۸</span>یادگیری و بهبود</span></nav><div class="sidebar-bottom"><span class="sidebar-status"><span class="status-light"></span> سند زنده و در حال توسعه</span><a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></aside>
+<main class="main" id="content"><div class="content-container"><header class="topbar"><span class="breadcrumb"><a href="../">مستندات</a><span class="slash">/</span><strong>فاز سه</strong></span><a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-3.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع ↗</a></header>
+<div class="document-layout"><article class="document"><header class="doc-header p2-hero p3-hero">
+<div class="p2-hero-top"><span class="p2-eyebrow"><span class="p2-spark" aria-hidden="true">✦</span> فاز ۰۳ / مهندسی مهاجرت</span><span class="p2-hero-marker">PROTO → MONOREPO</span></div>
+<h1>سورسِ ساخته‌شده با AI،<br><span>در زیرساخت واقعی پروژه.</span></h1><p class="doc-lead">سورس پروتوتایپ رو بی‌جهت از صفر نمی‌نویسیم. اول شواهد و رفتار مبنا را ثبت می‌کنیم، بعد با <strong>grill-with-docs</strong> تصمیم‌ها را روشن و مهاجرت به Monorepo را مرحله‌ای اجرا و بررسی می‌کنیم.</p>
+<div class="p2-hero-actions"><a class="p2-action-primary" href="migration/index.html">شروع کارگاه مهاجرت ←</a><a class="p2-action-quiet" href="#skills">دیدن مسیر Skills ↙</a></div><div class="p2-hero-foot"><span>LLM 1: Prompt Engineer</span><span>Local Coding Agent</span><span>Preserve Before Refactor</span></div></header>
+<details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">نقشهٔ مهاجرت</span><span class="mobile-toc-chevron" aria-hidden="true">⌄</span></summary><nav class="mobile-toc-links" aria-label="بخش‌های این صفحه"><a href="#overview">نقشهٔ مهاجرت</a>
+<a href="#entry">پیش‌نیاز و ایمنی</a>
+<a href="#local">آماده‌سازی Local</a>
+<a href="#ownership">نقش LLM و Agent</a>
+<a href="#skills">مسیر Skills</a>
+<a href="#grill">Grill with Docs</a>
+<a href="#spec">Spec و Tickets</a>
+<a href="#implement">پیاده‌سازی و بازبینی</a>
+<a href="#example">مثال TaskFlow</a>
+<a href="#gate">Migration Gate</a>
+<a href="#workspace">شروع کارگاه</a></nav></details>
+<section class="document-section p2-reading-section" id="overview"><div class="p2-section-heading"><span class="p2-section-kicker">معماری / ۰۳</span><h2>یک مهاجرت کنترل‌شده، نه بازنویسی از صفر</h2></div>
+<p class="p2-lead">فاز دو تجربهٔ محصول را در یک ابزار AI به نمونه تبدیل کرد. در فاز سه، <strong>همان سورس واقعی</strong> را وارد ساختار و قراردادهای Monorepo مقصد می‌کنیم؛ به شکلی که رفتارهای ارزشمندش حفظ و تغییرات قابل آزمون و بازبینی باشند.</p>
+<div class="p2-lane-grid">
+<div class="p2-lane p2-lane-a"><span class="p2-lane-index">SOURCE</span><strong>Prototype Source</strong><span>خروجی Replit یا ابزار مشابه، وابستگی‌های موجود، رفتارهای نمایشی و شواهد فاز دو.</span></div>
+<div class="p2-lane p2-lane-b"><span class="p2-lane-index">TARGET</span><strong>Project Monorepo</strong><span>ساختار موجود یا مقصد توافق‌شده، Package Manager، conventions و دستورات اجرا/تست.</span></div>
+</div>
+<div class="p3-pipeline" aria-label="روند مهاجرت"><div><small>BASELINE</small><strong>شناخت و Snapshot</strong></div><span aria-hidden="true">←</span><div class="p3-pipeline-core"><small>ALIGN</small><strong>grill-with-docs</strong></div><span aria-hidden="true">←</span><div><small>DELIVER</small><strong>spec → tickets → implement</strong></div><span aria-hidden="true">←</span><div><small>VERIFY</small><strong>review + handoff</strong></div></div>
+<div class="p2-inline-note"><strong>قاعدهٔ اصلی: Preserve Before Refactor.</strong> ابتدا رفتارهای مرجع را در مقصد اجراپذیر کن؛ فقط بازآرایی‌هایی را انجام بده که برای سازگاری، امنیت، نگهداری یا زیرساخت مقصد توجیه دارند. ساخت Backend یا Auth واقعی، صرفاً به دلیل وجود صفحهٔ نمایشی، جزو این فاز نیست.</div></section><section class="document-section p2-reading-section" id="entry"><div class="p2-section-heading"><span class="p2-section-kicker">Entry Gate / مجوز و شواهد</span><h2>برای آغاز مهاجرت به چه چیزهایی نیاز داریم؟</h2></div>
+<div class="p2-question-grid">
+<div class="p2-info-card"><span class="p2-card-index">01</span><h3>نسخهٔ مبنا</h3><p>سورس پروتوتایپ، Commit یا Snapshot اولیه و مراحل اجرای آن قابل دسترسی باشند. هیچ چیزی فقط در محیط سازنده باقی نمانده باشد.</p></div>
+<div class="p2-info-card"><span class="p2-card-index">02</span><h3>قرارداد محصول</h3><p>Product Experience Package، Prototype Handoff، وضعیت ACها و تفاوت‌های نمونه با طراحی مرجع معلوم باشند.</p></div>
+<div class="p2-info-card"><span class="p2-card-index">03</span><h3>مقصد و اختیار</h3><p>Monorepo موجود یا ساختار مقصد تعیین شده و اجازهٔ مهاجرت، هزینه، دسترسی‌ها و تغییر کد از هم جدا بررسی شوند.</p></div>
+</div>
+<p>اگر Monorepo هنوز وجود نداره، Agent نباید خودسرانه ابزار Build یا ساختار پوشه‌ها رو انتخاب کنه. انتخاب زیرساخت خودش یک تصمیمِ نیازمند بررسی و تأیید است؛ ممکنه یک Ticket مستقل یا آزمایش فنی کوتاه لازم داشته باشه.</p>
+<div class="p2-decision"><span class="p2-decision-tag">توقف درست</span><p>نبود سورس، نداشتن مجوز، عدم دسترسی به مقصد یا تعارض جدی لایسنس و امنیت، مانع شروع پیاده‌سازی است. در این حالت می‌توان گزارش ابهام و اقدامات مقدماتی تهیه کرد؛ نباید نتیجهٔ مهاجرت را جعل کرد.</p></div></section><section class="document-section p2-reading-section" id="local"><div class="p2-section-heading"><span class="p2-section-kicker">گام صفر / قبل از Skill</span><h2>Local Readiness؛ چیزی را که نداریم حدس نزنیم</h2></div>
+<p>پروتوتایپ را در یک مسیر کنترل‌شده و جدا از تغییرات مقصد بررسی کن. اجرای `npm install` یا اسکریپت‌های ناشناس ممکن است کد دلخواه اجرا کند؛ قبل از آن `package.json`، دستورات نصب، lockfile، وابستگی‌ها و فایل‌های حساس را مرور کن. هرجا امکان‌پذیره محیط ایزوله و دسترسی حداقلی استفاده کن.</p>
+<div class="p2-workshop-grid">
+<div class="p2-workshop-item"><span>01</span><h3>Snapshot و حفظ منشأ</h3><p>Commit/Tag مبنا، منبع خروجی ابزار AI و فهرست فایل‌ها/وابستگی‌های مهم را مشخص کن. سورس اولیه را بدون دلیل تخریب نکن.</p><small>Evidence: source revision</small></div>
+<div class="p2-workshop-item"><span>02</span><h3>بازرسی قبل از اجرا</h3><p>اسکریپت‌های نصب، فایل‌های پیکربندی، tokenها، سرویس‌های خارجی، لایسنس و وابستگی‌های اختصاصی ابزار سازنده را شناسایی کن.</p><small>Evidence: dependency &amp; risk inventory</small></div>
+<div class="p2-workshop-item"><span>03</span><h3>رفتار مبنا</h3><p>با اجازه و بعد از بررسی ایمنی، پروژهٔ اصلی را اجرا کن؛ جریان‌های AC حیاتی را بررسی و Passed/Failed/Blocked/Not Tested را ثبت کن.</p><small>Evidence: baseline results</small></div>
+<div class="p2-workshop-item"><span>04</span><h3>قرارداد Monorepo</h3><p>ساختار apps/packages، نسخه‌های Runtime و Package Manager، Workspaces، lint/typecheck/test و محدودیت CI را از روی کد واقعی بفهم.</p><small>Evidence: destination conventions</small></div>
+</div>
+<div class="p3-example-terminal" dir="ltr"><div class="p3-terminal-top"><span></span><span></span><span></span><small>illustrative directory layout — not the actual TaskFlow repo</small></div><pre><code>prototype-source/        # read / assess first
+target-monorepo/
+  apps/
+    web/                 # hypothetical target
+  packages/              # reuse only when justified</code></pre></div>
+<p>نقشهٔ مقصد بالا صرفاً مثال آموزشی است. نه مسیر واقعی TaskFlow را می‌دانیم و نه ساختار Monorepo تو را؛ Coding Agent باید هر دو را در Local مشاهده و گزارش کند.</p></section><section class="document-section p2-reading-section" id="ownership"><div class="p2-section-heading"><span class="p2-section-kicker">تقسیم مسئولیت / زمینهٔ واقعی</span><h2>LLM 1، توسعه‌دهنده و Coding Agent چه می‌کنند؟</h2></div>
+<div class="table-scroll"><table><thead><tr><th>عامل</th><th>مسئولیت</th><th>مرز اعتبار</th></tr></thead><tbody>
+<tr><td><strong>LLM 1 · Prompt Engineer</strong></td><td>به کمک ورودی فاز دو و گزارش Agent، هدف هر نوبت، محدودیت‌ها، دستور مرحلهٔ بعد و پرسش‌های باارزش را آماده می‌کند.</td><td>بدون دسترسی مستقیم به لوکال، ادعای دیدن فایل یا اجرای تست نمی‌کند.</td></tr>
+<tr><td><strong>Local Coding Agent</strong></td><td>فایل‌ها و قراردادهای واقعی را بررسی می‌کند، Skill مربوط را اجرا و در زمان مجاز تغییر و تست ایجاد می‌کند.</td><td>خروجی Skill را باید از نظر فایل، Diff و نتیجهٔ ابزار راستی‌آزمایی کرد.</td></tr>
+<tr><td><strong>توسعه‌دهنده</strong></td><td>دسترسی‌های محدود، پاسخ‌های تصمیمی، تأیید Review و انتقال نتایج بین سشن‌ها را مدیریت می‌کند.</td><td>پذیرش فنی به‌جای تأیید تجاری یا Production نیست.</td></tr>
+</tbody></table></div>
+<p>LLM اول <strong>خود Skills را بازنویسی نمی‌کند.</strong> به‌جای تکرار دستورهای داخلی Skill، یک Context Brief برای Agent می‌سازد و بعد از دیدن خروجی واقعیِ مرحله، پرامپت بعدی را مهندسی می‌کند.</p></section><section class="document-section p2-reading-section" id="skills"><div class="p2-section-heading"><span class="p2-section-kicker">فلو / بر اساس دامنهٔ کار</span><h2>مسیر کوتاه یا مسیر چندسشنی؟</h2></div>
+<p>در هر دو مسیر، اولین گفت‌وگوی مهندسی با <code>/grill-with-docs</code> انجام می‌شه. بعد از روشن‌شدن تصمیم‌ها، <strong>حجم واقعی مهاجرت</strong> تعیین می‌کنه آیا Spec و Tickets ارزش دارند یا نه.</p>
+<div class="p3-branch"><div class="p3-branch-header"><span>اول: Local Readiness →</span><strong>/grill-with-docs</strong></div><div class="p3-branch-grid"><div><span class="p3-route-pill">تغییر کوچک</span><h3>Single-session Migration</h3><p>یک بخش محدود، تصمیم‌ها روشن و تغییر در یک سشن قابل ساخت و بررسی است.</p><strong>/implement → review</strong></div><div><span class="p3-route-pill p3-route-pill-deep">مهاجرت چندمرحله‌ای</span><h3>Multi-session Migration</h3><p>هماهنگی چند اپ/پکیج، وابستگی زیاد یا برنامه‌ای که باید از Context Window عبور کند.</p><strong>/to-spec → /to-tickets → /implement per ticket → review</strong></div></div></div>
+<p>این ترکیب با مستندات فعلی Skills سازگاره: <code>to-spec</code> گفت‌وگوی Grill رو خلاصه می‌کنه، اما خودش مصاحبهٔ جدید نیست. <code>to-tickets</code> کار چندسشنی رو به برش‌های کوچک و قابل نمایش تقسیم می‌کنه. در کار خیلی کوچک، این دو مرحله می‌تونن سربار غیرضروری باشن.</p>
+<div class="p2-inline-note"><strong>برای مهاجرت واقعاً بزرگ:</strong> اگر خود مسئلهٔ مهاجرت هم در یک جلسه قابل تصمیم‌گیری نیست، نخست محدوده را کوچک و بخش‌بندی کن؛ در اکوسیستم این Skills، <code>wayfinder</code> گزینهٔ نقشه‌برداری چندسشنی است. انتخاب فعلی ما برای هر بخش قابل بحث همچنان <code>grill-with-docs</code> باقی می‌ماند.</div></section><section class="document-section p2-reading-section" id="grill"><div class="p2-section-heading"><span class="p2-section-kicker">Skill اصلی / Align</span><h2>grill-with-docs واقعاً چه خروجی دارد؟</h2></div>
+<p>این Skill یک جلسهٔ پرسش‌گری <strong>وابسته به کدبیس موجود</strong> اجرا می‌کنه: سؤال‌ها رو یکی‌یکی می‌پرسه و هرجا کد جواب می‌ده خودش به فایل مراجعه می‌کنه. اصطلاحات حل‌شده در <code>GLOSSARY.md</code> ذخیره می‌شن؛ تصمیم‌های واجد شرایط ADR در <code>docs/adr/</code> می‌گیرن. اغلب تصمیم‌های روزمره ممکنه فقط در خود مکالمه باقی بمونن.</p>
+<div class="p2-example-panel"><div class="p2-example-header"><span>سه سؤال نمونهٔ مرتبط با مهاجرت</span><span class="p2-chip">نه خروجی واقعی یک سشن</span></div>
+<div class="p3-question-list"><div><b>۱</b><p>کدام قابلیت پروتوتایپ باید <strong>بدون تغییر رفتار</strong> منتقل شود و کدام رفتار صرفاً دموست؟</p></div><div><b>۲</b><p>وابستگی‌های خاص محیط سازنده یا پیکربندی مقصد کدام‌اند؟ ابتدا Agent از کد پاسخ دهد.</p></div><div><b>۳</b><p>انتقال یک Component به پکیج مشترک، تصمیم ضروری است یا صرفاً بازآرایی خوشایند؟</p></div></div></div>
+<div class="p2-check-panel"><h3>نشانه‌های اجرای درست Skill</h3><ul class="p2-checklist">
+<li>Skills وابستهٔ <code>grilling</code> و <code>domain-modeling</code> نصب/قابل بارگیری‌اند.</li>
+<li>هر بار یک سؤال با توصیهٔ قابل بحث می‌آید؛ سؤال‌های قابل پاسخ از کد به انسان واگذار نمی‌شوند.</li>
+<li>تعاریف اصطلاحات واقعاً در <code>GLOSSARY.md</code> ثبت می‌شوند؛ این فایل نباید به Spec تبدیل شود.</li>
+<li>ADR فقط برای تصمیم دشوارِ برگشت، خلاف انتظار و دارای Trade-off ساخته می‌شود؛ صفر ADR هم طبیعی است.</li>
+<li>جلسه پس از توافق پایان می‌یابد و همان Context برای <code>to-spec</code> حفظ می‌شود، یا نتیجه به‌شکلی صادقانه Handoff می‌گردد.</li>
+</ul></div>
+<p>منابع راهنمای این رفتار، <a href="https://github.com/mattpocock/skills/blob/main/docs/engineering/grill-with-docs.md" target="_blank" rel="noopener noreferrer">مستند اصلی Grill</a> و <a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md" target="_blank" rel="noopener noreferrer">تعریف Skill</a> هستند.</p></section><section class="document-section p2-reading-section" id="spec"><div class="p2-section-heading"><span class="p2-section-kicker">برای مهاجرت چندسشنی</span><h2>To Spec و To Tickets چه زمانی مفیدند؟</h2></div>
+<div class="p2-workshop-grid">
+<div class="p2-workshop-item"><span>02</span><h3>to-spec</h3><p>توافق‌های Grill رو در قالب Spec ثبت می‌کنه: هدف مهاجرت، In/Out Scope، تصمیم‌های قابل ردگیری، Test Seams و معیارهای Done. نباید نیاز یا تصمیم جدید اختراع کنه.</p><small>Gate: Spec را توسعه‌دهنده با تصمیم‌های واقعی تطبیق داده؟</small></div>
+<div class="p2-workshop-item"><span>03</span><h3>to-tickets</h3><p>Spec رو به Ticketهایی با Dependency و نتیجهٔ مستقل می‌شکنه؛ ترجیح با برش‌های عمودیِ قابل Demonstrate است، نه تقسیم کورِ «اول همهٔ configها، بعد همهٔ UIها».</p><small>Gate: هر Ticket یک رفتار یا یک برش قابل آزمون دارد؟</small></div>
+</div>
+<p>برای <code>/to-spec</code> و <code>/to-tickets</code> ابتدا <code>/setup-matt-pocock-skills</code> رو در ریپازیتوری اجرا کن تا Issue Tracker و محل اسناد تنظیم بشن. در حالت GitHub یا Tracker دیگر، وجود دسترسی/ابزار لازم باید تأیید بشه؛ Local Markdown هم یک گزینه است. این دستورها رو در محیط Local و با آگاهی از فایل‌هایی که می‌نویسن اجرا کن.</p>
+<div class="p2-decision"><span class="p2-decision-tag">نکتهٔ عملی</span><p>اگر مشکل از Refactor وسیع با اثر روی همهٔ مصرف‌کننده‌هاست، ممکنه Ticketهای سادهٔ عمودی مناسب نباشن. در این شرایط از مدل Expand → Migrate → Contract یا برش‌بندی مشابه با اجرای Test/CI بین مراحل استفاده کن.</p></div></section><section class="document-section p2-reading-section" id="implement"><div class="p2-section-heading"><span class="p2-section-kicker">تغییر واقعی / Diff و Test</span><h2>Implement بدون شکستن رفتار مرجع</h2></div>
+<p><code>/implement</code> باید یک Ticket یا تغییر محدود رو اجرا کنه؛ نه اینکه سرِ پیاده‌سازی دربارهٔ هدف محصول تصمیم تازه بگیره. قبل از آغاز، <strong>Branch مناسب</strong> و محدودهٔ مجاز تغییرات روشن باشه؛ Skill می‌تونه روی Branch جاری Commit ایجاد کنه.</p>
+<div class="p2-workshop-grid">
+<div class="p2-workshop-item"><span>01</span><h3>Preserve</h3><p>سناریوی اصلی فاز دو و Baseline را نگه دار. اگر دادهٔ نمایشی قرار است حفظ شود، انتقال نباید ناخواسته Backend واقعی بسازد.</p></div>
+<div class="p2-workshop-item"><span>02</span><h3>Adapt</h3><p>فقط آنچه برای سازگاری با Monorepo لازم است تغییر کند: مسیرها، Imports، Build Scripts یا وابستگی خاص ابزار سازنده.</p></div>
+<div class="p2-workshop-item"><span>03</span><h3>Verify</h3><p>Typecheck/Build/Test و مسیرهای ضروری را با گزارش واقعی اجرا و اختلاف‌ها را ثبت کن.</p></div>
+<div class="p2-workshop-item"><span>04</span><h3>Review</h3><p>Diff نسبت به Spec/AC و قراردادهای ریپازیتوری بررسی شود. یافته‌های Review خودکار به معنی اصلاح یا پذیرش خودکار نیست.</p></div>
+</div>
+<p>برای هر Ticket، یک سشن متمرکز مناسب‌تر از درخواست «همهٔ مهاجرت رو هم‌زمان اجرا کن» است. بعد از Commit، وضعیت Ticket و Acceptance Criteria را انسانی بازبینی کن؛ خود Skill الزاماً Ticket را نمی‌بندد.</p></section><section class="document-section p2-reading-section" id="example"><div class="p2-section-heading"><span class="p2-section-kicker">آموزش / TaskFlow</span><h2>مثال پیوسته از یک مهاجرت فرضی</h2></div>
+<p><strong>فرض آموزشی:</strong> سورس TaskFlow در Local داریم. قصد داریم نسخهٔ Frontend Demo رو وارد `apps/web` یک Monorepo فرضی کنیم. این ساختار و وضعیت Build واقعی پروژهٔ تو نیست؛ فقط برای توضیح روند ازش استفاده می‌کنیم.</p>
+<div class="p3-case-table">
+<div><span class="p3-case-id">MIG-01</span><h3>اولین برش قابل مشاهده</h3><p>TaskFlow در محیط Monorepo اجرا شود و کاربر بتواند از Dashboard به پروژه و Board برود.</p><small>بررسی: Local start + FLOW مرتبط</small></div>
+<div><span class="p3-case-id">MIG-02</span><h3>رفتار دادهٔ نمایشی</h3><p>ایجاد تسک و جابه‌جایی در کانبان با رفتار مبنا سازگار بماند؛ آمار مرتبط هم‌خوان باشد.</p><small>بررسی: ACهای ساخت و تغییر تسک</small></div>
+<div><span class="p3-case-id">MIG-03</span><h3>وابستگی‌های مقصد</h3><p>وابستگی‌های خاص Replit که واقعاً وجود دارند شناسایی و در صورت لزوم جایگزین شوند.</p><small>بررسی: Build و گزارش Dependency</small></div>
+</div>
+<div class="p2-example-panel"><div class="p2-example-header"><span>مثال «گزارش شواهد» برای برگشت به LLM 1</span><code>MIG-02 · illustrative</code></div><p>«در نسخهٔ مبنا، ایجاد تسک روی برد قابل انجام بود. پس از انتقال اولیه، فرم باز می‌شود اما تسک جدید در برد نمایش داده نمی‌شود. مسیر را دستی بررسی کردم. Build موفق است، اما AC مربوط Failed است. فایل‌ها و Diff مرتبط را جداگانه آماده کرده‌ام.»</p><div class="p2-example-footer">نمونهٔ آموزشیِ گزارش ایراد؛ نه ادعای مشاهدهٔ خطا در TaskFlow واقعی.</div></div>
+<p>این نوع گزارش به LLM اول کمک می‌کنه برای Coding Agent دستور هدفمند بنویسه؛ بدون اینکه مجدداً تمام سورس رو برای بازنویسی عمومی واگذار کنیم.</p></section><section class="document-section p2-reading-section" id="gate"><div class="p2-section-heading"><span class="p2-section-kicker">شرط خروج / تصمیم انسانی</span><h2>Migration Acceptance Gate</h2></div>
+<p>پایان این فاز «پروژه اجرا شد» نیست. باید رفتار محصول، قرارداد Monorepo و سطح واقعی آزمون روشن باشند. معیارهای اصلی:</p>
+<div class="p2-status-grid">
+<div><span class="p2-state-label p2-state-pass">Runtime</span><p>اپ در محیط مقصد با دستورهای ثبت‌شده اجرا می‌شود؛ نه فقط در محیط سازنده.</p></div>
+<div><span class="p2-state-label p2-state-pass">Behavior</span><p>سناریوهای حیاتی فاز دو در مقصد بررسی شده‌اند و اختلاف‌ها معلوم‌اند.</p></div>
+<div><span class="p2-state-label p2-state-pass">Repository</span><p>وابستگی‌ها، قاعدهٔ پکیج‌ها، Build/Typecheck/Test و Diff وضعیت روشن دارند.</p></div>
+<div><span class="p2-state-label p2-state-block">Evidence</span><p>موارد Not Tested و Blocked، بدهی فنی، محدودیت سرویس و مجوزها پنهان نشده‌اند.</p></div>
+</div>
+<div class="p2-artifact-grid">
+<details class="p2-artifact"><summary><span class="p2-artifact-letter">A</span><span><strong>Source &amp; Baseline Assessment</strong><small>نسخهٔ سورس، ریسک‌ها، وابستگی‌ها و رفتار مبنا.</small></span><span class="p2-artifact-toggle">⌄</span></summary><div class="p2-artifact-detail"><p>لینک یا مسیرهای مرجع، نتیجهٔ واقعی اجرا و وضعیت اعتبار شواهد ثبت شود.</p></div></details>
+<details class="p2-artifact"><summary><span class="p2-artifact-letter">B</span><span><strong>Decision Trail &amp; Migration Spec</strong><small>واژگان، ADRهای واجد شرایط و در صورت نیاز Spec و Tickets.</small></span><span class="p2-artifact-toggle">⌄</span></summary><div class="p2-artifact-detail"><p>در مسیر کوچک بدون Spec نیز تصمیم‌های موجود در مکالمه یا Handoff گم نشوند.</p></div></details>
+<details class="p2-artifact"><summary><span class="p2-artifact-letter">C</span><span><strong>Migrated Source &amp; Verification</strong><small>Commit/PR و گزارش Build/Test و رفتارهای ضروری.</small></span><span class="p2-artifact-toggle">⌄</span></summary><div class="p2-artifact-detail"><p>هر AC با Passed / Failed / Blocked / Not Tested و نوع شاهد مشخص گردد.</p></div></details>
+<details class="p2-artifact"><summary><span class="p2-artifact-letter">D</span><span><strong>Migration Handoff</strong><small>خلاصهٔ مستقل پروژه و شروط ادامه.</small></span><span class="p2-artifact-toggle">⌄</span></summary><div class="p2-artifact-detail"><p>گام مجاز بعدی، مسئول، بدهی‌ها و مرز دمو/Production را ذکر کند.</p></div></details>
+</div>
+<p>نتیجهٔ نهایی می‌تواند Accepted، Conditionally Accepted یا Blocked باشد. در همهٔ حالت‌ها تصمیم و مجوز واقعی صاحب اختیار مهم است. انتقال کد موفق به Monorepo هنوز به معنی انتشار یا Production-readiness نیست.</p></section><section class="document-section p2-reading-section" id="workspace"><div class="p2-section-heading"><span class="p2-section-kicker">کارگاه / اجرای واقعی</span><h2>LLM اول رو برای این مهاجرت آماده کن</h2></div>
+<p>پرامپت LLM 1 باید با اطلاعات واقعی از فاز دو و محیط Local ساخته بشه. LLM اول پس از هر مرحله، گزارش Agent رو بررسی می‌کنه و <strong>فقط دستور مرحلهٔ بعد</strong> رو آماده می‌کنه؛ خودش ادعای دسترسی به سورس محلی نداره.</p>
+<div class="p2-lane-grid"><a class="p2-lane p2-lane-a" href="migration/index.html"><span class="p2-lane-index">WORKSPACE / 03</span><strong>کارگاه LLM 1 و Coding Agent</strong><span>ورودی Handoff، وضعیت لوکال، پرامپت شروع LLM 1، پرامپت بازرسی Agent، Grill و پرامپت مرحلهٔ بعد.</span><span class="p2-lane-link">ورود به کارگاه مهاجرت ←</span></a><a class="p2-lane p2-lane-b" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer"><span class="p2-lane-index">REFERENCE</span><strong>مخزن رسمی Skills</strong><span>نام‌ها، وابستگی‌ها و دستورهای دقیق را با نسخهٔ واقعی Agent نصب‌شده تطبیق بده.</span><span class="p2-lane-link">منبع اصلی ↗</span></a></div>
+</section>
+<nav class="doc-pagination" aria-label="جابه‌جایی بین فازها"><a href="phase-2.html"><span>فاز قبل</span><strong>← فاز دو · پروتوتایپ</strong></a><a href="migration/index.html"><span>شروع اجرای فاز سه</span><strong>کارگاه LLM 1 و Coding Agent ←</strong></a></nav></article>
+<aside class="toc" aria-label="فهرست بخش‌های این صفحه"><nav class="toc-sticky" aria-label="بخش‌های صفحه"><div class="toc-header"><span class="toc-overline">راهنمای مطالعه</span><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#overview">نقشهٔ مهاجرت</a>
+<a href="#entry">پیش‌نیاز و ایمنی</a>
+<a href="#local">آماده‌سازی Local</a>
+<a href="#ownership">نقش LLM و Agent</a>
+<a href="#skills">مسیر Skills</a>
+<a href="#grill">Grill with Docs</a>
+<a href="#spec">Spec و Tickets</a>
+<a href="#implement">پیاده‌سازی و بازبینی</a>
+<a href="#example">مثال TaskFlow</a>
+<a href="#gate">Migration Gate</a>
+<a href="#workspace">شروع کارگاه</a></div><a class="toc-shortcut" href="migration/index.html">شروع کارگاه مهاجرت ←</a></nav></aside></div>
+<footer class="footer"><span>Migration Engineering · Local Skills · Evidence</span><span><a href="../">بازگشت به راهنما</a></span></footer></div></main></div>
+<script src="../assets/phase-0-navigation.js" defer></script></body></html>
