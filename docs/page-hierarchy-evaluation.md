@@ -2,7 +2,15 @@
 
 Implemented 2026-10-26. Human evaluation is **pending**. This ticket follows the [UI/UX](ui-ux-evaluation.md) and [icon](icon-evaluation.md) tickets; their coverage is preserved separately.
 
-## Palette-sync correction — latest checkpoint
+## Migration sidebar cleanup — latest checkpoint
+
+Removed the redundant «در این فاز» block from /phases/migration/index.html. Its guide/workshop links duplicated destinations already present in the main navigation and marked the same page current twice.
+
+Actual preflight: browser DOM inspection confirmed one sidebar navigation group, one current-page entry, one phase-three link and one migration-workshop link. The extra heading is absent; desktop screenshot review and diff whitespace checks passed. Prompt textarea markup/content was compared before and after and is unchanged.
+
+First action: refresh http://localhost:8000/phases/migration/index.html and inspect the bottom of the sidebar. Expected: «کارگاه مهاجرت» appears once, with no additional «در این فاز» block. Select the main phase-three link and return to the workshop to check both routes. Human evaluation remains pending; this correction is local until committed and pushed.
+
+## Palette-sync correction
 
 Phase two and prototyping now share one rose palette declaration. Phase three and migration share one amber declaration. The previous emerald/olive definitions were removed, and the subpages’ browser theme-color values were synchronized. Grouped selectors keep each pair’s complete palette together instead of maintaining duplicate values.
 
