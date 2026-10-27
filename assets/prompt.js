@@ -1,16 +1,25 @@
 "use strict";
 
 (() => {
-  const input = document.querySelector("[data-prompt-input]");
+  const legacyInput = document.querySelector("[data-prompt-input]");
   const previews = [...document.querySelectorAll("[data-prompt-preview]")];
-  if (!input || !previews.length) return;
+  if (!previews.length) return;
   const templates = new Map(previews.map(preview => [preview, preview.defaultValue]));
 
-  function refresh() {
+  const inputs = new Map(previews.map(preview => [
+    preview,
+    preview.dataset.input
+      ? document.getElementById(preview.dataset.input)
+      : preview.hasAttribute("data-uses-input") ? legacyInput : null
+  ]));
+
+  function refresh(changedInput) {
     for (const preview of previews) {
+      const input = inputs.get(preview);
+      if (changedInput && input !== changedInput) continue;
       const template = templates.get(preview);
-      // A replacement callback preserves literal dollar patterns and whitespace.
-      preview.value = preview.hasAttribute("data-uses-input")
+      // A callback preserves literal dollar patterns, whitespace and HTML-like text.
+      preview.value = input
         ? template.replace("{{INPUT}}", () => input.value)
         : template;
       document.getElementById(preview.dataset.status).textContent = "";
@@ -51,6 +60,8 @@
       }
     });
   }
-  input.addEventListener("input", refresh);
+  for (const input of new Set(inputs.values())) {
+    if (input) input.addEventListener("input", () => refresh(input));
+  }
   refresh();
 })();

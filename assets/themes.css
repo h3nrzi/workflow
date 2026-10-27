@@ -64,6 +64,23 @@ body[data-page="prototyping"] { /* Rose */
   --hero-end: #941349;
   --hero-highlight: #f3d3e0;
 }
+body[data-page="phase-3"],
+body[data-page="workshop-3"] { /* Amber: intake and migration */
+  --blue: #92400e;
+  --blue-hover: #78350f;
+  --blue-soft: #fff3df;
+  --surface: #fffbf5;
+  --line: #ead5ba;
+  --ink: #342b27;
+  --muted: #685b50;
+  --tone-900: #572b0e;
+  --tone-700: #78350f;
+  --tone-500: #f6e7d1;
+  --tone-300: #d9b78b;
+  --hero-start: #3e200c;
+  --hero-end: #79400f;
+  --hero-highlight: #f7e2c0;
+}
 body[data-page="workshop-0"] { /* Cyan */
   --blue: #0e7490;
   --blue-hover: #0b5d73;
