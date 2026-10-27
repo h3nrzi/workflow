@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#be185d">
   <meta name="description" content="رفتار تأییدشده را به سناریوی مستقل وصل کن، اختلاف را اصلاح کن و شاهد واقعی را برای ریفکتور نگه دار.">
-  <title>فاز 4: E2E و اصلاح رفتار MVP — ورک‌فلو</title>
+  <title>فاز ۴: E2E و اصلاح رفتار MVP — ورک‌فلو</title>
   <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/styles.css?v=brand-1">
-  <link rel="stylesheet" href="../assets/themes.css">
+  <link rel="stylesheet" href="../assets/styles.css?v=development-1">
+  <link rel="stylesheet" href="../assets/themes.css?v=development-1">
 </head>
 <body class="p2 p2-design" data-page="phase-4" data-page-kind="guide">
   <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
@@ -21,15 +21,27 @@
       <div class="sidebar-inner">
         <div class="navigation-label">شروع</div>
         <nav class="navigation" aria-label="فصل‌های راهنما">
-          <a href="../"><svg viewBox="0 0 24 24" class="icon nav-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#home"></use></svg>نمای کلی</a>
-          <a href="phase-0.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#message"></use></svg><span class="nav-phase-number">۰۰</span></span>دریافت و صورت‌بندی مسئله</a>
-<a class="nav-child" href="workshops/phase-0.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#message"></use></svg>کارگاه صورت‌بندی</a>
-          <a href="phase-1.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#search"></use></svg><span class="nav-phase-number">۰۱</span></span>کشف محصول تطبیقی</a>
-<a class="nav-child" href="workshops/phase-1.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#search"></use></svg>کارگاه کشف محصول</a>
-          <a href="phase-2.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#pen"></use></svg><span class="nav-phase-number">۰۲</span></span>طراحی و پروتوتایپ</a>
-<a class="nav-child" href="workshops/phase-2.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#pen"></use></svg>کارگاه طراحی</a>
-<a class="nav-child" href="prototyping/index.html"><svg viewBox="0 0 24 24" class="icon nav-child-icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#panels"></use></svg>کارگاه پروتوتایپ</a>
-        <a href="phase-4.html" aria-current="page">فاز 4: E2E و اصلاح رفتار MVP</a><a class="nav-child" href="workshops/phase-4.html">کارگاه فاز 4</a></nav>
+<a href="../index.html"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#home"></use></svg>نمای کلی</a>
+<a href="phase-0.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#message"></use></svg><span class="nav-phase-number">۰۰</span></span>دریافت و صورت‌بندی مسئله</a>
+<a class="nav-child" href="workshops/phase-0.html">کارگاه صورت‌بندی</a>
+<a href="phase-1.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#search"></use></svg><span class="nav-phase-number">۰۱</span></span>کشف محصول تطبیقی</a>
+<a class="nav-child" href="workshops/phase-1.html">کارگاه کشف محصول</a>
+<a href="phase-2.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#pen"></use></svg><span class="nav-phase-number">۰۲</span></span>طراحی و پروتوتایپ</a>
+<a class="nav-child" href="workshops/phase-2.html">کارگاه طراحی</a>
+<a class="nav-child" href="prototyping/index.html"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#panels"></use></svg>کارگاه پروتوتایپ</a>
+<a href="phase-3.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#clipboard"></use></svg><span class="nav-phase-number">۰۳</span></span>تحویل‌گیری و مهاجرت</a>
+<a class="nav-child" href="workshops/phase-3.html">کارگاه مهاجرت</a>
+<a href="phase-4.html" aria-current="page"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#check"></use></svg><span class="nav-phase-number">۰۴</span></span>E2E و اصلاح رفتار MVP</a>
+<a class="nav-child" href="workshops/phase-4.html">کارگاه E2E</a>
+<a href="phase-5.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#panels"></use></svg><span class="nav-phase-number">۰۵</span></span>ریفکتور معماری فرانت</a>
+<a class="nav-child" href="workshops/phase-5.html">کارگاه ریفکتور</a>
+<a href="phase-6.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#route"></use></svg><span class="nav-phase-number">۰۶</span></span>طراحی بک‌اند</a>
+<a class="nav-child" href="workshops/phase-6.html">کارگاه طراحی بک‌اند</a>
+<a href="phase-7.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#route"></use></svg><span class="nav-phase-number">۰۷</span></span>توسعه و اتصال تدریجی</a>
+<a class="nav-child" href="workshops/phase-7.html">کارگاه اتصال تدریجی</a>
+<a href="phase-8.html"><span class="nav-number nav-with-icon"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#check"></use></svg><span class="nav-phase-number">۰۸</span></span>انتشار و تحویل</a>
+<a class="nav-child" href="workshops/phase-8.html">کارگاه انتشار و تحویل</a>
+</nav>
         <div class="sidebar-bottom">
           <span class="sidebar-status"><span class="status-light"></span> سند زنده و در حال توسعه</span>
           <a href="https://github.com/h3nrzi/workflow" target="_blank" rel="noopener noreferrer">مشاهده در GitHub <span aria-hidden="true"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#external"></use></svg></span></a>
@@ -37,9 +49,9 @@
       </div>
     </aside>
     <main id="content" class="main"><div class="content-container">
-      <header class="topbar"><span class="breadcrumb"><a href="../">مستندات</a><span class="slash">/</span><strong>فاز 4: E2E و اصلاح رفتار MVP</strong></span><a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-4.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#external"></use></svg></a></header>
+      <header class="topbar"><span class="breadcrumb"><a href="../">مستندات</a><span class="slash">/</span><strong>فاز ۴: E2E و اصلاح رفتار MVP</strong></span><a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/phases/phase-4.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../assets/icons.svg#external"></use></svg></a></header>
       <div class="document-layout">
-        <article class="document"><header class="doc-header page-hero"><h1 id="page-title">فاز 4: E2E و اصلاح رفتار MVP</h1><p class="doc-lead">رفتار تأییدشده را به سناریوی مستقل وصل کن، اختلاف را اصلاح کن و شاهد واقعی را برای ریفکتور نگه دار.</p><a class="doc-primary-link" href="workshops/phase-4.html">ورود به کارگاه و فرمان‌های مستقل</a></header><details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">بخش‌ها</span></summary><nav class="mobile-toc-links" aria-label="بخش‌های صفحه"><a href="#goal">رفتار مصوب را به سناریوی قابل مشاهده وصل کن</a><a href="#entry-gate">ورودی و مرجع صحت را احراز کن</a><a href="#coverage">از فهرست جریان‌ها به ماتریس پوشش برس</a><a href="#tool-and-data">ابزار، داده و مرز شبیه‌سازی را انتخاب کن</a><a href="#execute">اجرا، مشاهده و شاهد را جدا ثبت کن</a><a href="#repair">اختلاف را اصلاح کن؛ انتظار را برای سبز شدن تغییر نده</a><a href="#quality">کیفیت متناسب با ریسک را در همان جریان بسنج</a><a href="#handoff">CP-4 و تحویل به ریفکتور</a></nav></details><section class="document-section p2-reading-section" id="goal">
+        <article class="document"><header class="doc-header page-hero"><h1 id="page-title">فاز ۴: E2E و اصلاح رفتار MVP</h1><p class="doc-lead">رفتار تأییدشده را به سناریوی مستقل وصل کن، اختلاف را اصلاح کن و شاهد واقعی را برای ریفکتور نگه دار.</p><a class="doc-primary-link" href="workshops/phase-4.html">ورود به کارگاه و فرمان‌های مستقل</a></header><details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">بخش‌ها</span></summary><nav class="mobile-toc-links" aria-label="بخش‌های صفحه"><a href="#goal">رفتار مصوب را به سناریوی قابل مشاهده وصل کن</a><a href="#entry-gate">ورودی و مرجع صحت را احراز کن</a><a href="#coverage">از فهرست جریان‌ها به ماتریس پوشش برس</a><a href="#tool-and-data">ابزار، داده و مرز شبیه‌سازی را انتخاب کن</a><a href="#execute">اجرا، مشاهده و شاهد را جدا ثبت کن</a><a href="#repair">اختلاف را اصلاح کن؛ انتظار را برای سبز شدن تغییر نده</a><a href="#quality">کیفیت متناسب با ریسک را در همان جریان بسنج</a><a href="#handoff">CP-4 و تحویل به ریفکتور</a></nav></details><section class="document-section p2-reading-section" id="goal">
 <h2>رفتار مصوب را به سناریوی قابل مشاهده وصل کن</h2>
 <p>فاز چهار فاصلهٔ رفتار فعلی فرانت با تعریف تأییدشدهٔ رفتار MVP را آشکار و اصلاح می‌کند. چرا پیش از ریفکتور؟ تا ساختار داخلی را بعداً با یک مرجع رفتاری قابل تکرار تغییر بدهیم. وجود تست، تعداد تست یا سبز بودن اجرای نامرتبط شاهد پوشش MVP نیست. این آموزش روش دستی کار را می‌دهد؛ فرمان‌های کارگاه همان روش را به Agent می‌سپارند.</p><p>مسیر: احراز ورودی ← ماتریس پوشش ← تصمیم ابزار و داده ← طراحی تأییدشده ← spec و تیکت ← اجرای سناریو و اصلاح اختلاف ← شاهد و CP-4. شروع ثابت با grill-with-docs فقط طراحی است؛ تست‌نویسی و تغییر کد پس از فرمان اجرای جدا انجام می‌شوند.</p>
 </section><section class="document-section p2-reading-section" id="entry-gate">
@@ -63,13 +75,13 @@
 </section><section class="document-section p2-reading-section" id="handoff">
 <h2>CP-4 و تحویل به ریفکتور</h2>
 <p>پایان طراحی یعنی ماتریس، ابزار/داده/شبیه‌سازی، انتظارها، برنامهٔ اصلاح و معیار خروج تأیید و آمادهٔ spec هستند. پایان اجرای فاز یعنی همهٔ جریان‌های داخل MVP و حالت‌های مهم با نسخه و شاهد اجرا شده‌اند، اختلاف‌ها اصلاح و دوباره بررسی شده‌اند و مانع باز نداریم. پذیرش انسانی پایان جداگانه‌ای است و تا گزارش مشاهدهٔ انسان pending می‌ماند.</p><p>در محل معتبر مخزن، CP-4 را به CP-3 و نسخهٔ جاری وصل کن؛ FLOW/SCREEN/INT/AC، تصمیم‌ها، TESTها با شاهد/وضعیت، OPENها، شبیه‌سازی‌های باقی‌مانده و دستور بازتولید را به‌روز نگه دار. CP-4 آموزشی فعلی اجرا‌نشده است و به علت CP-2 مسدود نمی‌تواند آماده اعلام شود. در سشن تازه Agent همین مرجع و دستورالعمل‌ها را می‌خواند؛ خلاصهٔ چت جای مرجع رفتار و شاهد نیست. تعارض را با تصمیم معتبر حل کن.</p><p>نخستین اقدام: رفتار مصوب AC-01 و AC-02 را کنار CP-3 بگذار و دسترسی به سورس/اجرای آن را احراز کن؛ سپس <a href="workshops/phase-4.html#start">پیش‌نمایش شروع طراحی</a> را بخوان. پس از پایان واقعی CP-4، ماتریس و نتایج به فاز پنج می‌روند تا ریفکتور رفتار را حفظ کند؛ همان سناریوها در فاز هفت با سرویس واقعی دوباره اجرا خواهند شد. مهارت بعدی خودکار شروع نمی‌شود.</p>
-</section></article>
+</section><nav class="subpage-actions" aria-label="قبل و بعد فاز"><a href="phase-3.html">فاز ۳: تحویل‌گیری و مهاجرت</a><a href="workshops/phase-4.html">فرمان‌های مستقل این فاز</a><a href="phase-5.html">پس از پایان معتبر: فاز ۵، ریفکتور معماری فرانت</a></nav></article>
         <aside class="toc" aria-label="فهرست صفحه">
 <nav class="toc-sticky"><div class="toc-header"><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#goal">رفتار مصوب را به سناریوی قابل مشاهده وصل کن</a><a href="#entry-gate">ورودی و مرجع صحت را احراز کن</a><a href="#coverage">از فهرست جریان‌ها به ماتریس پوشش برس</a><a href="#tool-and-data">ابزار، داده و مرز شبیه‌سازی را انتخاب کن</a><a href="#execute">اجرا، مشاهده و شاهد را جدا ثبت کن</a><a href="#repair">اختلاف را اصلاح کن؛ انتظار را برای سبز شدن تغییر نده</a><a href="#quality">کیفیت متناسب با ریسک را در همان جریان بسنج</a><a href="#handoff">CP-4 و تحویل به ریفکتور</a></div>
 </nav>
 </aside>
       </div>
-      <footer class="footer"><span>Product Design · Prototype · Human Decision</span><span><a href="../">بازگشت به راهنما</a></span></footer>
+      <footer class="footer"><span>طراحی · توسعه · انتشار · تصمیم انسانی</span><span><a href="../">بازگشت به راهنما</a></span></footer>
     </div></main>
   </div>
   <script src="../assets/phase-0-navigation.js" defer></script>
