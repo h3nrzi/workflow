@@ -31,3 +31,8 @@ Reuse the local preview server, or serve the integration checkout with `python3 
 | Handoff and end states | Read `handoff`, `exit` and evaluation; imagine a fresh chat. | CP-5 carries version, prior checkpoint, stable IDs, actual TEST statuses and OPEN responsibility. Design completion, executed refactor and human acceptance remain separate; the backend phase does not start automatically. | CP-5 / pending human observation |
 
 **First user action:** open phase five, read `entry`, then open the workshop's start preview and find «اکنون کد را بازآرایی نکن». Enter the literal multiline test input above and report whether only that preview changed. Human acceptance remains pending until observations are reported.
+
+
+## Integrated checkpoint — 2026-10-27
+
+Implementation is resolved on `codex/workflow-development-phases`, functional commit `9273de8`. See [the integrated evaluation](development-phases-evaluation.md) for this ticket’s reproducible inputs/actions/expected checkpoints and the final browser evidence: all47 copy controls, controlled recovery, responsive checks, keyboard flow and separate Standards/Spec review. Earlier pending notes above describe that worktree checkpoint; final integration checks are now recorded separately. Human acceptance remains pending; actual prompt execution in an AI agent and customer-product deployment remain Not Tested.

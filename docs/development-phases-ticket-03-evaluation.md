@@ -45,3 +45,8 @@ Record browser, viewport, observation, evidence and Passed / Failed / Blocked / 
 | Exit and fresh session | Read handoff; list what a fresh Agent must discover from the repository. | CP-4 references version, CP-3, behaviors, results, witnesses, decisions and open issues; design end, actual execution end and human acceptance are distinct. First action is concrete; phase 5 is not auto-started. |
 
 A guide defect blocks the corresponding row until corrected. A product risk carried to a later phase needs an explicit decision, impact, owner and time; writing an evaluation guide does not accept that risk on the user's behalf.
+
+
+## Integrated checkpoint — 2026-10-27
+
+Implementation is resolved on `codex/workflow-development-phases`, functional commit `9273de8`. See [the integrated evaluation](development-phases-evaluation.md) for this ticket’s reproducible inputs/actions/expected checkpoints and the final browser evidence: all47 copy controls, controlled recovery, responsive checks, keyboard flow and separate Standards/Spec review. Earlier pending notes above describe that worktree checkpoint; final integration checks are now recorded separately. Human acceptance remains pending; actual prompt execution in an AI agent and customer-product deployment remain Not Tested.

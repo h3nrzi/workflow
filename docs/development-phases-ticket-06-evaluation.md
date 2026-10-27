@@ -36,3 +36,8 @@
 برای هر ردیف نسخه/commit، انتظار، مشاهده، شاهد و Passed / Failed / Blocked / Not Tested ثبت کن. نبود اجرای واقعی یا نبود پیش‌نیاز را نتیجهٔ موفقیت معرفی نکن. رفع نقص مانع و تکرار بررسی لازم است؛ پذیرش انسانی تا گزارش کاربر pending می‌ماند.
 
 **نخستین اقدام کاربر:** آموزش فاز هفت، بخش «جریان اول» را باز کن و توضیح بده چرا FLOW-01 به‌عنوان اولین برش انتخاب شده؛ سپس preview شروع کارگاه را با ورودی خاص بالا بررسی کن و مشاهده‌ات را ثبت کن.
+
+
+## Integrated checkpoint — 2026-10-27
+
+Implementation is resolved on `codex/workflow-development-phases`, functional commit `9273de8`. See [the integrated evaluation](development-phases-evaluation.md) for this ticket’s reproducible inputs/actions/expected checkpoints and the final browser evidence: all47 copy controls, controlled recovery, responsive checks, keyboard flow and separate Standards/Spec review. Earlier pending notes above describe that worktree checkpoint; final integration checks are now recorded separately. Human acceptance remains pending; actual prompt execution in an AI agent and customer-product deployment remain Not Tested.

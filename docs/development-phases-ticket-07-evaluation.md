@@ -45,3 +45,8 @@ For each row record browser, viewport, version, observation, evidence and Passed
 | Fresh-session handoff | Read `#checkpoints` and `#next`; list valid CP-8 references. | Version, CP-7, decisions, tickets, release/test/restore/monitoring evidence, owners and open issues share one authoritative package. Design completion, execution completion and human acceptance remain separate; no automatic maintenance work begins. |
 
 Guide readiness and automated passes do not establish human acceptance. Global navigation, colors and integration browser evidence are handled in ticket 08.
+
+
+## Integrated checkpoint — 2026-10-27
+
+Implementation is resolved on `codex/workflow-development-phases`, functional commit `9273de8`. See [the integrated evaluation](development-phases-evaluation.md) for this ticket’s reproducible inputs/actions/expected checkpoints and the final browser evidence: all47 copy controls, controlled recovery, responsive checks, keyboard flow and separate Standards/Spec review. Earlier pending notes above describe that worktree checkpoint; final integration checks are now recorded separately. Human acceptance remains pending; actual prompt execution in an AI agent and customer-product deployment remain Not Tested.

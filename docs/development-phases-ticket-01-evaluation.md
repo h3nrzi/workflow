@@ -36,3 +36,8 @@ From the integration checkout, run `python3 -m http.server 8000`, open `http://l
 | Keyboard and viewports | Test guide/workshop/hub/Replit at 1440px, 768px, 390px and 320px; Tab through menus, disclosures, inputs and copy buttons. | Focus visible; disclosures keyboard-operable; long prompts and new example readable; no important content clipped; page-level sideways scroll absent. Record browser, width, observed issue and screenshot where useful. |
 
 Keep observations per feature as Passed / Failed / Blocked / Not Tested. Browser evidence and user observations should be appended as later checkpoints, without changing the historical claims above.
+
+
+## Integrated checkpoint — 2026-10-27
+
+Implementation is resolved on `codex/workflow-development-phases`, functional commit `9273de8`. See [the integrated evaluation](development-phases-evaluation.md) for this ticket’s reproducible inputs/actions/expected checkpoints and the final browser evidence: all47 copy controls, controlled recovery, responsive checks, keyboard flow and separate Standards/Spec review. Earlier pending notes above describe that worktree checkpoint; final integration checks are now recorded separately. Human acceptance remains pending; actual prompt execution in an AI agent and customer-product deployment remain Not Tested.

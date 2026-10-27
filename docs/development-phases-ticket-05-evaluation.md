@@ -32,3 +32,8 @@
 | نمایش مستقل | هر دو صفحه را در عرض ۱۴۴۰، ۷۶۸ و ۳۹۰ پیکسل بررسی کن | RTL و متن فارسی خوانا، صفحه بدون overflow؛ جدول اسکرول خود را دارد؛ فهرست موبایل بازوبسته و کنترل‌ها قابل استفاده باشند | CP-6 / desktop، tablet، mobile؛ pending |
 
 نتیجهٔ هر بررسی را با نسخه/commit، انتظار، مشاهده، شاهد و Passed / Failed / Blocked / Not Tested ثبت کن. اگر خطا مانع تحویل است، رفع و دوباره بررسی شود؛ انتقال فقط با تصمیم، اثر، مسئول و زمان رسیدگی ممکن است. آماده‌بودن این راهنما پذیرش انسانی نیست.
+
+
+## Integrated checkpoint — 2026-10-27
+
+Implementation is resolved on `codex/workflow-development-phases`, functional commit `9273de8`. See [the integrated evaluation](development-phases-evaluation.md) for this ticket’s reproducible inputs/actions/expected checkpoints and the final browser evidence: all47 copy controls, controlled recovery, responsive checks, keyboard flow and separate Standards/Spec review. Earlier pending notes above describe that worktree checkpoint; final integration checks are now recorded separately. Human acceptance remains pending; actual prompt execution in an AI agent and customer-product deployment remain Not Tested.

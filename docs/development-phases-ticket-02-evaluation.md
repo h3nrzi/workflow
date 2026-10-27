@@ -35,3 +35,8 @@ Serve the integration checkout with `python3 -m http.server 8000 --bind 127.0.0.
 | Separate end states | Read `exit-gate` and evaluate command. | Design-ready, actually migrated and human-accepted remain distinct. Deferred issues require decision, effect, owner and date; automated success never creates human acceptance. | CP-3 / pending human observation |
 
 **First user action:** open phase two’s final workshop link, enter phase three, and read the start preview’s “design without migration execution” boundary. Record any missing input or source blocker, then check the preview with the literal test input above. Report the observed result; acceptance remains pending until then.
+
+
+## Integrated checkpoint — 2026-10-27
+
+Implementation is resolved on `codex/workflow-development-phases`, functional commit `9273de8`. See [the integrated evaluation](development-phases-evaluation.md) for this ticket’s reproducible inputs/actions/expected checkpoints and the final browser evidence: all47 copy controls, controlled recovery, responsive checks, keyboard flow and separate Standards/Spec review. Earlier pending notes above describe that worktree checkpoint; final integration checks are now recorded separately. Human acceptance remains pending; actual prompt execution in an AI agent and customer-product deployment remain Not Tested.
