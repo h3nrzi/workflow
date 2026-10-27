@@ -533,7 +533,7 @@ body.p2 {
   .p2 .p2-artifact-toggle,.p2 .p2-hero-actions a,.p2 a.p2-lane { transition: none; }
 }
 
-/* Nested workshop entries: shared navigation for phases 0–2 */
+/* Nested workshop entries: shared navigation for phases 0–8 */
 .navigation a.nav-child { margin-inline-start: 22px; padding-inline-start: 14px; min-height: 44px; font-size: 13px; color: var(--muted); border-inline-start: 1px solid var(--tone-300); border-radius: 4px; }
 .navigation a.nav-child:hover { color: var(--blue); }
 .navigation a.nav-child[aria-current="page"] { color: var(--blue); background: var(--blue-soft); font-weight: 700; }

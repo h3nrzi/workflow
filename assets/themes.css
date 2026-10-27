@@ -81,6 +81,91 @@ body[data-page="workshop-3"] { /* Amber: intake and migration */
   --hero-end: #79400f;
   --hero-highlight: #f7e2c0;
 }
+body[data-page="phase-4"],
+body[data-page="workshop-4"] { /* Forest */
+  --blue: #166534;
+  --blue-hover: #14532d;
+  --blue-soft: #eff8f0;
+  --surface: #f7fcf8;
+  --line: #c9e3cf;
+  --ink: #183727;
+  --muted: #4b6656;
+  --tone-900: #0c3620;
+  --tone-700: #14532d;
+  --tone-500: #dbeee1;
+  --tone-300: #9cc7a9;
+  --hero-start: #08291a;
+  --hero-end: #175634;
+  --hero-highlight: #d9efe1;
+}
+body[data-page="phase-5"],
+body[data-page="workshop-5"] { /* Indigo */
+  --blue: #4338ca;
+  --blue-hover: #3730a3;
+  --blue-soft: #eeedfb;
+  --surface: #f8f8fe;
+  --line: #d6d3f3;
+  --ink: #252c55;
+  --muted: #555d7a;
+  --tone-900: #262264;
+  --tone-700: #3730a3;
+  --tone-500: #e4e2f7;
+  --tone-300: #b3afe4;
+  --hero-start: #1b1949;
+  --hero-end: #37319a;
+  --hero-highlight: #dedcf5;
+}
+body[data-page="phase-6"],
+body[data-page="workshop-6"] { /* Petrol */
+  --blue: #0e6477;
+  --blue-hover: #0a5060;
+  --blue-soft: #eaf5f7;
+  --surface: #f6fbfc;
+  --line: #c4e0e5;
+  --ink: #173747;
+  --muted: #4a6470;
+  --tone-900: #073947;
+  --tone-700: #0a5060;
+  --tone-500: #d7eaee;
+  --tone-300: #97c4cf;
+  --hero-start: #052a34;
+  --hero-end: #105464;
+  --hero-highlight: #cee8ed;
+}
+body[data-page="phase-7"],
+body[data-page="workshop-7"] { /* Brick */
+  --blue: #a33125;
+  --blue-hover: #82271f;
+  --blue-soft: #fbefec;
+  --surface: #fdf8f6;
+  --line: #ebcfc7;
+  --ink: #422b2b;
+  --muted: #725952;
+  --tone-900: #54231c;
+  --tone-700: #82271f;
+  --tone-500: #f2dfd8;
+  --tone-300: #d4a297;
+  --hero-start: #3a1915;
+  --hero-end: #813027;
+  --hero-highlight: #f0d8cf;
+}
+body[data-page="phase-8"],
+body[data-page="workshop-8"] { /* Plum */
+  --blue: #7e225d;
+  --blue-hover: #651b4b;
+  --blue-soft: #f8edf4;
+  --surface: #fcf7fa;
+  --line: #e7cade;
+  --ink: #39283c;
+  --muted: #6c566a;
+  --tone-900: #481635;
+  --tone-700: #651b4b;
+  --tone-500: #eedbe8;
+  --tone-300: #cc9cbb;
+  --hero-start: #331026;
+  --hero-end: #641c4c;
+  --hero-highlight: #ecd4e4;
+}
 body[data-page="workshop-0"] { /* Cyan */
   --blue: #0e7490;
   --blue-hover: #0b5d73;
