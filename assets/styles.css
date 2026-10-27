@@ -377,7 +377,7 @@ body.p2 {
 .p2 .p2-decision-tag { color: #946b22; font-size: 13px; font-weight: 800; display: block; margin-bottom: 8px; }
 .p2 .p2-decision p { font-size: 14px; line-height: 2.35; color: #655638; margin: 0; }
 .p2 .table-scroll { background: #fff; }
-.p2 .table-scroll table { font-size: 14px; min-width: min(100%, 510px); line-height: 2; }
+.p2 .table-scroll table { font-size: 14px; line-height: 2; }
 .p2 .table-scroll th { color: var(--tone-900); background: var(--blue-soft); }
 .p2 .table-scroll td { color: var(--muted); }
 .p2 .p2-workshop-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 24px 0; }
@@ -533,7 +533,7 @@ body.p2 {
   .p2 .p2-artifact-toggle,.p2 .p2-hero-actions a,.p2 a.p2-lane { transition: none; }
 }
 
-/* Nested workshop entries: shared navigation for phases 0–2 */
+/* Nested workshop entries: shared navigation for phases 0–8 */
 .navigation a.nav-child { margin-inline-start: 22px; padding-inline-start: 14px; min-height: 44px; font-size: 13px; color: var(--muted); border-inline-start: 1px solid var(--tone-300); border-radius: 4px; }
 .navigation a.nav-child:hover { color: var(--blue); }
 .navigation a.nav-child[aria-current="page"] { color: var(--blue); background: var(--blue-soft); font-weight: 700; }
