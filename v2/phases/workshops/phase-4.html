@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9f1239">
+  <meta name="description" content="شش فرمان مستقل برای طراحی، spec، تیکت، اجرا و ارزیابی؛ طرح اتصال جای شاهد واقعی نیست.">
+  <title>کارگاه فاز ۴: اتصال واقعی و تکمیل محصول — ورک‌فلو نسخهٔ ۲</title>
+  <link rel="icon" href="../../../assets/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=development-2">
+  <link rel="stylesheet" href="../../../assets/themes.css?v=development-2">
+</head>
+<body class="p2 p2-design" data-page="workshop-7" data-page-kind="subpage">
+  <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
+  <div class="site">
+    <aside class="sidebar" aria-label="ناوبری نسخهٔ ۲"><a class="brand" href="../../index.html" aria-label="نمای نسخهٔ ۲ ورک‌فلو"><img class="brand-logo" src="../../../assets/brand/workflow-logo.svg" alt="ورک‌فلو" width="230" height="80" decoding="async"></a><div class="sidebar-inner"><div class="navigation-label">نسخهٔ ۲ · مسیر شش‌فازی</div><nav class="navigation" aria-label="راهنمای نسخهٔ ۲"><a href="../../index.html">نمای نسخهٔ ۲</a><a href="../phase-3.html">فاز ۳ · طراحی بک‌اند و قرارداد اتصال</a><a href="../phase-4.html">فاز ۴ · اتصال واقعی و تکمیل محصول</a><a class="nav-child" href="phase-4.html" aria-current="page">کارگاه اتصال واقعی</a><a href="../../index.html#phase-5">فاز ۵ · انتشار و تحویل</a><a href="../../contracts.html">قرارداد مراحل و شواهد</a><a href="../../migration.html">انتقال از نسخهٔ ۱</a></nav><div class="sidebar-bottom">نسخهٔ ۲ · اتصال تدریجی جریان کامل با شواهد واقعی</div></div></aside>
+    <main id="content" class="main"><div class="content-container">
+      <header class="topbar"><span class="breadcrumb"><a href="../../index.html">ورک‌فلو نسخهٔ ۲</a><span class="slash">/</span><strong>کارگاه فاز ۴: اتصال واقعی و تکمیل محصول</strong></span><a class="header-link" href="https://github.com/h3nrzi/workflow/blob/main/v2/phases/workshops/phase-4.html" target="_blank" rel="noopener noreferrer">مشاهدهٔ منبع <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" focusable="false" width="24" height="24"><use href="../../../assets/icons.svg#external"></use></svg></a></header>
+
+        <div class="document-layout">
+        <article class="document"><header class="doc-header subpage-header"><h1 id="page-title">کارگاه فاز ۴: اتصال واقعی و تکمیل محصول</h1><p class="doc-lead">شش فرمان مستقل برای طراحی، spec، تیکت، اجرا و ارزیابی؛ طرح اتصال جای شاهد واقعی نیست.</p><a class="doc-primary-link" href="../phase-4.html">آموزش و روش اجرای فاز</a></header><details class="mobile-toc" id="mobile-toc"><summary><span class="mobile-toc-title">فهرست صفحه</span><span class="mobile-toc-current" id="mobile-toc-current">بخش‌ها</span></summary><nav class="mobile-toc-links" aria-label="بخش‌های صفحه"><a href="#sequence">ترتیب و مرز فرمان‌ها</a><a href="#start">شروع: طراحی برنامهٔ اتصال</a><a href="#spec">تدوین spec</a><a href="#tickets">تیکت‌بندی</a><a href="#execute">اجرای کل فاز</a><a href="#one">اجرای یک تیکت</a><a href="#evaluate">ارزیابی و جمع‌بندی</a></nav></details><p class="callout"><strong>نسخهٔ ۲ · فاز ۴:</strong> ورودی از <a href="../phase-3.html">طراحی بک‌اند فاز ۳</a> و چرخهٔ فرانت لوکال می‌آید. <a href="../../migration.html#checkpoints">نگاشت v1:CP-7 به v2:CP-4</a> معنای سوابق تاریخی را حفظ می‌کند؛ این محتوا شاهد اجرای تازه یا مجوز سرویس واقعی نیست. <a href="../../contracts.html#phase-4">قرارداد ورود و خروج</a> و <a href="../../contracts.html#evidence">قرارداد شواهد</a> را بخوان.</p><section class="document-section p2-reading-section" id="sequence">
+<h2>ترتیب و مرز فرمان‌ها</h2>
+<p>ابتدا <a href="../phase-4.html">آموزش فاز چهار</a> و ورودی معتبر را بخوان. ترتیب: طراحی با grill-with-docs ← spec تأییدشده ← تیکت‌ها و وابستگی‌ها ← اجرای کل فاز یا فقط یک تیکت ← ارزیابی مستقل. هر فرمان در نوبت جدا با مهارت همراه خودش اجرا می‌شود؛ شروع طراحی اتصال را اجرا نمی‌کند و طرح اتصال شاهد موفقیت نیست.</p><p>اسناد از پروژهٔ جاری کشف می‌شوند؛ مسیر مخزن ورودی دستی نیست. اگر محل سند را می‌دانی، در متن شروع جای [مسیر اسناد] معرفی کن؛ در غیر این صورت Agent باید مخزن را بررسی و نبود ضروری را روشن کند. اطلاعات تکمیلی هر فرمان اختیاری و فقط برای همان فرمان است؛ ورودی خالی اجازهٔ حدس یا تغییر دامنه نمی‌دهد. داده در سایت ذخیره یا ارسال نمی‌شود.</p><p>متن کامل را پیش از کپی باز کن. اگر clipboard شکست خورد، پیام وضعیت را بخوان و متن readonly پیش‌نمایش را دستی انتخاب و کپی کن. اجرای واقعی این پرامپت‌ها در Agent در این راهنما آزموده نشده است. مثال TaskFlow مشروط است: v1:CP-2 تاریخی مسدود، v2:CP-4 اجرا‌نشده، AC-01/02 Not Tested و تصمیم‌های پیشنهادی همچنان پیشنهادی‌اند. <a href="../phase-4.html#exit-gate">سه پایان مستقل</a> را با هم یکی نکن.</p>
+</section><section class="document-section p2-reading-section" id="start">
+<h2>شروع: طراحی برنامهٔ اتصال</h2>
+<p>جریان اول، ابزار داده و شواهد پایان را توافق کن؛ اکنون توسعه یا اتصال انجام نشود.</p><p>مهارت همراه: <code>grill-with-docs</code></p><label class="prompt-label" for="start-input">اطلاعات تکمیلی همین فرمان (اختیاری)</label><textarea id="start-input" class="client-request-input" rows="4" aria-describedby="start-hint" spellcheck="false"></textarea><p class="prompt-hint" id="start-hint">فقط اطلاعات واقعاً ناموجود را اضافه کن؛ مسیر مخزن لازم نیست. خالی‌بودن این ورودی به معنی اجازهٔ حدس نیست. تغییر این فیلد فرمان‌های دیگر را تغییر نمی‌دهد.</p><div class="prompt-preview-top"><label class="prompt-label" for="start-preview">پیش‌نمایش کامل: شروع: طراحی برنامهٔ اتصال</label><button type="button" class="copy-prompt-button" data-copy="start-preview">کپی متن</button></div><details class="prompt-details"><summary>مشاهدهٔ کامل و کپی دستی متن</summary><textarea readonly id="start-preview" rows="18" spellcheck="false" data-prompt-preview data-status="start-status" data-input="start-input">می‌خواهم برنامهٔ فاز ۴ نسخهٔ ۲، اتصال واقعی و تکمیل محصول، را طراحی کنیم.
+
+در پروژهٔ جاری کار می‌کنی؛ دستورالعمل‌ها، مهارت‌ها و اسناد موجود را از همین محیط پیدا کن.
+ورودی را از v2:CP-2 و v2:CP-3 بخوان: رفتار مصوب، سورس و روش اجرای فرانت، قراردادهای بک‌اند، مرز داده و mock، تست‌ها، شواهد و مسائل باز. اگر محل معتبر اسناد معلوم نیست، از مخزن کشف کن. اختیار ساخت و اتصال از وجود طراحی یا تأیید این ورک‌فلو نتیجه نمی‌شود؛ حدود اجرای ثبت‌شده و دسترسی سرویس واقعی را احراز کن.
+
+مقصد، توافق روی طرح توسعه و اتصال آمادهٔ تبدیل به spec است؛ اکنون توسعه یا اتصال را شروع نکن. دستورالعمل‌های پروژه، وضعیت فرانت، شبیه‌سازی‌ها، تصمیم‌های بک‌اند و شواهد تست را بررسی کن. پایان نقشهٔ طراحی را با ساخته شدن بک‌اند اشتباه نگیر.
+
+ابتدا بررسی کن تصمیم‌های لازم از جمله ابزار دریافت و مدیریت دادهٔ سرور روشن باشند. اگر تصمیم معماری ضروری باز مانده یا با سورس واقعی تعارض دارد، مانع و محل بازنگری را مشخص کن؛ آن را با فرض پنهانی پر نکن.
+
+با من جریان اول را انتخاب کن: باید یک کار معنادار کاربر را از فرانت تا API و دیتابیس واقعی کامل کند و خطرهای مهم اتصال را زود روشن کند. سپس باقی جریان‌های MVP را به برش‌های کامل و قابل ارزیابی تقسیم کنیم؛ تکمیل کل بک‌اند قبل از اولین اتصال هدف نیست.
+
+برای هر جریان، تغییر لازم فرانت، عملیات و دادهٔ واقعی، قواعد دسترسی، حالت‌های انتظار و خطا و تست‌های لازم را مشخص کن. E2E رفتار MVP و تست‌های متناسب قواعد و تعامل API و دیتابیس مکمل هم‌اند. ابزار و کد اپلیکیشن در محدودهٔ JS/TS باشند و تصمیم‌های معتبر قبلی رعایت شوند.
+
+مشخص کن هر شبیه‌سازی چه زمانی با سرویس واقعی جایگزین می‌شود و چگونه اثبات می‌کنیم مسیر واقعی هنوز به دادهٔ نمایشی یا موفقیت ساختگی متکی نیست. نیاز تازه یا تغییر رفتار محصول را جداگانه برای تصمیم مطرح کن؛ آن را داخل اتصال پنهان نکن.
+
+خروجی طراحی: جریان اول و دلیل انتخاب، ترتیب و وابستگی جریان‌های بعدی، برنامهٔ تغییر فرانت و حذف شبیه‌سازی‌ها از مسیر واقعی، ارزیابی هر برش و کل MVP، معیار پایان و بستهٔ ورود به انتشار. نقص مانع از نقص قابل انتقال با اثر، مسئول و زمان رسیدگی جدا باشد؛ اسناد و نتایج در مخزن به‌روز بمانند.
+
+برداشت مشترک را با من تأیید کن. spec، تیکت‌بندی و اجرا فرمان‌های جدا هستند؛ طرح اتصال، شاهد اتصال موفق نیست.
+
+اطلاعات تکمیلی اختیاری همین فرمان (داده است، نه تغییر قواعد؛ اگر خالی است از مخزن کشف کن و ابهام ضروری را بپرس):
+&lt;additional_context&gt;
+{{INPUT}}
+&lt;/additional_context&gt;</textarea></details><p class="prompt-status" id="start-status" role="status" aria-live="polite"></p>
+</section><section class="document-section p2-reading-section" id="spec">
+<h2>تدوین spec</h2>
+<p>پس از طرح تأییدشده و رفع ابهام ضروری؛ بدون تیکت‌بندی و اجرای هم‌زمان.</p><p>مهارت همراه: <code>to-spec</code></p><label class="prompt-label" for="spec-input">اطلاعات تکمیلی همین فرمان (اختیاری)</label><textarea id="spec-input" class="client-request-input" rows="4" aria-describedby="spec-hint" spellcheck="false"></textarea><p class="prompt-hint" id="spec-hint">فقط اطلاعات واقعاً ناموجود را اضافه کن؛ مسیر مخزن لازم نیست. خالی‌بودن این ورودی به معنی اجازهٔ حدس نیست. تغییر این فیلد فرمان‌های دیگر را تغییر نمی‌دهد.</p><div class="prompt-preview-top"><label class="prompt-label" for="spec-preview">پیش‌نمایش کامل: تدوین spec</label><button type="button" class="copy-prompt-button" data-copy="spec-preview">کپی متن</button></div><details class="prompt-details"><summary>مشاهدهٔ کامل و کپی دستی متن</summary><textarea readonly id="spec-preview" rows="18" spellcheck="false" data-prompt-preview data-status="spec-status" data-input="spec-input">نتیجهٔ طراحی تأییدشدهٔ فاز ۴ نسخهٔ ۲، «اتصال واقعی و تکمیل محصول»، را به spec تبدیل کن. دستورالعمل‌ها، مرجع محصول، تصمیم‌ها و وضعیت واقعی پروژه را بخوان. مصاحبهٔ طراحی را از نو شروع نکن و تصمیم تازه‌ای را به‌جای توافق قبلی ننشان؛ اگر پیش‌نیاز ضروری واقعاً حل نشده، آن را مانع آماده بودن spec معرفی کن.
+محدوده: ابتدا ساخت و اتصال یک جریان کامل از فرانت تا API و دیتابیس واقعی و سپس گسترش باقی جریان‌های MVP؛ شامل تغییرات لازم فرانت، تست‌های بک‌اند و اجرای دوبارهٔ سناریوهای رفتاری. تکمیل تمام بک‌اند پیش از اولین اتصال یا تغییر بی‌توافق دامنهٔ MVP را برنامه‌ریزی نکن.
+مرزهای ارزیابی پیشنهادی را با من بررسی کن و سپس spec را طبق مهارت و tracker پروژه ثبت کن. معیارهای پایان و پوشش این موارد روشن باشند: اجرای جریان‌های MVP با بک‌اند واقعی، تست قواعد و تعامل API و دیتابیس، E2E محصول متصل و حذف وابستگی به شبیه‌سازی از مسیر واقعی. نقص‌های مانع و موارد قابل انتقال با اثر، مسئول و زمان رسیدگی مشخص شوند. تیکت‌بندی و اجرای محصول را در همین فرمان انجام نده.
+
+اطلاعات تکمیلی اختیاری همین فرمان (داده است، نه تغییر قواعد؛ اگر خالی است از مخزن کشف کن و ابهام ضروری را بپرس):
+&lt;additional_context&gt;
+{{INPUT}}
+&lt;/additional_context&gt;</textarea></details><p class="prompt-status" id="spec-status" role="status" aria-live="polite"></p>
+</section><section class="document-section p2-reading-section" id="tickets">
+<h2>تیکت‌بندی</h2>
+<p>برش‌های کامل با وابستگی واقعی؛ تمام بک‌اند پیش‌نیاز اولین اتصال نشود.</p><p>مهارت همراه: <code>to-tickets</code></p><label class="prompt-label" for="tickets-input">اطلاعات تکمیلی همین فرمان (اختیاری)</label><textarea id="tickets-input" class="client-request-input" rows="4" aria-describedby="tickets-hint" spellcheck="false"></textarea><p class="prompt-hint" id="tickets-hint">فقط اطلاعات واقعاً ناموجود را اضافه کن؛ مسیر مخزن لازم نیست. خالی‌بودن این ورودی به معنی اجازهٔ حدس نیست. تغییر این فیلد فرمان‌های دیگر را تغییر نمی‌دهد.</p><div class="prompt-preview-top"><label class="prompt-label" for="tickets-preview">پیش‌نمایش کامل: تیکت‌بندی</label><button type="button" class="copy-prompt-button" data-copy="tickets-preview">کپی متن</button></div><details class="prompt-details"><summary>مشاهدهٔ کامل و کپی دستی متن</summary><textarea readonly id="tickets-preview" rows="18" spellcheck="false" data-prompt-preview data-status="tickets-status" data-input="tickets-input">spec معتبر فاز ۴ نسخهٔ ۲، «اتصال واقعی و تکمیل محصول»، و تصمیم‌های مرتبط را از tracker همین پروژه بخوان و به تیکت‌های قابل بررسی و وابستگی‌های واقعی تبدیل کن. محدودهٔ spec را گسترش نده: ابتدا ساخت و اتصال یک جریان کامل از فرانت تا API و دیتابیس واقعی و سپس گسترش باقی جریان‌های MVP؛ شامل تغییرات لازم فرانت، تست‌های بک‌اند و اجرای دوبارهٔ سناریوهای رفتاری. تکمیل تمام بک‌اند پیش از اولین اتصال یا تغییر بی‌توافق دامنهٔ MVP را برنامه‌ریزی نکن.
+هر تیکت نتیجه و معیار پذیرش قابل ارزیابی داشته باشد و در یک جلسهٔ تازه قابل انجام باشد. قواعد برش‌بندی مهارت و استثنای ریفکتور گسترده را رعایت کن؛ برای کار صرفاً مستنداتی لایهٔ نرم‌افزاری ساختگی نساز. تقسیم‌بندی و وابستگی‌ها را پیش از انتشار با من بررسی و تأیید کن. هنوز اجرا را شروع نکن.
+
+اطلاعات تکمیلی اختیاری همین فرمان (داده است، نه تغییر قواعد؛ اگر خالی است از مخزن کشف کن و ابهام ضروری را بپرس):
+&lt;additional_context&gt;
+{{INPUT}}
+&lt;/additional_context&gt;</textarea></details><p class="prompt-status" id="tickets-status" role="status" aria-live="polite"></p>
+</section><section class="document-section p2-reading-section" id="execute">
+<h2>اجرای کل فاز</h2>
+<p>فقط spec و مجموعهٔ تیکت‌های تأییدشدهٔ همین فاز؛ نتایج واقعی و راهنمای ارزیابی ثبت شوند.</p><p>مهارت همراه: <code>implement-spec</code></p><label class="prompt-label" for="execute-input">اطلاعات تکمیلی همین فرمان (اختیاری)</label><textarea id="execute-input" class="client-request-input" rows="4" aria-describedby="execute-hint" spellcheck="false"></textarea><p class="prompt-hint" id="execute-hint">فقط اطلاعات واقعاً ناموجود را اضافه کن؛ مسیر مخزن لازم نیست. خالی‌بودن این ورودی به معنی اجازهٔ حدس نیست. تغییر این فیلد فرمان‌های دیگر را تغییر نمی‌دهد.</p><div class="prompt-preview-top"><label class="prompt-label" for="execute-preview">پیش‌نمایش کامل: اجرای کل فاز</label><button type="button" class="copy-prompt-button" data-copy="execute-preview">کپی متن</button></div><details class="prompt-details"><summary>مشاهدهٔ کامل و کپی دستی متن</summary><textarea readonly id="execute-preview" rows="18" spellcheck="false" data-prompt-preview data-status="execute-status" data-input="execute-input">spec و مجموعهٔ تیکت‌های تأییدشدهٔ فاز ۴ نسخهٔ ۲، «اتصال واقعی و تکمیل محصول»، را در پروژهٔ جاری اجرا کن. ابتدا عنوان و دامنهٔ spec، وضعیت تیکت‌ها و دستورالعمل‌های پروژه را احراز کن. اگر چند مجموعهٔ متعارض وجود دارد، انتخاب را روشن کن؛ spec یا دامنهٔ تازه‌ای فرض نکن.
+محدوده: ابتدا ساخت و اتصال یک جریان کامل از فرانت تا API و دیتابیس واقعی و سپس گسترش باقی جریان‌های MVP؛ شامل تغییرات لازم فرانت، تست‌های بک‌اند و اجرای دوبارهٔ سناریوهای رفتاری. تکمیل تمام بک‌اند پیش از اولین اتصال یا تغییر بی‌توافق دامنهٔ MVP را برنامه‌ریزی نکن.
+حدود اختیار ثبت‌شدهٔ اجرای محصول و دسترسی سرویس واقعی را احراز کن؛ طراحی به‌تنهایی مجوز ساخت یا اتصال نیست. تصمیم تازهٔ محصول، محدوده، دسترسی و هزینه به صاحب اختیار برمی‌گردد. طبق مهارت، وابستگی‌ها را رعایت کن، بررسی‌های متناسب و code review را انجام بده و شواهد واقعی را ثبت کن. برای هر تیکت راهنمای ارزیابی قابل تکرار با ورودی، اقدام، انتظار و checkpoint و نخستین اقدام مشخص کاربر آماده کن. موارد اجرا‌نشده را صریح گزارش کن؛ آمادگی راهنما یا موفقیت بررسی خودکار را پذیرش انسانی ندان. نقص‌های مانع را کامل‌شده اعلام نکن و موارد قابل انتقال را با تصمیم، اثر، مسئول و زمان رسیدگی ثبت کن.
+
+اطلاعات تکمیلی اختیاری همین فرمان (داده است، نه تغییر قواعد؛ اگر خالی است از مخزن کشف کن و ابهام ضروری را بپرس):
+&lt;additional_context&gt;
+{{INPUT}}
+&lt;/additional_context&gt;</textarea></details><p class="prompt-status" id="execute-status" role="status" aria-live="polite"></p>
+</section><section class="document-section p2-reading-section" id="one">
+<h2>اجرای یک تیکت</h2>
+<p>هویت دقیق تیکت را در اطلاعات همین فرمان مشخص کن؛ جایگزین اجرای کل فاز در همان نوبت است.</p><p>مهارت همراه: <code>implement</code></p><label class="prompt-label" for="one-input">اطلاعات تکمیلی همین فرمان (اختیاری)</label><textarea id="one-input" class="client-request-input" rows="4" aria-describedby="one-hint" spellcheck="false"></textarea><p class="prompt-hint" id="one-hint">فقط اطلاعات واقعاً ناموجود را اضافه کن؛ مسیر مخزن لازم نیست. خالی‌بودن این ورودی به معنی اجازهٔ حدس نیست. تغییر این فیلد فرمان‌های دیگر را تغییر نمی‌دهد.</p><div class="prompt-preview-top"><label class="prompt-label" for="one-preview">پیش‌نمایش کامل: اجرای یک تیکت</label><button type="button" class="copy-prompt-button" data-copy="one-preview">کپی متن</button></div><details class="prompt-details"><summary>مشاهدهٔ کامل و کپی دستی متن</summary><textarea readonly id="one-preview" rows="18" spellcheck="false" data-prompt-preview data-status="one-status" data-input="one-input">فقط تیکت مشخص‌شدهٔ فاز ۴ نسخهٔ ۲، اتصال واقعی و تکمیل محصول، را از tracker پروژهٔ جاری اجرا کن. v2:CP-3 و حدود اختیار ساخت و اتصال سرویس‌های واقعی را احراز کن؛ طراحی به‌تنهایی مجوز اجرا نیست. تغییر رفتار، محدوده، دسترسی یا هزینهٔ تازه به صاحب اختیار برگردد. اگر هویت تیکت از درخواست روشن نیست، آن را روشن کن و به حدس انتخاب نکن. عنوان، spec مرتبط، وضعیت و وابستگی‌های تیکت را بخوان؛ تا رفع مانع واقعی آن را آمادهٔ اجرا فرض نکن.
+طبق مهارت اجرا، بررسی‌های لازم، code review و ثبت نتیجه را انجام بده. دامنه را به کل فاز گسترش نده. راهنمای ارزیابی قابل تکرار همین تیکت با ورودی، اقدام، انتظار، checkpoint و نخستین اقدام کاربر را آماده کن و شواهد واقعی و موارد اجرا‌نشده را ثبت کن. پذیرش انسانی تا گزارش مشاهدات کاربر باز می‌ماند؛ این وضعیت را با ناقص بودن پیاده‌سازی مجاز یکی ندان.
+
+اطلاعات تکمیلی اختیاری همین فرمان (داده است، نه تغییر قواعد؛ اگر خالی است از مخزن کشف کن و ابهام ضروری را بپرس):
+&lt;additional_context&gt;
+{{INPUT}}
+&lt;/additional_context&gt;</textarea></details><p class="prompt-status" id="one-status" role="status" aria-live="polite"></p>
+</section><section class="document-section p2-reading-section" id="evaluate">
+<h2>ارزیابی و جمع‌بندی</h2>
+<p>شاهد واقعی اتصال، حذف شبیه‌سازی و وضعیت بررسی‌ها را ثبت کن؛ پذیرش انسانی و آغاز فاز بعد خودکار نیست.</p><p>این فرمان مستقل است؛ مهارت دیگری را فعال نکن.</p><label class="prompt-label" for="evaluate-input">اطلاعات تکمیلی همین فرمان (اختیاری)</label><textarea id="evaluate-input" class="client-request-input" rows="4" aria-describedby="evaluate-hint" spellcheck="false"></textarea><p class="prompt-hint" id="evaluate-hint">فقط اطلاعات واقعاً ناموجود را اضافه کن؛ مسیر مخزن لازم نیست. خالی‌بودن این ورودی به معنی اجازهٔ حدس نیست. تغییر این فیلد فرمان‌های دیگر را تغییر نمی‌دهد.</p><div class="prompt-preview-top"><label class="prompt-label" for="evaluate-preview">پیش‌نمایش کامل: ارزیابی و جمع‌بندی</label><button type="button" class="copy-prompt-button" data-copy="evaluate-preview">کپی متن</button></div><details class="prompt-details"><summary>مشاهدهٔ کامل و کپی دستی متن</summary><textarea readonly id="evaluate-preview" rows="18" spellcheck="false" data-prompt-preview data-status="evaluate-status" data-input="evaluate-input">وضعیت واقعی فاز ۴ نسخهٔ ۲، «اتصال واقعی و تکمیل محصول»، را با spec و تیکت‌ها و شواهد موجود بررسی و جمع‌بندی کن. بررسی‌های لازم: اجرای جریان‌های MVP با بک‌اند واقعی، تست قواعد و تعامل API و دیتابیس، E2E محصول متصل و حذف وابستگی به شبیه‌سازی از مسیر واقعی.
+بررسی‌های انجام‌شده، شکست‌خورده، مسدود و اجرا‌نشده را از هم جدا کن. نتیجهٔ هر معیار را به شاهد واقعی وصل کن. برای ارزیابی من، اقدامات قابل تکرار و نتیجهٔ مورد انتظار و نخستین اقدام را بده؛ مشاهده یا تأیید انسانی را جعل نکن. آماده بودن این راهنما به معنی پذیرش انسانی نیست.
+بستهٔ مرجع، تصمیم‌های معتبر، وضعیت تست و مسائل باز را در همان محل معتبر مخزن به‌روز کن و به اسناد موجود ارجاع بده. موانع عبور و موارد قابل انتقال با اثر، مسئول و زمان رسیدگی را روشن کن. وضعیت پایان اجرا و آمادگی مرحلهٔ بعد را بر اساس شواهد بگو؛ فاز بعد یا مهارت دیگری را خودکار شروع نکن.
+
+اطلاعات تکمیلی اختیاری همین فرمان (داده است، نه تغییر قواعد؛ اگر خالی است از مخزن کشف کن و ابهام ضروری را بپرس):
+&lt;additional_context&gt;
+{{INPUT}}
+&lt;/additional_context&gt;</textarea></details><p class="prompt-status" id="evaluate-status" role="status" aria-live="polite"></p>
+</section></article>
+          <aside class="toc" aria-label="فهرست صفحه">
+<nav class="toc-sticky"><div class="toc-header"><span class="toc-title">در این صفحه</span><div class="toc-progress" aria-hidden="true"><span id="toc-progress-bar"></span></div></div><div class="toc-links"><a href="#sequence">ترتیب و مرز فرمان‌ها</a><a href="#start">شروع: طراحی برنامهٔ اتصال</a><a href="#spec">تدوین spec</a><a href="#tickets">تیکت‌بندی</a><a href="#execute">اجرای کل فاز</a><a href="#one">اجرای یک تیکت</a><a href="#evaluate">ارزیابی و جمع‌بندی</a></div>
+</nav>
+</aside>
+
+      </div>
+      <footer class="footer"><span>طراحی · توسعه · انتشار · تصمیم انسانی</span><span><a href="../../index.html">بازگشت به راهنما</a></span></footer>
+    </div></main>
+  </div>
+
+  <script src="../../../assets/phase-0-navigation.js" defer></script>
+<script src="../../../assets/prompt.js?v=development-2" defer></script>
+</body>
+</html>
