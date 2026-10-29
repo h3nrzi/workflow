@@ -25,3 +25,11 @@ First action: open /v2/, read the mapping, then open migration/checkpoint explan
 Ticket02 first action: open /v2/phases/workshops/phase-2.html#start, enter a real phase-1 package path plus multiline context, expand preview and compare before copying. Expected: design command includes literal context and grants no implementation authority.
 
 Ticket05 first action: open /v2/phases/phase-3.html#route, compare frontend exit contract, then /v2/phases/workshops/phase-3.html#start. Change two command inputs; expected: independent previews and document-only execution scope. Record observations against the respective ticket.
+
+## Clipboard denial resolved; ticket 06 — integration 47d757c
+
+Chrome host-managed extension on localhost:8001 correctly enforced `Permissions-Policy: clipboard-write=(), clipboard-read=()`. All seven phase-3 commands: Passed — failure message, open details, focused preview and full selection. This supersedes the earlier dynamic Not Tested status for ticket05; the in-app browser limitation remains recorded above.
+
+Ticket06: all six phase-4 inputs preserved the same Persian multiline/special-character fixture, changed only their own previews, and copied literal text successfully in the in-app browser. All six denied copies in Chrome opened, focused and fully selected their associated previews: Passed. Guide opening view visually reviewed independently at 1440×1000, 768×1024 and 390×844; mobile workshop form/copy region also reviewed. No overlapping or unreadable control observed. Static merge preflight: 32 pages/1717 refs and diff check passed. Prompt execution on a real customer product remains Not Tested; human acceptance pending.
+
+Ticket06 first action: open /v2/phases/phase-4.html#first-flow, read the reason for selecting one complete connected flow, then open its workshop and compare the start/design and execute scopes. Expected: real service authority is explicit and mock success cannot establish integration correctness. Record observation against ticket06.
