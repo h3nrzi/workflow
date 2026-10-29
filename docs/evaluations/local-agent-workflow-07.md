@@ -47,3 +47,7 @@ Exact changed source identity at preflight:
 Old phase-8 pages, fragments and historical evaluation records untouched. New guide's examples remain conditional, historical TaskFlow AC-01/02 and TEST-01 remain Not Tested, AC-03/04/05 proposed, DEC-01/02 proposed and OPEN-01 hypothetical. Independent preview/copy wiring reviewed from source; manual-copy failure, exact clipboard content, keyboard and widths require browser observations.
 
 Human acceptance: **pending** until user observations arrive. Browser copy/keyboard/responsive: **Not Tested** at worktree checkpoint. Actual generated-prompt Agent execution, website/customer release and paid commitments: **Not Tested**, outside this ticket's website implementation scope.
+
+## Integration-tip refresh
+
+Merged integration `2916e6c26747b9e72c0969cb6e71ab683add054b` before reporting. A concurrent overview conflict was resolved by preserving integration's phase-2 workshop availability and reapplying phase-5 availability only. Post-merge full link checker passed **34 HTML pages, 1832 local references**; diff check passed. Hash table above identifies pre-merge implementation checkpoint; merged overview has a fresh identity. Browser coverage remains explicitly pending.
