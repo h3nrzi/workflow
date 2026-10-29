@@ -71,3 +71,7 @@ Environment: local macOS worktree; Python 3 standard-library link/HTML parser ch
 6. `git diff --check` passed. No historical evaluation document or ADR rewritten; visual-system edit limited to active introductory contract. Source identity manifest: [08 preflight SHA-256](local-agent-workflow-08-preflight.sha256).
 7. Self-review against ticket/spec/ADR: complete default route and compatibility, existing styles/scripts and semantic controls reused; glossary adds definitions only; source/missing-source/ambiguity/blocked-independent/browser/feedback/resume paths explicit. Newly copied workshops prepend versioned phase/input/output scope and preserve existing command boundaries. Phase-2 AC-03/DEC-02 conflict identified by parent remains a final-review correction rather than silently propagated into new ledger.
 8. Browser preview/copy/failure, visual width and keyboard checks for this combined activation: **Not Tested** in this worktree; parent will add actual observations. No independent Agent execution of generated commands or customer/product work performed. Human acceptance remains **pending**.
+
+## Integration-tip refresh
+
+Merged integration `2e23a8a48619c8713eb8df5444cc4c230cea90bb` before reporting ready. Merge added the coordinator's latest browser evidence; website source manifest remains the same. Post-merge full link check passed **40 HTML pages, 2343 local references**; diff check passed. Parent final QA/review and phase-2 identifier reconciliation remain explicit follow-up work; this record does not mark human acceptance complete.
