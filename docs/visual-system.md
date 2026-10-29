@@ -1,6 +1,6 @@
 # Workflow visual system
 
-> Active contract (2026-10-27): guides and workshops cover phases 0–8. Shared navigation exposes every guide/workshop; each guide retains one hero and workshops retain compact headings. The route palettes now extend through phase 8 using the same complete token contract. HTML versions the shared styles/themes/prompt assets together to avoid stale route colors. See [development-phase evaluation](development-phases-evaluation.md) for this version. The dated preflight records below remain historical and do not establish current-version results.
+> Active contract (2026-10-29): the default website is workflow v2, six phases 0–5 under `/v2/phases/`, with a directly rendered root overview. Every active navigation exposes six guides/workshops and contracts/migration/example; `/phases/` and `/v1/index.html` retain historical routes with explicit return links. Shared Persian typography, palette tokens, guide heroes and compact workshop headers remain in force. Phase 2 uses four independent local-agent commands. New workflow evidence lives under `docs/evaluations/local-agent-workflow-*.md`; all dated records below are historical and do not establish current results.
 
 Initial implementation: 2026-10-25. Site-wide UI/UX update: 2026-10-26. User evaluation is pending. See [the hierarchy and palette evaluation](page-hierarchy-evaluation.md) for the recorded hierarchy-update preflight evidence (historical). Earlier [UI/UX](ui-ux-evaluation.md) and [icon](icon-evaluation.md) checkpoints remain available.
 
