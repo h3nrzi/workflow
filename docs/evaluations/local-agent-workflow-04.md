@@ -65,3 +65,7 @@ Source identity at this preflight (SHA-256):
 ## Remaining observations
 
 Browser visual, responsive, keyboard, literal preview behavior, clipboard readback, copy-failure and four-input independence: **Not Tested** at this worktree checkpoint. Actual independent execution of these commands on a product: **Not Tested**. Human acceptance: **pending**. Keep each earlier ticket's source and browser checkpoint records; availability of all four commands does not retroactively establish their acceptance.
+
+## Integration recheck
+
+Merged integration tip `9a3cde8` before reporting. Resolved v2 entry conflict by retaining both all-four-command frontend availability and the completed release-phase availability. `python3 scripts/check-links.py` then passed: **34 HTML pages, 1865 local references**; `git diff --check` passed. Post-merge `v2/index.html` SHA-256: `1e856be33b2abf223d134dc3618b6d9dc97e7f00c58cc5ceee248d6bd4cbcad5`. Phase 2 guide/workshop hashes above are unchanged. Existing integration browser records remain scoped to their tested versions and commands; resume/evaluate checks above are still Not Tested.
