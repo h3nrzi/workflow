@@ -57,3 +57,7 @@ Exact source identity at this preflight (SHA-256):
 ## Limits
 
 Browser appearance, keyboard, responsive layout, clipboard readback, failed-copy path and cross-command independence: **Not Tested** at this worktree checkpoint. Independent use of these prompts on a real product: **Not Tested**. Human acceptance stays **pending** until observations are reported. A static checker pass establishes destinations and identifiers, not execution quality or acceptance. Ticket 02 checkpoints remain in their own record; this ticket does not rewrite their historical results.
+
+## Integration recheck
+
+Merged integration `47d757c` before reporting; resolved the v2 overview conflict by preserving both frontend execution availability and the newly available real-integration phase. Static link check passed afterward: **32 HTML pages, 1734 local references**; `git diff --check` passed. Post-merge `v2/index.html` SHA-256: `4a66e6ad0b88d50dc43c44e44747cc4512a251fc5327f135ae9f093999f8e470`; phase 2 guide/workshop hashes above are unchanged. Historical browser records from integration are not browser results for the new execution slice.
