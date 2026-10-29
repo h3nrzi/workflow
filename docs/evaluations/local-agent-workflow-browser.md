@@ -43,3 +43,9 @@ Ticket07: all seven release inputs independently updated only corresponding prev
 Ticket03 first action: open phase-2 guide #visual-feedback, follow the representative-flow evaluation steps and compare workshop #execute with #start. Expected: a visual feedback checkpoint before propagation; independent authorized work can continue.
 
 Ticket07 first action: open /v2/phases/phase-5.html, read recovery/rollback and ownership requirements, then compare workshop start and execute. Expected: design is separate from release authority and publication is never claimed from this website exercise. Record observations against tickets03/07.
+
+## Ticket 04 — integration e840f56
+
+Passed: all four frontend inputs independently preserved Persian multiline/special-character fixture; Enter copied each literal preview to clipboard. All four Chrome-denied copies opened/focused/selected the entire corresponding preview. Mobile workshop form/copy region visually reviewed. Resume/evaluation/human-guide text read from rendered page; source describes local-change preservation, authority, pending human acceptance and independent backend entry. Desktop guide/handoff view reviewed. Full three-width final integrated frontend review is recorded in ticket08 below when performed; this entry alone does not claim it. Static merge: 34 pages/1865refs, diffcheck Passed. Human acceptance and customer-product execution remain pending/Not Tested respectively.
+
+First action: open /v2/phases/workshops/phase-2.html#resume, enter the repository entry-index path; then compare #evaluate and inspect the guide #human-guide. Expected: independent inputs, instructions to preserve local changes and per-flow observations, no automatic backend work. Record against ticket04.
