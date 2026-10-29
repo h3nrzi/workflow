@@ -44,3 +44,7 @@ Exact changed source identity at preflight:
 Old phase-7 guide/workshop and historical evaluation records untouched. Historical absent-source TaskFlow checkpoint is qualified; it does not prevent new frontend construction from approved behavior. All conditional examples remain unexecuted and AC proposals remain proposals. Source inspection checked independent data-input/data-status/data-copy wiring, labels, readonly previews and button types; clipboard success/failure and responsive/keyboard behavior remain browser obligations.
 
 Human acceptance: **pending** until observations arrive. Browser interaction/clipboard/keyboard/responsive: **Not Tested** at this worktree checkpoint. Actual generated-prompt Agent execution and customer integration: **Not Tested**, outside website implementation scope.
+
+## Integration-tip refresh
+
+Merged integration `013fce9911fed0007f980dcc348a3d0d66b46860` (phase-2 design/workshop addition) before reporting. The overview had a concurrent-edit conflict; retained integration's phase-2 availability and reapplied only phase-4 availability. Post-merge `python3 scripts/check-links.py` passed **32 HTML pages, 1717 local references**; `git diff --check` passed. The source hash table above identifies the pre-merge implementation checkpoint, not the combined overview after that merge. Browser obligations remain Not Tested.
