@@ -12,3 +12,16 @@ Date: 2026-10-29. Host-managed Codex in-app browser; static server http://localh
 - Not Tested: customer-product execution; independent execution of prompt instructions.
 
 First action: open /v2/, read the mapping, then open migration/checkpoint explanations and compare old phase-three guide/workshop destinations. Record observations against ticket01; acceptance pending.
+
+## Tickets 02 and 05 — integration 013fce9
+
+- Passed: phase-2 design input preserved Persian multiline, `<tag>`, ampersand, quotes and literal dollar patterns in preview and actual browser clipboard. Enter activated copy; Enter opened manual preview. Design-only authority warning visible.
+- Passed: all seven phase-3 workshop fields independently changed only their associated previews with the same literal sample; all seven copy buttons produced matching browser clipboard text and success status. Keyboard Tab from evaluation copy reached manual disclosure with visible focus ring.
+- Passed: phase-2 and phase-3 guide opening view independently visually reviewed at 1440×1000, 768×1024, 390×844. RTL headings/prose, responsive menu/index, hero and actions readable in observed views. Phase-3 and phase-2 workshop input/copy/manual-preview region visually reviewed on mobile.
+- Static preflight passed: 30 pages, 1626 local references; diff check passed. Per-ticket self-reviews and source hashes in 02/05 evaluation guides.
+- Clipboard failure automatic recovery: Not Tested dynamically. Permissions-Policy denial on localhost:8001 and CSP sandbox on localhost:8002 were attempted; host browser still reported copy success, so neither establishes denial handling. Existing catch path inspected; manual disclosure is verified separately. Do not label this a successful failure-path test.
+- Independent execution of commands against a customer product: Not Tested. Human acceptance pending.
+
+Ticket02 first action: open /v2/phases/workshops/phase-2.html#start, enter a real phase-1 package path plus multiline context, expand preview and compare before copying. Expected: design command includes literal context and grants no implementation authority.
+
+Ticket05 first action: open /v2/phases/phase-3.html#route, compare frontend exit contract, then /v2/phases/workshops/phase-3.html#start. Change two command inputs; expected: independent previews and document-only execution scope. Record observations against the respective ticket.
