@@ -33,3 +33,13 @@ Chrome host-managed extension on localhost:8001 correctly enforced `Permissions-
 Ticket06: all six phase-4 inputs preserved the same Persian multiline/special-character fixture, changed only their own previews, and copied literal text successfully in the in-app browser. All six denied copies in Chrome opened, focused and fully selected their associated previews: Passed. Guide opening view visually reviewed independently at 1440×1000, 768×1024 and 390×844; mobile workshop form/copy region also reviewed. No overlapping or unreadable control observed. Static merge preflight: 32 pages/1717 refs and diff check passed. Prompt execution on a real customer product remains Not Tested; human acceptance pending.
 
 Ticket06 first action: open /v2/phases/phase-4.html#first-flow, read the reason for selecting one complete connected flow, then open its workshop and compare the start/design and execute scopes. Expected: real service authority is explicit and mock success cannot establish integration correctness. Record observation against ticket06.
+
+## Tickets 03 and 07 — integration d279730
+
+Ticket03: execution context preserved multiline literal fixture and left design preview unchanged. Enter copied execution text with success feedback. Chrome denial recovery Passed for both design and execute: opened preview, focus and full selection. Representative-feedback guide section read in Chrome after anchor scrolling settled (section top 58px); instructional table readable on desktop. Phase-2 guide and mobile execute controls were visually checked using the same three viewport sizes; no overlap observed in captured views. Static preflight: 34 pages/1832 refs and diffcheck Passed at latest merge.
+
+Ticket07: all seven release inputs independently updated only corresponding previews and copied literal fixture text; all seven Chrome-denied copies opened/focused/selected full previews. Release guide visually reviewed at 1440×1000, 768×1024, 390×844, plus mobile workshop form/copy region. Passed for observed views. No actual deployment, restoration or customer-product prompt run performed; these remain Not Tested. Human acceptance pending.
+
+Ticket03 first action: open phase-2 guide #visual-feedback, follow the representative-flow evaluation steps and compare workshop #execute with #start. Expected: a visual feedback checkpoint before propagation; independent authorized work can continue.
+
+Ticket07 first action: open /v2/phases/phase-5.html, read recovery/rollback and ownership requirements, then compare workshop start and execute. Expected: design is separate from release authority and publication is never claimed from this website exercise. Record observations against tickets03/07.
