@@ -48,3 +48,7 @@ Source identity at preflight (SHA-256):
 ## Limits and checkpoint
 
 Old routes, historical evidence and global activation are untouched. Only phase 2 availability and phase 1 package handoff within the v2 entry were updated. The workshop uses the full approved design prompt plus an explicit data-only context block; placeholders must be reviewed against real paths before using it in a product agent. Actual independent execution of that prompt on a product is **Not Tested**. Human acceptance remains **pending** until the user reports observations; static passes and this guide do not constitute acceptance.
+
+## Integration recheck
+
+Merged integration tip `92c9dfc` into this branch before handoff. The v2 entry conflict was resolved by retaining both phase 2 design availability and phase 3 guide/workshop availability. `python3 scripts/check-links.py` then passed: **30 HTML pages, 1626 local references**; `git diff --check` passed. Parent's historical browser record came with integration; it is not a browser result for these new phase 2 pages. Post-merge `v2/index.html` SHA-256: `12fe0bd1d7c915210d7fb3ce0f38198e195f046ba3730c92f0e3ca98a053ea82`. Guide and workshop hashes above remain unchanged.
