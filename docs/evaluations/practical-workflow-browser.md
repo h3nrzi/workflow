@@ -33,4 +33,10 @@ Human acceptance: pending. Date: 2026-10-30. Host-managed Codex in-app browser, 
 - Content review checked identity versus membership, server-owned team/role checks, idempotent create and versioned status update, design-only scope, recorded script prerequisites and transfer to phase four. No blocking slice issue found; final integration review follows.
 - Not executed: skill installer, account provisioning, Auth0 login, API or PostgreSQL, product security tests. User acceptance pending.
 
+## Ticket 05 — 68d2250
+
+- At 800×900 opened the real-integration chapter. All six panels (start, spec, tickets, execute, one, evaluate) opened and copied their distinct `QA4` marker plus `$& <نمونه>` exactly. Each preview contained only its own marker. Width and scrollWidth both 800; visual input/preview/copy review passed.
+- Content review checked the phase-three identity/API contract, first-flow then remaining-MVP gates, real persistence and authorization evidence, mutation replay/version conflicts and phase-five handoff. No blocking slice issue found; final integration review follows.
+- Not executed: backend installation, migration, real login, connected product flow, security or database tests. TEST-01 remains educational Not Tested; user acceptance pending.
+
 Reproduce feature checks using the per-ticket guides. Record user observations in this chat or the corresponding issue Comments; these automated observations do not establish acceptance.
