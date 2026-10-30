@@ -18,4 +18,12 @@ Human acceptance: pending. Date: 2026-10-30. Host-managed Codex in-app browser, 
 - Source/content review found no blocking issue for this slice. Full standards/spec integration review follows.
 - Not tested at this checkpoint: actual LLM discovery/summary, customer approval, screen reader, clipboard failure fallback. User acceptance pending.
 
+## Ticket 03 — 2c06bae
+
+- At 800×900 opened phase two and verified four separately labeled command inputs and previews: start/design, execute, resume, evaluate.
+- Filled each with a distinct marker plus literal `$& <آزمون>`, opened its preview and copied. All four clipboard readbacks contained their own exact marker. DOM readback showed each preview contained only its corresponding marker, with no other command input leaking into it.
+- Visual review of the input/preview/copy work area was readable in RTL. Source review checked setup against verified sources, frontend-only boundaries, mock scenarios, authority, repository entry and Not Tested example evidence.
+- Additional ticket02 mobile check: at 390×844 Enter opened navigation, Escape closed it (`aria-expanded=false`), focus stayed on the menu with solid outline; page width and scrollWidth both 390.
+- Not executed: installation/scaffold commands, sample product tests, LLM/Codex prompt execution, real backend/deployment. These are teaching instructions, not documentation-site preflight operations. User acceptance pending.
+
 Reproduce feature checks using the per-ticket guides. Record user observations in this chat or the corresponding issue Comments; these automated observations do not establish acceptance.
