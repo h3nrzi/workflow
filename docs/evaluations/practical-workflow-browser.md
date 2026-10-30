@@ -26,4 +26,11 @@ Human acceptance: pending. Date: 2026-10-30. Host-managed Codex in-app browser, 
 - Additional ticket02 mobile check: at 390×844 Enter opened navigation, Escape closed it (`aria-expanded=false`), focus stayed on the menu with solid outline; page width and scrollWidth both 390.
 - Not executed: installation/scaffold commands, sample product tests, LLM/Codex prompt execution, real backend/deployment. These are teaching instructions, not documentation-site preflight operations. User acceptance pending.
 
+## Ticket 04 — f99a963
+
+- At 800×900 reviewed the skill-setup/design page and seven command panels (start, continue, spec, tickets, execute, one, evaluate).
+- Each panel received a distinct `QA3` marker plus `$& <نمونه>`; each preview opened and clipboard readback retained its exact marker. Each preview contained only its own command marker. Page width and scrollWidth both 800; the copy/input/preview area was visually readable.
+- Content review checked identity versus membership, server-owned team/role checks, idempotent create and versioned status update, design-only scope, recorded script prerequisites and transfer to phase four. No blocking slice issue found; final integration review follows.
+- Not executed: skill installer, account provisioning, Auth0 login, API or PostgreSQL, product security tests. User acceptance pending.
+
 Reproduce feature checks using the per-ticket guides. Record user observations in this chat or the corresponding issue Comments; these automated observations do not establish acceptance.
