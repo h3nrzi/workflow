@@ -1,6 +1,6 @@
 # Ticket 08: complete practical journey and evaluation handoff
 
-Human acceptance: **pending until the user reports observations**. This guide and automated evidence do not establish customer acceptance, successful LLM/agent execution or a deployed TaskFlow product. Final post-cleanup clipboard and width checks were reported by integration QA as detailed below; remaining keyboard/visual checks are **pending integration QA**. Existing slice observations are preserved separately.
+Human acceptance: **pending until the user reports observations**. This guide and automated evidence do not establish customer acceptance, successful LLM/agent execution or a deployed TaskFlow product. Final post-cleanup clipboard and width checks were reported by integration QA as detailed below; final keyboard/visual checks and independent review are recorded in the final evidence below, with the desktop capture limitation retained. Existing slice observations are preserved separately.
 
 ## Evaluated version and actual preflight
 
@@ -19,8 +19,8 @@ Client date: 2026-10-30. Environment: Darwin 25.1.0 arm64, Python 3.14.7, Node v
 | Prior browser evidence inspected | [Browser checkpoints](practical-workflow-browser.md) records exact literal clipboard and preview isolation in the six implementation slices, selected keyboard/menu observations and 390/800/1440 viewport checks at their stated commits. These precede ticket-07 navigation/layout cleanup and do not establish final-layout success. |
 | Final post-cleanup route/width checks (parent QA report) | On integration `5d2ba1b`, host-managed in-app browser and local Python server at localhost:8000: all 10 current HTML routes at 320/390/768/1440px, 40 page/width observations; no document overflow, exactly one h1, all RTL. This verifies reported layout measurements, not every visual detail. |
 | Final post-cleanup clipboard (parent QA report) | At 800×900, all 29 previews opened and full clipboard text equaled the preview in 29/29 checks, with literal FINAL marker plus `$& <نمونه>` and no unresolved `{{INPUT}}`. Phase-zero optional simulator disclosure was opened. |
-| Final post-cleanup keyboard/visual review | Parent still evaluating TOC keyboard and screenshots at this record; remaining outcomes are pending, not inferred from the width or copy results. |
-| Independent standards/spec code review | Pending orchestration after this ticket is integrated; results and any fixes belong to their actual commit. This static source review is not a substitute. |
+| Final post-cleanup keyboard/visual review | Completed on the reviewed public source: mobile TOC Enter/selection/close/anchor, menu Escape, skip-link focus, homepage/phase/resource navigation and representative mobile/tablet screenshots. Desktop sticky/layout measurements passed; complete desktop screenshot was clipped by the host. See [final browser record](practical-workflow-browser.md). |
+| Independent standards/spec code review | Completed at integration 654743f: Standards 0 material findings; Spec 0 material findings. No corrective source change required. See [two-axis review](practical-workflow-review.md). |
 
 No sample commands, installations, identity/database operations, TaskFlow tests or deployments were executed as documentation preflight. No new test seam or implementation-mirroring test was introduced; existing checks were used. Manual-copy failure fallback, screen reader, OS reduced-motion and other browser engines remain untested unless a later evidence record explicitly reports them.
 
@@ -88,6 +88,6 @@ Use the detailed ticket guides above for their full cases; this table connects t
 
 ## Remaining verification and observation log
 
-Final TOC keyboard/screenshot checks and independent code review are still pending at this guide's initial commit; the orchestrator appends exact observed evidence after those run and fixes any blockers. The width/clipboard checks above are the specific post-cleanup outcomes reported so far. The six earlier browser slice records do not silently cover the changed navigation/layout after cleanup. Screen-reader/reduced-motion/alternate-engine and clipboard-denial cases remain Not Tested unless explicitly superseded by later evidence.
+Final TOC keyboard, navigation and representative screenshots were checked against the unchanged public source at integration 654743f; both independent review axes found zero material issues. The final browser record supplies the actual observations, root tool versions and the host's clipped desktop-capture limitation. Complete unclipped desktop visual review remains Not Tested. Earlier slice records remain dated checkpoints; the post-cleanup checks explicitly cover the changed navigation/layout. Screen-reader/reduced-motion/alternate-engine and clipboard-denial cases remain Not Tested unless explicitly superseded by later evidence.
 
 User observation: **pending**. Record in this chat or the relevant local ticket Comments. A missing product account or authority can block that product exercise without blocking independent review of the documentation website. No new human-approval gate is added to completion of authorized implementation.

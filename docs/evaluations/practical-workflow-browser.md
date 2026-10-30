@@ -45,4 +45,15 @@ Human acceptance: pending. Date: 2026-10-30. Host-managed Codex in-app browser, 
 - Content review checked Render frontend/backend roots and project scripts, Auth0 final origins, server secrets versus frontend configuration, migrations, isolated restore, compatibility rollback, production smoke, monitoring and operations handoff. No blocking slice issue found; final integration review follows.
 - Not executed: deployment, paid service provisioning, migration, restore, rollback, real product smoke or operational alert delivery. Those remain explicit teaching examples and required future product evidence. User acceptance pending.
 
+## Tickets 07–08 — final public source at 5d2ba1b, integration 654743f
+
+- All 10 current HTML routes were opened at 320, 390, 768 and 1440px (40 observations). No document overflow; exactly one h1 and RTL on every page.
+- All 29 final prompt previews were opened and copied at 800×900. Full clipboard text equaled the preview in 29/29 cases, including literal markers, `$&` and `<نمونه>`; no unresolved `{{INPUT}}`. The optional phase-zero simulator was expanded first.
+- At 390×844, Enter opened phase-three mobile TOC; selecting the model/contract link updated the hash to `#domain-model`, closed the index, updated its current label and settled the target at 98px below the viewport top, below the 64px index. Screenshot visually confirmed the heading and readable RTL content.
+- At 1440×1000, desktop TOC displayed with computed `position: sticky`; article width was 701px and TOC width 190px, with no page overflow. Tab from the document body focused the skip link with solid outline. Host screenshot capture clipped part of this emulated desktop viewport; complete desktop pixel-level review is limited. This limitation is not a site overflow observation.
+- At 800×900, final homepage screenshot showed the complete hero and first action. The first-action link reached phase zero, its continuation reached phase one, and menu links navigated to contracts and TaskFlow with the expected h1. Escape closed the final main menu (`aria-expanded=false`). Representative mobile/tablet screenshots were visually reviewed.
+- Final checks at 654743f: 10 pages / 317 references passed; both shared scripts passed `node --check`; `git diff --check` passed. Root environment: Node v24.22.0, Python 3.14.7, Darwin arm64. Ticket08's Node v26.4.0 records that implementer's actual shell, not the sample product's recommended runtime.
+- Independent Standards and Spec reviews at 654743f each found zero material issues; see [review record](practical-workflow-review.md).
+- Still Not Tested: screen reader, OS reduced-motion setting, other browser engines, clipboard-denial/manual fallback, complete unclipped desktop screenshot, actual LLM/agent/product/deployment execution. User acceptance pending.
+
 Reproduce feature checks using the per-ticket guides. Record user observations in this chat or the corresponding issue Comments; these automated observations do not establish acceptance.

@@ -87,3 +87,5 @@
 ## Comments
 
 - کاربر پس از چهار دور مصاحبه، جمع‌بندی نهایی را با «بله تایید» تأیید کرد. ثبت طرح و تیکت‌ها بر مبنای همین تأیید است.
+
+- اجرای مجاز در شاخهٔ `codex/practical-workflow-docs` تکمیل شد؛ هر هشت تیکت resolved هستند. شواهد و راهنمای ویژگی‌به‌ویژگی در `docs/evaluations/practical-workflow-08.md` و مرور دو محور در `docs/evaluations/practical-workflow-review.md` ثبت‌اند. پذیرش انسانی pending است؛ محصول نمونه یا سایت عمومی منتشر نشده است.
